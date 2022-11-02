@@ -1,0 +1,29 @@
+ /* ====== Acerca de mi (texto) =======*/
+ .row.info-personal{
+    height: 475px;
+    font-size: 10px;
+    font-family: 'Georgia', sans-serif;
+    text-align: justify;
+}
+
+#presentacion{
+    margin-top: 6rem;
+} /* ======Termina Texto======= */
+
+
+/* ===== Boton descarga CV =====*/
+.btn.btn-outline{
+    background-color:#f04d84;
+    border: 2px solid;
+    font-size: x-small;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+
+section.about {
+    background-color:rgb(255, 247, 255);
+}
+
+main{
+    background-color: rgb(246, 250, 248);
+}

@@ -1,0 +1,42 @@
+/* ===== Comienza Navbar ==== */
+.navbar-brand {
+    --bs-navbar-brand-color:aliceblue;   
+}
+
+.bg {
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+
+/* ===== Redes Sociales (Navbar)======*/
+i.fa-brands.fa-instagram.fa-2xl,
+i.fa-brands.fa-linkedin.fa-2xl,
+i.fa-brands.fa-github.fa-2xl,
+i.fa-solid.fa-user.fa-2xl,
+i.fa-solid.fa-user-lock.fa-2xl{
+    color: aliceblue;
+}
+
+i.fa-brands.fa-instagram.fa-2xl:hover{
+color: rgb(233, 13, 203);
+}
+
+i.fa-brands.fa-linkedin.fa-2xl:hover{
+    color: rgb(22, 74, 245);
+}
+
+i.fa-brands.fa-github.fa-2xl:hover{
+    color: rgb(0, 0, 0);
+}
+
+i.fa-solid.fa-user-lock.fa-2xl:hover{
+    color: #f00352;
+}
+
+.list-group-item {
+    --bs-list-group-bg: transparent;
+    --bs-list-group-border-color: transparent;
+}
+
+button.navbar-toggler{
+    border-color: transparent;
+}/* ===== termina Navbar =======*/
