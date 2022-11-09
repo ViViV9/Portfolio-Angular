@@ -1,11 +1,8 @@
 /* ===== Comienza Navbar ==== */
 .navbar-brand {
-    --bs-navbar-brand-color:aliceblue;   
+    --bs-navbar-brand-color:aliceblue;
 }
 
-.bg {
-    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
-}
 
 /* ===== Redes Sociales (Navbar)======*/
 i.fa-brands.fa-instagram.fa-2xl,
@@ -17,7 +14,7 @@ i.fa-solid.fa-user-lock.fa-2xl{
 }
 
 i.fa-brands.fa-instagram.fa-2xl:hover{
-color: rgb(233, 13, 203);
+color:  #ad0a7a;
 }
 
 i.fa-brands.fa-linkedin.fa-2xl:hover{

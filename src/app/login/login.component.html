@@ -1,44 +1,45 @@
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<app-navbar></app-navbar>
+
+<!-- Formulario de login -->
+<section class="login">
+<div class="container">
+    <div class="row">
+        <div class="col-3">
         </div>
-        <div class="modal-body">
+        <div class="col-6">
           <form>
-            <div class="mb-3">
+              <div class="mb-3">
+          
+                <label for="idE" class="form-label">Correo</label>
+          
+                <input type="email" class="form-control" id="idE" aria-describedby ="idEH">
+          
+                <div id="idEH" class="form-text">Debe ser un correo válido.</div>
+          
+              </div>
+          
+              <div class="mb-3">
+          
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          
+                <input type="password" class="form-control" id="exampleInputPassword1">
+          
+              </div>
+          
+              <div class="mb-3 form-check">
         
-              <label for="idE" class="form-label">Correo</label>
-        
-              <input type="email" class="form-control" id="idE" aria-describedby ="idEH">
-        
-              <div id="idEH" class="form-text">Debe ser un correo válido.</div>
-        
-            </div>
-        
-            <div class="mb-3">
-        
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-        
-              <input type="password" class="form-control" id="exampleInputPassword1">
-        
-            </div>
-        
-            <div class="mb-3 form-check">
-      
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        
-              <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-        
-            </div>
-        
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </form>
-          <br>
-          <small> Si no tenes cuenta <a href="registro.html">Registrate</a></small>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          
+                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+          
+              </div>
+          
+              <button type="submit" class="btn btn">Enviar</button>
+            </form>
+            <small>Si no tenes cuenta<a routerLink="/registro">Registrate</a></small>
         </div>
-      </div>
+        <div class="col-3">
+        </div>
     </div>
-  </div>
+</div>
+</section>

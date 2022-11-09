@@ -1,0 +1,9 @@
+#error{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.error .subtitulo{
+    font-size: 10rem;
+}

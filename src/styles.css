@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+/* Baner*/
+.banner {
+    background-image: url(/assets/IMG/banner-full.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+/* Nombre y Apellido*/
+h1.nombre {
+    font-family: Georgia,serif;
+    font-style:italic;
+    color: rgb(241, 48, 129);
+    text-shadow: 2px 2px 4px #8d8585;
+    font-size: 4rem;
+    transform: translateY(10rem)
+}
+
+/* ======Foto de Perfil =======*/
+.foto-perfil{
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-50%);
+    width: 70%;
+    padding-left: 5%;
+}
+
+/* ===== Secciones ======*/
+section.experiencia, section.educacion, section.habilidades{
+    margin-top: 4rem;
+}
+
+.subtitulo{
+    font-family: Georgia,serif;
+    font-style:italic;
+    color: rgb(241, 48, 129);
+    text-shadow: 2px 2px 4px #8d8585;
+    font-size: 3rem;
+}
+
+.bg {
+    background-image: linear-gradient(to top, #f7628f 0%, #fe5196 100%);
+}
+
+section.login, section.registro{
+    height: 50rem;
+}
