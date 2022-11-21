@@ -1,0 +1,150 @@
+{
+    "nombre": "Viviana",
+    "apellido": "Verachtert",
+    "titulo": "Desarrolladora Web Full Stack Jr.",
+    "foto_perfil": "./assets/IMG/IMG_20220819_215820.jpg",
+    "sobre_mi": "Lorem ipsum",
+     
+    "educacion": [
+        {
+            "id": 0,
+            "inicio": "Febrero 2022",
+            "fin": "Marzo 2022",
+            "nivel": "Se Programar",
+            "logo": "assets/IMG/logo-argentina-programa-ng.jpg",
+            "institucion": "Argentina Programa"  
+        },
+        {
+            "id": 1,
+            "inicio": "Junio 2022",
+            "fin": "Enero 2023",
+            "nivel": "Yo Programo",
+            "logo": "assets/IMG/logo-argentina-programa-ng.jpg",
+            "institucion": "Argentina Programa" 
+        },
+        {
+            "id": 2,
+            "inicio": " ",
+            "fin": "1999",
+            "nivel": "Operadora de PC",
+            "logo": "assets/IMG/logo-pc.jpg",
+            "institucion": "" 
+        },
+        {
+            "id": 3,
+            "inicio": " ",
+            "fin": "",
+            "nivel": "Secundario",
+            "logo": "",
+            "institucion": "" 
+        }
+    ],
+
+    "experiencia": [
+        {
+            "id": 0,
+            "desde": "",
+            "hasta": "",
+            "puesto": "Modista",
+            "institucion": "Emprendimiento Propio",
+            "logo": "" 
+        },
+        {
+            "id": 1,
+            "desde": "",
+            "hasta": "",
+            "puesto": "Vendedora",
+            "institucion": "Avon",
+            "logo": "" 
+        }
+    ],
+    
+    "habilidades" : [
+        {
+          "id": 1,
+          "nombre": "HTML" ,
+          "porcentaje": "75"
+        },
+        {
+            "id": 2,
+            "nombre": "CSS",
+            "porcentaje": "65"
+        },
+        {
+            "id": 3 ,
+            "nombre": "JAVA",
+            "porcentaje": "50"
+        },
+        {
+            "id": 4 ,
+            "nombre": "JavaScript",
+            "porcentaje": "35"
+        },
+        {
+            "id": 5 ,
+            "nombre": "Bootstrap",
+            "porcentaje": "90"
+        },
+        {
+            "id": 6,
+            "nombre": "Adaptabilidad",
+            "porcentaje": "80"
+        },
+        {
+            "id": 7,
+            "nombre": "Trabajo en Equipo",
+            "porcentaje": "90"
+        },
+        {
+            "id": 8 ,
+            "nombre": "Aprendizaje Rápido",
+            "porcentaje": "80"
+        },
+        {
+            "id": 9 ,
+            "nombre": "Resolucion de Problemas",
+            "porcentaje": "85"
+        },
+        {
+            "id": 10,
+            "nombre": "Manejo del tiempo",
+            "porcentaje": "95"
+        }
+    ],
+      
+    "redes": [
+        {
+            "id": 1 ,
+            "nombre": "LinkedIn",
+            "url": "https://www.linkedin.com/in/",
+            "icono": "fa fa-linkedin fa-xl"
+        },
+        {
+            "id": 2 ,
+            "nombre": "Github",
+            "url": "https://github.com/",
+            "icono": "fa fa-github fa-xl"
+        }
+    ],
+    
+    "proyectos": [
+        {
+            "id": 1,
+            "logoProyecto": "",
+            "urlProyecto": "",
+            "tituloProyecto": "Porfolio Argentina Programa",
+            "inicio": "28-06-2022",
+            "fin": "13-01-2023",
+            "descripcion": "Armado de Proyecto integrador de porfolio web, utilizando tecnologias Angular, Apache Netbeans, MySQL Workbench, Boopstrap. Lenguajes HTML, CSS, TypeScript, Java."
+        },
+        {
+          "id": 2,
+          "logoProyecto": "",
+          "urlProyecto": "",
+          "tituloProyecto": "Task List",
+          "inicio": "",
+          "fin": "",
+          "descripcion": "Armado de lista de tareas como actividad de práctica de Angular utilizando base de datos local JSON"
+        }
+    ]
+}

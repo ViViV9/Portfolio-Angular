@@ -2,6 +2,11 @@
   <hr>
   <section id="educacion" class="educacion">
     <h2 class= "subtitulo" style="text-align:center;"> Educación </h2>
+    <div *ngIf="usuarioLogueado" class="d-flex" >
+      <button class="btn"><i class="fa-solid fa-pen-to-square" type="button"></i></button>
+      <button class="btn"><i class="fa-solid fa-trash-can" type="button"></i></button>
+      <button class="btn"><i class="fa-regular fa-floppy-disk" type="button"></i></button>
+    </div>
     <div class="container text-center">
       <div class="row mt-4"> 
         <h4 class="titulo-curso p-2"> Curso de programación <strong>"Argentina Programa"</strong></h4>
