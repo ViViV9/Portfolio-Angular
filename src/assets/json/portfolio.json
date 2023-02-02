@@ -3,112 +3,154 @@
     "apellido": "Verachtert",
     "titulo": "Desarrolladora Web Full Stack Jr.",
     "foto_perfil": "./assets/IMG/IMG_20220819_215820.jpg",
-    "sobre_mi": "Lorem ipsum",
+    "sobre_mi": "¡Hola! Soy Viviana Verachtert y vivo en Colón, provincia de Entre Ríos, República Argentina. Desarrolladora Web Full Stack Jr. Además realizo prendas a medida como modista en Alta Costura.",
      
-    "educacion": [
+    "educaciones": [
         {
-            "id": 0,
+            "id": 1,
             "inicio": "Febrero 2022",
             "fin": "Marzo 2022",
-            "nivel": "Se Programar",
-            "logo": "assets/IMG/logo-argentina-programa-ng.jpg",
+            "curso": "",
+            "titulo": "Se Programar",
+            "logo": "./assets/IMG/logo-argentina-programa-ng.jpg",
             "institucion": "Argentina Programa"  
         },
         {
-            "id": 1,
+            "id": 2,
             "inicio": "Junio 2022",
             "fin": "Enero 2023",
-            "nivel": "Yo Programo",
-            "logo": "assets/IMG/logo-argentina-programa-ng.jpg",
+            "curso": "Yo Programo",
+            "titulo": "Desarrolladora Web Full Stack Jr.",
+            "logo": "./assets/IMG/logo-argentina-programa-ng.jpg",
             "institucion": "Argentina Programa" 
         },
         {
-            "id": 2,
-            "inicio": " ",
+            "id": 3,
+            "inicio": "1998",
             "fin": "1999",
-            "nivel": "Operadora de PC",
+            "curso": "",
+            "titulo": "Operadora de PC con orientación administrativa.",
             "logo": "assets/IMG/logo-pc.jpg",
-            "institucion": "" 
+            "institucion": "Asociación Civil para la investigación y el desarrollo de la ciencia informática (ACIDCI)" 
         },
         {
-            "id": 3,
-            "inicio": " ",
-            "fin": "",
-            "nivel": "Secundario",
-            "logo": "",
-            "institucion": "" 
+            "id": 4,
+            "inicio": "2019",
+            "fin": "2022",
+            "curso": "Programa Oportunid@des",
+            "titulo": "Secundario",
+            "logo": "./assets/IMG/Logo-oportunidades.png",
+            "institucion": "Dirección de Educación de Jóvenes y Adultos; CGE Provincia de Entre Ríos" 
+        },
+        {
+            "id": 5,
+            "inicio": "2018",
+            "fin": "2019",
+            "curso": "Confeccionista de prendas a medida",
+            "titulo": "Modista",
+            "logo": "./assets/IMG/Logo-EJA.png",
+            "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos" 
+        },
+        {
+            "id": 4,
+            "inicio": "2019",
+            "fin": "2022",
+            "curso":"Confeccionista de Alta Costura",
+            "titulo": "Confeccionista de Alta Costura",
+            "logo": "./assets/IMG/Logo-EJA.png",
+            "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos" 
         }
     ],
 
-    "experiencia": [
-        {
-            "id": 0,
-            "desde": "",
-            "hasta": "",
-            "puesto": "Modista",
-            "institucion": "Emprendimiento Propio",
-            "logo": "" 
-        },
+    "experiencias": [
         {
             "id": 1,
-            "desde": "",
-            "hasta": "",
+            "desde": "2019",
+            "hasta": "2022",
+            "puesto": "Modista",
+            "institucion": "Independiente",
+            "logo": "./assets/IMG/Viviana-logo-modista.png" 
+        },
+        {
+            "id": 2,
+            "desde": "2018",
+            "hasta": "2019",
             "puesto": "Vendedora",
             "institucion": "Avon",
-            "logo": "" 
+            "logo": "./assets/IMG/Avon-logo.png" 
+        },
+        {
+            "id": 3,
+            "desde": "2018",
+            "hasta": "2019",
+            "puesto": "Vendedora",
+            "institucion": "Violetta Cosmeticos",
+            "logo": "./assets/IMG/Violetta-logo.png" 
+        },
+        {
+            "id": 3,
+            "desde": "2018",
+            "hasta": "2019",
+            "puesto": "Vendedora",
+            "institucion": "Tsu Cosmeticos",
+            "logo": "./assets/IMG/Tsu-logo.png" 
         }
     ],
     
     "habilidades" : [
         {
           "id": 1,
-          "nombre": "HTML" ,
-          "porcentaje": "75"
+          "nombre": "HTML",
+          "span": "fa-brands fa-html5",
+          "porcentaje": "progress-90"
         },
         {
             "id": 2,
             "nombre": "CSS",
-            "porcentaje": "65"
+            "span": "fa-brands fa-css3-alt",
+            "porcentaje": "progress-50"
         },
         {
             "id": 3 ,
             "nombre": "JAVA",
-            "porcentaje": "50"
+            "span": "fa-brands fa-java",
+            "porcentaje": "progress-50"
         },
         {
             "id": 4 ,
             "nombre": "JavaScript",
-            "porcentaje": "35"
+            "span": "fa-brands fa-square-js", 
+            "porcentaje":"progress-50"
         },
         {
             "id": 5 ,
             "nombre": "Bootstrap",
-            "porcentaje": "90"
+            "span": "fa-brands fa-bootstrap",
+            "porcentaje":"progress-90"
         },
         {
             "id": 6,
-            "nombre": "Adaptabilidad",
-            "porcentaje": "80"
+            "nombre": "Angular",
+            "span": "fa-brands fa-angular",
+            "porcentaje":"progress-80"
         },
         {
             "id": 7,
             "nombre": "Trabajo en Equipo",
-            "porcentaje": "90"
+            "span": "fa-solid fa-people-group",
+            "porcentaje":"progress-90"
         },
         {
             "id": 8 ,
-            "nombre": "Aprendizaje Rápido",
-            "porcentaje": "80"
+            "nombre": "Capacidad de aprendizaje",
+            "span": "fa-solid fa-book-open-cover",
+            "porcentaje":"progress-75"
         },
         {
             "id": 9 ,
             "nombre": "Resolucion de Problemas",
-            "porcentaje": "85"
-        },
-        {
-            "id": 10,
-            "nombre": "Manejo del tiempo",
-            "porcentaje": "95"
+            "span": "fa-solid fa-lightbulb-on",
+            "porcentaje":"progress-85"
         }
     ],
       
@@ -116,35 +158,52 @@
         {
             "id": 1 ,
             "nombre": "LinkedIn",
-            "url": "https://www.linkedin.com/in/",
-            "icono": "fa fa-linkedin fa-xl"
+            "url": "https://www.linkedin.com/in/viviana-verachtert-709621257/",
+            "icono": "fa-brands fa-linkedin fa-2xl"
         },
         {
             "id": 2 ,
             "nombre": "Github",
-            "url": "https://github.com/",
-            "icono": "fa fa-github fa-xl"
+            "url": "https://github.com/ViViV9",
+            "icono": "fa-brands fa-github fa-2xl"
+        },
+        {
+            "id": 3,
+            "nombre": "Instagram",
+            "url": "https://instagram.com/vi.ve_code/",
+            "icono": "fa-brands fa-instagram fa-2xl"
         }
     ],
     
+    "redes-footer": [
+        {
+            "id": 1 ,
+            "nombre": "LinkedIn",
+            "url": "https://www.linkedin.com/in/viviana-verachtert-709621257/",
+            "icono": "fab fa-linkedin-in"
+        },
+        {
+            "id": 2 ,
+            "nombre": "Github",
+            "url": "https://github.com/ViViV9",
+            "icono": "fab fa-github"
+        },
+        {
+            "id": 3,
+            "nombre": "Instagram",
+            "url": "https://instagram.com/vi.ve_code/",
+            "icono": "fab fa-instagram"
+        }
+    ],
     "proyectos": [
         {
             "id": 1,
-            "logoProyecto": "",
+            "imagenProyecto": "./assets/IMG/Portada-proyecto.png",
             "urlProyecto": "",
             "tituloProyecto": "Porfolio Argentina Programa",
             "inicio": "28-06-2022",
             "fin": "13-01-2023",
-            "descripcion": "Armado de Proyecto integrador de porfolio web, utilizando tecnologias Angular, Apache Netbeans, MySQL Workbench, Boopstrap. Lenguajes HTML, CSS, TypeScript, Java."
-        },
-        {
-          "id": 2,
-          "logoProyecto": "",
-          "urlProyecto": "",
-          "tituloProyecto": "Task List",
-          "inicio": "",
-          "fin": "",
-          "descripcion": "Armado de lista de tareas como actividad de práctica de Angular utilizando base de datos local JSON"
+            "descripcion": "Mi primer proyecto como desarrolladora full stack, es un porfolio web, en el cual puse en práctica mis conocimientos y utilice diferentes tecnologias como Angular, Apache Netbeans, MySQL Workbench, Boopstrap, Lenguajes HTML, CSS, TypeScript, Java."
         }
     ]
 }

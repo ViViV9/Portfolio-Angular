@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
+  miData:any
 
   constructor() { }
 
   ngOnInit(): void {
+    /*this.getDatos().subscribe
+    (datos => {
+      this.miData = data;
+    });*/
   }
 
 }
