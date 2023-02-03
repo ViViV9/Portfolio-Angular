@@ -4,7 +4,7 @@ import { PortfolioService } from '../servicios/portfolio.service';
 @Component({
   selector: 'app-acercademi',
   templateUrl: './acercademi.component.html',
-  styleUrls: ['./acercademi.component.css']
+  styleUrls: ['./acercademi.component.css'],
 })
 export class AcercademiComponent implements OnInit {
   sobre_mi: string= '';
