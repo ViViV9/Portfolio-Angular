@@ -3,7 +3,9 @@
     "apellido": "Verachtert",
     "titulo": "Desarrolladora Web Full Stack Jr.",
     "foto_perfil": "./assets/IMG/IMG_20220819_215820.jpg",
-    "sobre_mi": "¡Hola! Soy Viviana Verachtert y vivo en Colón, provincia de Entre Ríos, República Argentina. Desarrolladora Web Full Stack Jr. Además realizo prendas a medida como modista en Alta Costura.",
+    "sobre_mi": "¡Hola! Me llamo Viviana Verachtert y vivo en Colón, provincia de Entre Ríos, República Argentina",
+    "sobre_mi2":"Soy Desarrolladora Web Full Stack Jr. Además realizo prendas a medida como modista en Alta Costura.",
+    "sobre_mi3": "Me considero una persona creativa, responsable, con facilidad de adaptación y capacidad para trabajar en equipo. Busco un puesto desafiante y dinámico para continuar sumando experiencia, seguir aprendiendo y creciendo en conocimientos.",
      
     "educaciones": [
         {
@@ -12,7 +14,7 @@
             "fin": "Marzo 2022",
             "curso": "",
             "titulo": "Se Programar",
-            "logo": "./assets/IMG/logo-argentina-programa-ng.jpg",
+            "logo": "./assets/IMG/Logo-ArgProg.png",
             "institucion": "Argentina Programa"  
         },
         {
@@ -21,7 +23,7 @@
             "fin": "Enero 2023",
             "curso": "Yo Programo",
             "titulo": "Desarrolladora Web Full Stack Jr.",
-            "logo": "./assets/IMG/logo-argentina-programa-ng.jpg",
+            "logo": "./assets/IMG/Logo-ArgProg.png",
             "institucion": "Argentina Programa" 
         },
         {
@@ -30,7 +32,7 @@
             "fin": "1999",
             "curso": "",
             "titulo": "Operadora de PC con orientación administrativa.",
-            "logo": "assets/IMG/logo-pc.jpg",
+            "logo": "assets/IMG/Logo-pc.png",
             "institucion": "Asociación Civil para la investigación y el desarrollo de la ciencia informática (ACIDCI)" 
         },
         {
@@ -77,7 +79,7 @@
             "hasta": "2019",
             "puesto": "Vendedora",
             "institucion": "Avon",
-            "logo": "./assets/IMG/Avon-logo.png" 
+            "logo": "./assets/IMG/Logo-Avon.png" 
         },
         {
             "id": 3,
@@ -85,7 +87,7 @@
             "hasta": "2019",
             "puesto": "Vendedora",
             "institucion": "Violetta Cosmeticos",
-            "logo": "./assets/IMG/Violetta-logo.png" 
+            "logo": "./assets/IMG/Logo-Violetta.png" 
         },
         {
             "id": 3,

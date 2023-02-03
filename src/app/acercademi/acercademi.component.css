@@ -1,13 +1,13 @@
  /* ====== Acerca de mi (texto) =======*/
  .row.info-personal{
-    height: 475px;
-    font-size: 10px;
+    height: 42rem;
+    font-size: larger;
     font-family: 'Georgia', sans-serif;
     text-align: justify;
 }
 
 #presentacion{
-    margin-top: 6rem;
+    margin-top: 4rem;
 } /* ======Termina Texto======= */
 
 

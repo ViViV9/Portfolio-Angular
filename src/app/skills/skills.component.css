@@ -19,7 +19,7 @@
 } 
 
 .progress-circle span { 
-    font-size: 1.8rem; 
+    font-size: 2rem; 
     color: #8b8b8b; 
     position: absolute; 
     left: 50%; 
@@ -45,6 +45,7 @@
     color: #8b8b8b; 
 }
 
+
 .progress-circle.progress-50:after { 
     background-image: linear-gradient(-90deg, rgb(241, 48, 129) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(241, 48, 129) 50%, #ebebeb 50%, #ebebeb); 
 }
@@ -57,9 +58,6 @@
     background-image: linear-gradient(18deg, rgb(241, 48, 129) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(241, 48, 129) 50%, #ebebeb 50%, #ebebeb); 
 }
 
-.progress-circle.progress-85:after {
-    background-image: linear-gradient(36deg, #66b8ff 50%, transparent 50%, transparent), linear-gradient(270deg, #66b8ff 50%, #ebebeb 50%, #ebebeb); }
-  
 .progress-circle.progress-90:after { 
     background-image: linear-gradient(54deg, rgb(241, 48, 129) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(241, 48, 129) 50%, #ebebeb 50%, #ebebeb); 
 }
@@ -71,5 +69,4 @@
 
 @keyframes colorload { 
     0% { opacity: 0; transform: rotate(0deg); } 100% { opacity: 1; transform: rotate(360deg); } 
-} 
-/* ===== termina Circulos de progreso ===== */
+} /* ===== termina Circulos de progreso ===== */

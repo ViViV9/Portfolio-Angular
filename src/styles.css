@@ -29,10 +29,13 @@ h1.nombre {
 }
 
 /* ===== Secciones ======*/
-section.experiencia, section.educacion, section.habilidades{
+section.experiencia, section.educacion, section.habilidades, section.proyectos{
     margin-top: 4rem;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.4s;
 }
 
+/* ===== Subtitulos de cada seccion =====*/
 .subtitulo{
     font-family: Georgia,serif;
     font-style:italic;
