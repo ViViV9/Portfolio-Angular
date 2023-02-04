@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ExperienciaComponent implements OnInit {
 
   constructor() { }
-
+  usuarioLogueado= true
   ngOnInit(): void {
   }
 

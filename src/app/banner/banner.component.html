@@ -1,9 +1,19 @@
 <!--Banner-->
 <header>
-    <section class="banner">
+  <section class="banner">
+    <div class="container text-center">
       <div class="container text-center">
-        <h1 class="nombre text-center">{{ nombre }} {{ apellido }}</h1><br>
-        <h3 class="titulo text-center">{{ titulo }}</h3>  
+        <div class="row">
+          <div class="col-7"></div>
+          <div class="col-5">
+            <div *ngIf="usuarioLogueado">
+              <button class="btn"><i class="fa-solid fa-pen-to-square" type="button"></i></button>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-  </header>
+      <h1 class="nombre text-center">{{nombre}} {{apellido}}</h1><br>
+      <h3 class="titulo text-center">{{titulo}}</h3>  
+    </div>
+  </section>
+</header>

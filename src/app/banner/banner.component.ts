@@ -12,7 +12,7 @@ export class BannerComponent implements OnInit {
   titulo: string= '';
 
   constructor(private porfolioService: PortfolioService) { }
-
+  usuarioLogueado= true
   ngOnInit(): void {
     this.porfolioService.getDatos().subscribe(datos => {
       console.log(datos);

@@ -9,7 +9,7 @@ export class ProyectosComponent implements OnInit {
   miData:any
 
   constructor() { }
-
+  usuarioLogueado= true
   ngOnInit(): void {
     /*this.getDatos().subscribe
     (datos => {
