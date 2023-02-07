@@ -16,12 +16,19 @@ h1.nombre {
     color: rgb(241, 48, 129);
     text-shadow: 2px 2px 4px #8d8585;
     font-size: 4rem;
-    transform: translateY(10rem)
+    transform: translateY(8rem)
 }
 
 /* Titulo "Desarroladora Full Stack" */
 h3.titulo {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 2rem;
-    transform: translateY(10rem);
+    transform: translateY(8rem);
+}
+
+/*boton de edicion */
+.btn.banner{
+    position: absolute;
+    z-index: 0;
+    text-shadow: 2px 2px 4px #8d8585;
 }

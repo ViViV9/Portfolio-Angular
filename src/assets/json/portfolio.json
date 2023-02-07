@@ -1,102 +1,115 @@
 {
-    "nombre": "Viviana",
-    "apellido": "Verachtert",
-    "titulo": "Desarrolladora Web Full Stack Jr.",
-    "foto_perfil": "./assets/IMG/IMG_20220819_215820.jpg",
-    "sobre_mi": "¡Hola! Me llamo Viviana Verachtert y vivo en Colón, provincia de Entre Ríos, República Argentina.",
-    "sobre_mi2":"Soy Desarrolladora Web Full Stack Jr. Además realizo prendas a medida como modista en Alta Costura.",
-    "sobre_mi3": "Me considero una persona creativa, responsable, con facilidad de adaptación y capacidad para trabajar en equipo. Busco un puesto desafiante y dinámico para continuar sumando experiencia, seguir aprendiendo y creciendo en conocimientos.",
-    "cv": "",
-     
+   
+            "nombre": "Viviana",
+            "apellido": "Verachtert",
+            "titulo": "Desarrolladora Web Full Stack Jr.",
+            "foto_perfil": "./assets/IMG/IMG_20220819_215820.jpg",
+            "sobre_mi": "¡Hola! Me llamo Viviana Verachtert y vivo en Colón, provincia de Entre Ríos, República Argentina.",
+            "sobre_mi2":"Soy Desarrolladora Web Full Stack Jr. Además realizo prendas a medida como modista en Alta Costura.",
+            "sobre_mi3": "Me considero una persona creativa, responsable, con facilidad de adaptación y capacidad para trabajar en equipo. Busco un puesto desafiante y dinámico para continuar sumando experiencia, seguir aprendiendo y creciendo en conocimientos.",
+            "cv": "",
+ 
     "educaciones": [
         {
             "id": 1,
-            "inicio": "Febrero 2022",
-            "fin": "Marzo 2022",
-            "curso": "",
+            "curso": "Argentina Programa",
+            "institucion": "Secretaría de Economía del Conocimiento, Ministerio de Economía de la Nación." ,
             "titulo": "Se Programar",
             "logo": "./assets/IMG/Logo-ArgProg.png",
-            "institucion": "Argentina Programa"  
+            "nombre-curso": "#Se Programar",
+            "inicio": "Febrero del año 2022",
+            "fin": "Marzo del año 2022"
         },
         {
             "id": 2,
-            "inicio": "Junio 2022",
-            "fin": "Enero 2023",
             "curso": "Yo Programo",
+            "institucion": "Secretaría de Economía del Conocimiento, Ministerio de Economía de la Nación.", 
             "titulo": "Desarrolladora Web Full Stack Jr.",
             "logo": "./assets/IMG/Logo-ArgProg.png",
-            "institucion": "Argentina Programa" 
+            "nombre-curso": "#Yo Programo",
+            "inicio": "Junio del año 2022",
+            "fin": "Enero del año 2023"
         },
         {
             "id": 3,
-            "inicio": "1998",
-            "fin": "1999",
-            "curso": "",
-            "titulo": "Operadora de PC con orientación administrativa.",
-            "logo": "assets/IMG/Logo-pc.png",
-            "institucion": "Asociación Civil para la investigación y el desarrollo de la ciencia informática (ACIDCI)" 
+            "curso": "Idioma Inglés",
+            "institucion": "Centro Universitario de Idiomas, UBA.",
+            "titulo": "Inglés con orientación en programación.",
+            "logo": "./assets/IMG/Logo-CUI.png",
+            "inicio": "Diciembre del año 2022",
+            "fin": "Enero del año 2023"
         },
         {
             "id": 4,
-            "inicio": "2019",
-            "fin": "2022",
-            "curso": "Programa Oportunid@des",
-            "titulo": "Secundario",
+            "curso": "Secundario",
+            "institucion": "Dirección de Educación de Jóvenes y Adultos; CGE Provincia de Entre Ríos", 
+            "titulo": "Bachiller en Economía y Administración.",
             "logo": "./assets/IMG/Logo-oportunidades.png",
-            "institucion": "Dirección de Educación de Jóvenes y Adultos; CGE Provincia de Entre Ríos" 
+            "nombre-curso": "Programa Oportunid@des",
+            "inicio": "Julio del año 2019",
+            "fin": "Julio del año 2022"
         },
         {
             "id": 5,
-            "inicio": "2018",
-            "fin": "2019",
-            "curso": "Confeccionista de prendas a medida",
-            "titulo": "Modista",
-            "logo": "./assets/IMG/Logo-EJA.png",
-            "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos" 
-        },
-        {
-            "id": 4,
-            "inicio": "2019",
-            "fin": "2022",
             "curso":"Confeccionista de Alta Costura",
+            "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos", 
             "titulo": "Confeccionista de Alta Costura",
             "logo": "./assets/IMG/Logo-EJA.png",
-            "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos" 
+            "inicio": "Marzo del año 2019",
+            "fin": "Julio del año 2021"
+        },
+        {
+            "id": 6,
+            "curso": "Confeccionista de prendas a medida",
+            "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos", 
+            "titulo": "Modista",
+            "logo": "./assets/IMG/Logo-EJA.png",
+            "inicio": "Marzo del año 2018",
+            "fin": "Diciembre del año 2018"
+        },
+        {
+            "id": 7,
+            "curso": "Operadora de PC",
+            "institucion": "Asociación Civil para la investigación y el desarrollo de la ciencia informática (ACIDCI)", 
+            "titulo": "Operadora de PC con orientación administrativa.",
+            "logo": "./assets/IMG/Logo-pc.png",
+            "inicio": "Marzo del año 1999",
+            "fin": "Diciembre del año 1999"
         }
     ],
 
     "experiencias": [
         {
             "id": 1,
-            "desde": "2019",
-            "hasta": "2022",
-            "puesto": "Modista",
             "institucion": "Independiente",
-            "logo": "./assets/IMG/Viviana-logo-modista.png" 
+            "puesto": "Modista",
+            "logo": "./assets/IMG/Viviana-logo-modista.png", 
+            "desde": "2019",
+            "hasta": "2022"
         },
         {
             "id": 2,
-            "desde": "2018",
-            "hasta": "2019",
-            "puesto": "Vendedora",
             "institucion": "Avon",
-            "logo": "./assets/IMG/Logo-Avon.png" 
+            "puesto": "Vendedora",
+            "logo": "./assets/IMG/Logo-Avon.png", 
+            "desde": "2018",
+            "hasta": "2019"
         },
         {
             "id": 3,
-            "desde": "2018",
-            "hasta": "2019",
-            "puesto": "Vendedora",
             "institucion": "Violetta Cosmeticos",
-            "logo": "./assets/IMG/Logo-Violetta.png" 
+            "puesto": "Vendedora",
+            "logo": "./assets/IMG/Logo-Violetta.png", 
+            "desde": "2018",
+            "hasta": "2019"
         },
         {
             "id": 3,
-            "desde": "2018",
-            "hasta": "2019",
-            "puesto": "Vendedora",
             "institucion": "Tsu Cosmeticos",
-            "logo": "./assets/IMG/Tsu-logo.png" 
+            "puesto": "Vendedora",
+            "logo": "./assets/IMG/Tsu-logo.png", 
+            "desde": "2018",
+            "hasta": "2019"
         }
     ],
     
@@ -201,12 +214,12 @@
     "proyectos": [
         {
             "id": 1,
+            "tituloProyecto": "Porfolio Argentina Programa",
             "imagenProyecto": "./assets/IMG/Portada-proyecto.png",
             "urlProyecto": "",
-            "tituloProyecto": "Porfolio Argentina Programa",
+            "descripcion": "Mi primer proyecto como desarrolladora full stack, es un porfolio web, en el cual puse en práctica mis conocimientos y utilice diferentes tecnologias como Angular, Apache Netbeans, MySQL Workbench, Boopstrap, Lenguajes HTML, CSS, TypeScript, Java.",
             "inicio": "28-06-2022",
-            "fin": "13-01-2023",
-            "descripcion": "Mi primer proyecto como desarrolladora full stack, es un porfolio web, en el cual puse en práctica mis conocimientos y utilice diferentes tecnologias como Angular, Apache Netbeans, MySQL Workbench, Boopstrap, Lenguajes HTML, CSS, TypeScript, Java."
+            "fin": "13-01-2023"
         }
     ]
 }
