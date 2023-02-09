@@ -19,6 +19,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { IndexComponent } from './index/index.component';
 import { ErrorComponent } from './error/error.component';
 import { ModalLogoutComponent } from './modals/modal-logout/modal-logout.component';
+import { RedesSocialesComponent } from './redes-sociales/redes-sociales.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ModalLogoutComponent } from './modals/modal-logout/modal-logout.compone
     SkillsComponent,
     IndexComponent,
     ErrorComponent,
-    ModalLogoutComponent
+    ModalLogoutComponent,
+    RedesSocialesComponent
   ],
   imports: [
     BrowserModule,

@@ -2,12 +2,10 @@
 <section id="footer" class="footer">
     <div class="container-fluid bg  py-1 px-sm-1 px-md-5">
       <div class="container text-center py-3">
-        <div class="d-flex justify-content-center text-white mb-3">
-          <a class="btn btn-social mr-2" href="https://github.com/ViViV9" target="_blank"><i class="fab fa-github"></i></a>
-          <a class="btn btn-socialn mr-2" href="https://www.linkedin.com/in/viviana-verachtert-709621257/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a class="btn btn-social" href="https://www.instagram.com/vi.ve_code/"><i class="fab fa-instagram" target="_blank"></i></a>
+        <div class="d-flex justify-content-center text-white mb-3" *ngFor="let redsocial of redesFotter">
+          <a class="btn btn-social mr-2" href={{redsocial.url}} target="_blank"><i class={{redsocial.icono}}></i></a>
         </div>
-        <p style="color: aliceblue;">&copy; Copyright Viviana Verachtert - 2022</p>
+        <p style="color: #f0f8ff;">&copy; Copyright Viviana Verachtert - 2022</p>
         <div class="position-relative">
           <div class="position-absolute bottom-0 end-0"><a href="#"><button class="btn text-white"><i class="fa-solid fa-angle-up "></i></button></a></div>
         </div>

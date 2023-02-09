@@ -1,0 +1,9 @@
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+        <ul class="list-group list-group-horizontal" *ngFor="let red_social of redes" >
+            <li class="list-group-item"><a href={{red_social.url}} target="_blank"><i class={{red_social.icono}}></i></a></li>
+        </ul>
+        <li class="list-group-item list-group list-group-horizontal"><i class="fa-solid fa-user-lock fa-2xl" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+        </li>         
+    </ul>
+</div>
