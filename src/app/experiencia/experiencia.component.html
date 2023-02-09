@@ -14,54 +14,15 @@
           </div>
         </div>
       </div>
-      <div class="row mt-4">
+      <div class="row mt-4" *ngFor="let experiencia of experiencias">
         <div class="col-2">
-          <img src="assets/IMG/Viviana-logo-modista.png" class= "rounded w-80" alt="" width="100%">
+          <img src={{experiencia.logo}} class= "rounded w-80" alt="" width="100%">
         </div>
         <div class="col-9 descripcion descripcion">
-          <p style="text-align: justify;"><strong>Modista</strong></p>
-          <p style="text-align: justify;"><strong> Trabajo independiente</strong></p>
-          <p style="text-align: justify;">Desde: 2018</p>
-          <p style="text-align: justify;">Hasta: Actualidad</p>
-        </div>
-        <div class="col"></div>
-      </div>
-      <br>
-      <div class="row mt-4">
-        <div class="col-2">
-          <img src="assets/IMG/Tsu-logo.png" class= "rounded w-80" alt="" width="100%">
-        </div>
-        <div class="col-9 descripcion descripcion">
-          <p style="text-align: justify;">Empresa: <strong>Tsu Cosméticos</strong></p>
-          <p style="text-align: justify;">Cargo: <strong>Vendedora por catálogo</strong></p>
-          <p style="text-align: justify;">Desde: 2018</p>
-          <p style="text-align: justify;">Hasta: 2019</p>
-        </div>
-        <div class="col"></div>
-      </div>
-      <br>
-      <div class="row mt-4">
-        <div class="col-2">
-          <img src="assets/IMG/Logo-Avon.png" class= "rounded w-80" alt="" width="100%">
-        </div>
-        <div class="col-9 descripcion descripcion">
-          <p style="text-align: justify;">Empresa: <strong> Avon</strong></p>
-          <p style="text-align: justify;">Cargo: <strong>Vendedora por catálogo</strong></p>
-          <p style="text-align: justify;">Desde: 2018</p>
-          <p style="text-align: justify;">Hasta: 2019</p>
-        </div>
-        <div class="col"></div>
-      </div>
-      <br>
-      <div class="row mt-4">
-        <div class="col-2">
-          <img src="assets/IMG/Logo-Violetta.png" class= "rounded w-80" alt="" width="100%">
-        </div>
-        <div class="col-9 descripcion descripcion">
-          <p style="text-align: justify;">Empresa: <strong> Violetta</strong></p>
-            <p style="text-align: justify;">Cargo: <strong>Vendedora por catálogo</strong></p>
-            <p style="text-align: justify;">Desde: 2018</p>
-            <p style="text-align: justify;">Hasta: 2019</p>
+          <p style="text-align: justify;">Empresa: <strong>{{experiencia.institucion}}</strong></p>
+          <p style="text-align: justify;">Cargo: <strong>{{experiencia.puesto}}</strong></p>
+          <p style="text-align: justify;">Desde: {{experiencia.desde}}</p>
+          <p style="text-align: justify;">Hasta: {{experiencia.hasta}}</p>
         </div>
         <div class="col"></div>
       </div>

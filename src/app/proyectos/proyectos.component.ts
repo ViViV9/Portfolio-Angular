@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProyectosService } from '../servicios/proyectos.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -6,15 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  miData:any
+  proyectos: any= [];
 
-  constructor() { }
+  constructor(private datos:ProyectosService) { }
   usuarioLogueado= true
   ngOnInit(): void {
-    /*this.getDatos().subscribe
-    (datos => {
-      this.miData = data;
-    });*/
+    this.datos.getDatos().subscribe(datos => {
+      this.proyectos=datos.proyectos;
+    });
   }
 
 }

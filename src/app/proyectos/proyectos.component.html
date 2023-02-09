@@ -14,24 +14,21 @@
         </div>
       </div>
     </div>
-    <p class= "texto-proyectos mt-4" style="text-align: justify;">
-      Mi primer proyecto como desarrolladora web full stack, es un Portfolio web; en el cual apliqué diferentes tecnologías, tanto para la parte del FrontEnd como Backend. 
-      Creando un diseño resceptivo y adaptable a cualquier dispositivo.</p>
-    <div class="row">
+    <div class="row" *ngFor="let proyecto of proyectos"> 
+      <p class= "texto-proyectos mt-4" style="text-align: justify;">
+      {{proyecto.descripcion}}</p>
       <div class="col-3">
       </div>
       <div class="col-6">
         <div class="card">
-          <img src="assets/IMG/Portada-proyecto.png" class="card-img-top" alt="...">
+          <img src={{proyecto.imagenProyecto}} class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-center">"Mi portfolio"</h5>
             <p class="card-text"></p>
           </div>
         </div>
       </div>
-      <div class="col-3">
-        
-      </div>
+      <div class="col-3"></div>
     </div>
   </div>
 </section>
