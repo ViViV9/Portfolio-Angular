@@ -16,121 +16,18 @@
       </div>
     </div>
     <div class="container text-center">
-      <div class="row mt-4"> 
-        <h3 class="titulo-curso p-2"> Curso: <strong>{{curso}}</strong></h3>
-        <div class="col-2">
-          <img src={{logo}} class= "rounded-circle w-80" alt="Logo Argentina Programa" width="100%">
+      <div class="row mt-4" *ngFor="let educacion of educaciones"> 
+        <h3 class="titulo-curso p-2"><strong>{{educacion.curso}}</strong></h3>
+        <div class="col-2 p-2">
+          <img src={{educacion.logo}} class= "rounded-circle w-80" alt="Logo" width="100%">
         </div>
         <div class="col-9 descripcion">
-          <p style="text-align: justify;"><strong>{{institucion}}</strong></p>
-          <p style="text-align: justify;"><strong> {{titulo}}</strong></p>
-          <div class="container px-4 text-center">
-            <div class="row gx-3">
-              <div class="col">
-               <div class="p-3 border rounded w-80">
-                <p>Primera etapa <strong>{{nombre_curso}}</strong></p>
-                <p>Desde: {{inicio}}</p>
-                <p>Hasta: {{fin}}</p>
-               </div>
-              </div>
-              <div class="col">
-                <div class="p-3 border rounded w-80">
-                  <p>Segunda etapa <strong>{{nombre_curso}}</strong></p>
-                  <p>Desde: {{inicio}}</p>
-                  <p>Hasta: {{fin}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col"></div>
+          <p style="text-align: justify;">Institucion: <strong> {{educacion.institucion}}</strong></p>
+          <p style="text-align: justify;">Titulo: <strong> {{educacion.titulo_curso}} </strong></p>
+          <p style="text-align: justify;">Desde: {{educacion.inicio}}</p>
+          <p style="text-align: justify;">Hasta: {{educacion.fin}}</p>
         </div>
       </div>
-      <br>
-      <hr>
-      <div class="container text-center">
-        <div class="row mt-4">
-          <h3 class="titulo-curso p-2"> Curso: <strong> {{curso}}</strong></h3>
-          <div class="col-2 p-2">
-            <img src={{logo}} class= "rounded-circle w-80" alt="Logo CUI" width="100%">
-          </div>
-          <div class="col-9 descripcion">
-            <p style="text-align: justify;"><strong>CUI</strong> {{institucion}}</p>
-            <p style="text-align: justify;"><strong> {{titulo}} </strong></p>
-            <p style="text-align: justify;">Desde: {{inicio}}</p>
-            <p style="text-align: justify;">Hasta: {{fin}}</p>
-          </div>
-          <div class="col">
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="container text-center">
-        <div class="row mt-4">
-          <h3 class="titulo-curso p-2"><strong>{{curso}}</strong></h3>
-          <div class="col-2 p-2">
-            <img src={{logo}} class= "rounded-circle w-80" alt="Logo programa oportunidades" width="100%">
-          </div>
-          <div class="col-9 descripcion">
-            <p style="text-align: justify;"><strong>{{nombre_curso}}</strong>perteneciente a la {{institucion}}</p>
-            <p style="text-align: justify;"><strong> {{titulo}}</strong></p>
-            <p style="text-align: justify;">Desde: {{inicio}}</p>
-            <p style="text-align: justify;">Hasta: {{fin}}</p>
-          </div>
-          <div class="col">
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="container text-center">
-        <div class="row mt-4">
-          <h3 class="titulo-curso p-2"><strong> {{curso}}</strong></h3>
-          <div class="col-2 p-2">
-       <img src={{logo}} class= "rounded-circle w-80" alt="Logo EJA" width="100%">
-          </div>
-          <div class="col-9 descripcion">
-            <p style="text-align: justify;"><strong> {{institucion}}</strong>  </p>
-            <p style="text-align: justify;"><strong>{{titulo}}</strong></p>
-            <p style="text-align: justify;">Desde: {{inicio}}</p>
-            <p style="text-align: justify;">Hasta: {{fin}}</p>
-          </div>
-          <div class="col">
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="container text-center">
-        <div class="row mt-4">
-          <h3 class="titulo-curso p-2"><strong>{{curso}}</strong></h3>
-          <div class="col-2 p-2">
-            <img src={{logo}} class= "rounded-circle w-80" alt="" width="100%">
-          </div>
-          <div class="col-9 descripcion">
-            <p style="text-align: justify;"><strong> {{institucion}}</strong> </p>
-            <p style="text-align: justify;"><strong> {{titulo}} </strong></p>
-            <p style="text-align: justify;">Desde: {{inicio}}</p>
-            <p style="text-align: justify;">Hasta: {{fin}}</p>
-          </div>
-          <div class="col">
-          </div>
-        </div>
-      </div>
-      <hr> 
-        <div class="container text-center">
-          <div class="row mt-4">
-            <h3 class="titulo-curso p-2"><strong> {{curso}}</strong></h3>
-            <div class="col-2 p-2">
-              <img src={{logo}} class= "rounded-circle w-80" alt="" width="100%">
-            </div>
-            <div class="col-9 descripcion">
-              <p style="text-align: justify;"><strong>{{institucion}}</strong> </p>
-              <p style="text-align: justify;"><strong> {{titulo}}</strong></p>
-              <p style="text-align: justify;">Desde: {{inicio}}</p>
-              <p style="text-align: justify;">Hasta: {{fin}}</p>
-            </div>
-            <div class="col">
-            </div>
-          </div>
-        </div>
       <br>
     </div>
   </section>

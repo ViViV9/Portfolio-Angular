@@ -1,6 +1,6 @@
 /* ===== Comienza Navbar ==== */
 .navbar-brand {
-    --bs-navbar-brand-color:aliceblue;
+    --bs-navbar-brand-color:#f0f8ff;
 }
 
 
@@ -10,7 +10,7 @@ i.fa-brands.fa-linkedin.fa-2xl,
 i.fa-brands.fa-github.fa-2xl,
 i.fa-solid.fa-user.fa-2xl,
 i.fa-solid.fa-user-lock.fa-2xl{
-    color: aliceblue;
+    color: #f0f8ff;
 }
 
 i.fa-brands.fa-instagram.fa-2xl:hover{
@@ -18,11 +18,11 @@ color:  #ad0a7a;
 }
 
 i.fa-brands.fa-linkedin.fa-2xl:hover{
-    color: rgb(22, 74, 245);
+    color: #164af5;
 }
 
 i.fa-brands.fa-github.fa-2xl:hover{
-    color: rgb(0, 0, 0);
+    color: #000000;
 }
 
 i.fa-solid.fa-user-lock.fa-2xl:hover{

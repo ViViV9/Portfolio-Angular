@@ -14,16 +14,16 @@
 /* ===== Boton descarga CV =====*/
 .btn.btn-outline{
     background-color:#f04d84;
-    border: 2px solid;
+    border: 0.188rem solid;
     font-size: x-small;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: aliceblue;
+    color: #f0f8ff;
 }
 
 section.about {
-    background-color:rgb(255, 247, 255);
+    background-color:#fff7ff;
 }
 
 main{
-    background-color: rgb(246, 250, 248);
+    background-color: #f6faf8;
 }

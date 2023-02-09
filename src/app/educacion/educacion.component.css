@@ -3,12 +3,12 @@
     font-family: 'Expletus Sans', cursive;
 }
 .col .p-3{
-    background-color: rgb(235, 234, 236);
+    background-color: #ebeaec;
 }
 /*=====Font info cursos====*/
 .col-9.descripcion{
     font-family: 'Roboto', sans-serif;
 }
 .bg-light{
-    background-color: antiquewhite;
+    background-color: #faebd7;
 }

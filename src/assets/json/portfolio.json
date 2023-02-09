@@ -14,9 +14,8 @@
             "id": 1,
             "curso": "Argentina Programa",
             "institucion": "Secretaría de Economía del Conocimiento, Ministerio de Economía de la Nación." ,
-            "titulo": "Se Programar",
+            "titulo_curso": "Se Programar",
             "logo": "./assets/IMG/Logo-ArgProg.png",
-            "nombre-curso": "#Se Programar",
             "inicio": "Febrero del año 2022",
             "fin": "Marzo del año 2022"
         },
@@ -24,9 +23,8 @@
             "id": 2,
             "curso": "Yo Programo",
             "institucion": "Secretaría de Economía del Conocimiento, Ministerio de Economía de la Nación.", 
-            "titulo": "Desarrolladora Web Full Stack Jr.",
+            "titulo_curso": "Desarrolladora Web Full Stack Jr.",
             "logo": "./assets/IMG/Logo-ArgProg.png",
-            "nombre-curso": "#Yo Programo",
             "inicio": "Junio del año 2022",
             "fin": "Enero del año 2023"
         },
@@ -34,7 +32,7 @@
             "id": 3,
             "curso": "Idioma Inglés",
             "institucion": "Centro Universitario de Idiomas, UBA.",
-            "titulo": "Inglés con orientación en programación.",
+            "titulo_curso": "Inglés con orientación en programación.",
             "logo": "./assets/IMG/Logo-CUI.png",
             "inicio": "Diciembre del año 2022",
             "fin": "Enero del año 2023"
@@ -43,9 +41,8 @@
             "id": 4,
             "curso": "Secundario",
             "institucion": "Dirección de Educación de Jóvenes y Adultos; CGE Provincia de Entre Ríos", 
-            "titulo": "Bachiller en Economía y Administración.",
+            "titulo_curso": "Bachiller en Economía y Administración.",
             "logo": "./assets/IMG/Logo-oportunidades.png",
-            "nombre-curso": "Programa Oportunid@des",
             "inicio": "Julio del año 2019",
             "fin": "Julio del año 2022"
         },
@@ -53,7 +50,7 @@
             "id": 5,
             "curso":"Confeccionista de Alta Costura",
             "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos", 
-            "titulo": "Confeccionista de Alta Costura",
+            "titulo_curso": "Confeccionista de Alta Costura",
             "logo": "./assets/IMG/Logo-EJA.png",
             "inicio": "Marzo del año 2019",
             "fin": "Julio del año 2021"
@@ -62,7 +59,7 @@
             "id": 6,
             "curso": "Confeccionista de prendas a medida",
             "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos", 
-            "titulo": "Modista",
+            "titulo_curso": "Modista",
             "logo": "./assets/IMG/Logo-EJA.png",
             "inicio": "Marzo del año 2018",
             "fin": "Diciembre del año 2018"
@@ -71,7 +68,7 @@
             "id": 7,
             "curso": "Operadora de PC",
             "institucion": "Asociación Civil para la investigación y el desarrollo de la ciencia informática (ACIDCI)", 
-            "titulo": "Operadora de PC con orientación administrativa.",
+            "titulo_curso": "Operadora de PC con orientación administrativa.",
             "logo": "./assets/IMG/Logo-pc.png",
             "inicio": "Marzo del año 1999",
             "fin": "Diciembre del año 1999"

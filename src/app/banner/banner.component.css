@@ -6,15 +6,15 @@
     position: relative;
     z-index: 1;
     background-attachment: fixed;
-    height: 500px;
+    height: 75vh;
 }
 
 /* Nombre y Apellido*/
 h1.nombre {
     font-family: Georgia,serif;
     font-style:italic;
-    color: rgb(241, 48, 129);
-    text-shadow: 2px 2px 4px #8d8585;
+    color: #f13081;
+    text-shadow: 0.125rem 0.125rem 0.25rem #8d8585;
     font-size: 4rem;
     transform: translateY(8rem)
 }
@@ -30,5 +30,5 @@ h3.titulo {
 .btn.banner{
     position: absolute;
     z-index: 0;
-    text-shadow: 2px 2px 4px #8d8585;
+    text-shadow: 0.125rem 0.125rem 0.25rem #8d8585;
 }

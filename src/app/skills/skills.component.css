@@ -47,23 +47,23 @@
 
 
 .progress-circle.progress-50:after { 
-    background-image: linear-gradient(-90deg, rgb(241, 48, 129) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(241, 48, 129) 50%, #ebebeb 50%, #ebebeb); 
+    background-image: linear-gradient(-90deg, #f13081 50%, transparent 50%, transparent), linear-gradient(270deg, #f13081 50%, #ebebeb 50%, #ebebeb); 
 }
 
 .progress-circle.progress-75:after { 
-    background-image: linear-gradient(0deg, rgb(241, 48, 129) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(241, 48, 129) 50%, #ebebeb 50%, #ebebeb); 
+    background-image: linear-gradient(0deg, #f13081 50%, transparent 50%, transparent), linear-gradient(270deg, #f13081 50%, #ebebeb 50%, #ebebeb); 
 }
 
 .progress-circle.progress-80:after { 
-    background-image: linear-gradient(18deg, rgb(241, 48, 129) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(241, 48, 129) 50%, #ebebeb 50%, #ebebeb); 
+    background-image: linear-gradient(18deg, #f13081 50%, transparent 50%, transparent), linear-gradient(270deg, #f13081 50%, #ebebeb 50%, #ebebeb); 
 }
 
 .progress-circle.progress-90:after { 
-    background-image: linear-gradient(54deg, rgb(241, 48, 129) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(241, 48, 129) 50%, #ebebeb 50%, #ebebeb); 
+    background-image: linear-gradient(54deg, #f13081 50%, transparent 50%, transparent), linear-gradient(270deg, #f13081 50%, #ebebeb 50%, #ebebeb); 
 }
 
 .progress-circle.progress-100:after { 
-    background-image: linear-gradient(90deg, rgb(241, 48, 129) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(241, 48, 129) 50%, #ebebeb 50%, #ebebeb); 
+    background-image: linear-gradient(90deg, #f13081 50%, transparent 50%, transparent), linear-gradient(270deg, #f13081 50%, #ebebeb 50%, #ebebeb); 
 }
 
 
