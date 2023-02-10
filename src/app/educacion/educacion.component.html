@@ -8,26 +8,27 @@
           <div *ngIf="usuarioLogueado">
             <!-- Button trigger modal prueba 
             <button type="button" *ngIf="usuarioLogueado" routerLink="editPerfil/{{educaciones?.id}}" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>--termina prueba-->
-          <button class="btn"><i class="fa-solid fa-pen-to-square" type="button"></i></button>
-          <button class="btn"><i class="fa-regular fa-floppy-disk" type="button"></i></button>
-          <button class="btn"><i class="fa-solid fa-trash-can" type="button"></i></button>
+           <!-- Button trigger modal -->
+            <button class="btn"><i class="fa-solid fa-pen-to-square" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i></button>
+            <button class="btn"><i class="fa-regular fa-floppy-disk" type="button"></i></button>
+            <button class="btn"><i class="fa-solid fa-trash-can" type="button"></i></button>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container text-center">
-      <div class="row mt-4" *ngFor="let educacion of educaciones"> 
-        <h3 class="titulo-curso p-2"><strong>{{educacion.curso}}</strong></h3>
-        <div class="col-2 p-2">
-          <img src={{educacion.logo}} class= "rounded-circle w-80" alt="Logo" width="100%">
+        <div class="container text-center">
+          <div class="row mt-4" *ngFor="let educacion of educaciones"> 
+            <h3 class="titulo-curso p-2"><strong>{{educacion.curso}}</strong></h3>
+            <div class="col-2 p-2">
+              <img src={{educacion.logo}} class= "rounded-circle w-80" alt="Logo" width="100%">
+            </div>
+            <div class="col-9 descripcion">
+              <p style="text-align: justify;">Institucion: <strong> {{educacion.institucion}}</strong></p>
+              <p style="text-align: justify;">Titulo: <strong> {{educacion.titulo_curso}} </strong></p>
+              <p style="text-align: justify;">Desde: {{educacion.inicio}}</p>
+              <p style="text-align: justify;">Hasta: {{educacion.fin}}</p>
+            </div>
+          </div>
+          <br>
         </div>
-        <div class="col-9 descripcion">
-          <p style="text-align: justify;">Institucion: <strong> {{educacion.institucion}}</strong></p>
-          <p style="text-align: justify;">Titulo: <strong> {{educacion.titulo_curso}} </strong></p>
-          <p style="text-align: justify;">Desde: {{educacion.inicio}}</p>
-          <p style="text-align: justify;">Hasta: {{educacion.fin}}</p>
-        </div>
       </div>
-      <br>
     </div>
   </section>

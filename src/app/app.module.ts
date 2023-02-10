@@ -20,6 +20,13 @@ import { IndexComponent } from './index/index.component';
 import { ErrorComponent } from './error/error.component';
 import { ModalLogoutComponent } from './modals/modal-logout/modal-logout.component';
 import { RedesSocialesComponent } from './redes-sociales/redes-sociales.component';
+import { EducacionModalComponent } from './modales/educacion-modal/educacion-modal.component';
+import { AcercademiModalComponent } from './modales/acercademi-modal/acercademi-modal.component';
+import { BannerModalComponent } from './modales/banner-modal/banner-modal.component';
+import { ExperienciaModalComponent } from './modales/experiencia-modal/experiencia-modal.component';
+import { FooterModalComponent } from './modales/footer-modal/footer-modal.component';
+import { ProyectosModalComponent } from './modales/proyectos-modal/proyectos-modal.component';
+import { SkillModalComponent } from './modales/skill-modal/skill-modal.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,14 @@ import { RedesSocialesComponent } from './redes-sociales/redes-sociales.componen
     IndexComponent,
     ErrorComponent,
     ModalLogoutComponent,
-    RedesSocialesComponent
+    RedesSocialesComponent,
+    EducacionModalComponent,
+    AcercademiModalComponent,
+    BannerModalComponent,
+    ExperienciaModalComponent,
+    FooterModalComponent,
+    ProyectosModalComponent,
+    SkillModalComponent
   ],
   imports: [
     BrowserModule,

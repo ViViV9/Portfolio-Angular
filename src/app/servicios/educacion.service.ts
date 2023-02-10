@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
+  edit(value: any) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http:HttpClient) { }
   getDatos():Observable<any>{
