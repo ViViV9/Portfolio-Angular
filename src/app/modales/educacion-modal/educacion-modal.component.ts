@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EducacionService } from 'src/app/servicios/educacion.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
-
-
 
 @Component({
   selector: 'app-educacion-modal',
@@ -16,26 +13,23 @@ export class EducacionModalComponent implements OnInit {
   educacion: any;
   //arriba sacar any 
 
-  constructor(private formBuilder: FormBuilder, 
+  constructor(
+    private formBuilder: FormBuilder, 
     private Educ:EducacionService, 
     private activatedRoute:ActivatedRoute,
     private router:Router) { 
-      //Creamos el grupo de controles para el formulario 
+    //Controles para el formulario 
     this.form= this.formBuilder.group({
       id:[''],
-      estudio:['',[Validators.required]],
-      inicio:[''],
-      fin:[''],
-      descripcion:['', [Validators.required]],
-      imagen:[''],
-      url:[''],
       institucion:[''],
-      personaid:1,
-   })
-    }
-
-  ngOnInit(): void {
+      logo:[''],
+      curso:['',[Validators.required]],
+      desde:[''],
+      hasta:[''],
+    })
   }
+
+  ngOnInit(): void {}
   
   onUpdate():void{
     this.Educ.edit(this.form.value), {
@@ -45,10 +39,6 @@ export class EducacionModalComponent implements OnInit {
 
   get Educacion(){
     return this.form.get("educacion");
-  }
-
-  get Descripcion(){
-    return this.form.get("descripcion");
   }
 
   onEnviar(event:Event){

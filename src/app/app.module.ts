@@ -24,7 +24,7 @@ import { EducacionModalComponent } from './modales/educacion-modal/educacion-mod
 import { AcercademiModalComponent } from './modales/acercademi-modal/acercademi-modal.component';
 import { BannerModalComponent } from './modales/banner-modal/banner-modal.component';
 import { ExperienciaModalComponent } from './modales/experiencia-modal/experiencia-modal.component';
-import { FooterModalComponent } from './modales/footer-modal/footer-modal.component';
+import { FooterModalComponent, RedesModalComponent } from './modales/redes-modal/redes-modal.component';
 import { ProyectosModalComponent } from './modales/proyectos-modal/proyectos-modal.component';
 import { SkillModalComponent } from './modales/skill-modal/skill-modal.component';
 
@@ -52,7 +52,8 @@ import { SkillModalComponent } from './modales/skill-modal/skill-modal.component
     ExperienciaModalComponent,
     FooterModalComponent,
     ProyectosModalComponent,
-    SkillModalComponent
+    SkillModalComponent,
+    RedesModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<!-- Formulario "Modal Redes Sociales" REVISAR ANTES DE LINKEAR  FALTAN NG-->
+<form class="bg-white rounded p-5 seccion">
+    <!-- Modal -->
+    <div class="modal fade" id="redesModal" tabindex="-1" aria-labelledby="redesModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Redes Sociales</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div  class="modal-body">
+            <input type="hidden" formControlName="id">
+            <div class="mb-3">
+              <label for="habilidadicono" class="form-label">Modificar Icono</label>
+              <input class="form-control" type="url"  formControlName="icono" placeholder="URL Icono de Fort Awesome">
+            </div>
+            <div class="mb-3">
+              <label for="habilidadicono" class="form-label">Modificar URL</label>
+              <input class="form-control" type="url"  formControlName="url" placeholder="URL">
+            </div>
+            <!--[ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched} ESTO VA ARRIBA
+            </div>-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btnLogin">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>

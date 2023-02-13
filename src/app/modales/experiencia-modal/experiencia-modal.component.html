@@ -1,1 +1,44 @@
-<p>experiencia-modal works!</p>
+<!-- Formulario "Modal Experiencia" REVISAR ANTES DE LINKEAR FALTA NG -->
+<form class="bg-white rounded p-5 seccion">
+    <!-- Modal -->
+    <div class="modal fade" id="experienciasModal" tabindex="-1" aria-labelledby="experienciasModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Experiencia Laboral</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div  class="modal-body">
+            <input type="hidden" formControlName="id">
+            <div class="mb-3">
+              <label for="experiencialogo" class="form-label">Modificar Logo</label>
+              <input class="form-control" type="file"  formControlName="Logo" >
+            </div>
+            <div class="mb-3">
+              <label for="experienciainstitucion" class="form-label">Modificar Empresa</label>
+              <input type="text" class="form-control"  formControlName="institucion" placeholder="Nombre de Empresa" >
+            </div>
+            <div class="mb-3">
+             <label for="experienciacargo" class="form-label">Modificar Cargo</label>
+             <input type="text" class="form-control" formControlName="cargo" placeholder="Cargo-Puesto">
+             <!--[ngClass]="{'is-invalid': educacionerrors && educaciontouched, 'is-valid': !educacionerrors && educaciontouched}" ESTO VA ARRIBA-->
+            </div> 
+            <div class="mb-3">
+              <label for="experienciaPeriodoInicio" class="form-label">Modificar Desde</label>
+              <input type="date" class="form-control" formControlName="desde" >
+            </div>
+            <div class="mb-3">
+              <label for="experienciaPeriodoFin" class="form-label">Modificar Hasta</label>
+              <input type="date" class="form-control"  formControlName="hasta">
+            </div>
+             <!--[ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched} ESTO VA ARRIBA
+            </div>-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btnLogin">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>

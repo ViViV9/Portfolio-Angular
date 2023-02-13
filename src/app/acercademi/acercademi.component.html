@@ -9,14 +9,12 @@
       <div class="row info-personal">
         <div class="col-2 "> </div>
         <div class="col-8 align-self-center" id="presentacion">
-          <p>{{sobre_mi}}</p>
-          <p>{{sobre_mi2}}</p>
-          <p>{{sobre_mi3}}</p>
+          <p>{{textsobre_mi}}</p>
           <a href="#" download="#" type="button" class="btn btn-outline">Descargar CV</a>
         </div>
         <div class="col-2">           
           <!-- Button trigger modal prueba 
-            <button type="button" *ngIf="usuarioLogueado" routerLink="editPerfil/{{personas?.id}}" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>--termina prueba-->
+            <button type="button" *ngIf="usuarioLogueado" routerLink="editPerfil/{{personas?.id}}" class="btn btn-close-white"><i class="fa-solid fa-pencil"></i></button>--termina prueba-->
           <button class="btn" *ngIf="usuarioLogueado"><i class="fa-solid fa-pen-to-square" type="button"></i></button>
         </div>
       </div>

@@ -1,4 +1,55 @@
-<!-- Formulario edit Perfil 
+<!-- Formulario "Modal Acerca_de_MI" REVISAR ANTES DE LINKEAR -->
+<form class="bg-white rounded p-5 seccion">
+  <!-- Modal -->
+  <div class="modal fade" id="acercademiModal" tabindex="-1" aria-labelledby="acercademiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Datos personales</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div  class="modal-body">
+        <input type="hidden" formControlName="id">
+        <div class="mb-3">
+            <label for="foto" class="form-label">Modificar Foto de Perfil</label>
+            <input class="form-control" type="file"  formControlName="imagen" >
+        </div>
+        <div class="mb-3">
+            <label for="Nombre" class="form-label">Modificar Nombre</label>
+            <input type="text" class="form-control"  formControlName="nombre" placeholder="Nombre nuevo" >
+        </div>
+        
+        <div class="mb-3">
+        <label for="Apellido" class="form-label">Modificar Apellido</label>
+        <input type="text" class="form-control" formControlName="apellido" placeholder="Apellido nuevo">
+        <!--[ngClass]="{'is-invalid': educacionerrors && educaciontouched, 'is-valid': !educacionerrors && educaciontouched}" ESTO VA ARRIBA-->
+      
+        </div>     
+        <div class="mb-3">
+        <label for="titulo" class="form-label">Modificar Título</label>
+        <input type="text" class="form-control" formControlName="titulo" >
+        </div>
+        <div class="mb-3">
+        <label for="descripcion" class="form-label">Modificar Descripción</label>
+        <textarea type="text" class="form-control"  formControlName="descripcion"></textarea>
+        </div>
+        <!--[ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched} ESTO VA ARRIBA
+            </div>-->
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btnLogin">Guardar</button>
+        </div>
+    </div>
+  </div>
+</div>
+</form>
+
+
+
+
+
+<!-- Formulario edit Perfil SACAR LOS NG 
 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="perfilForm" class="bg-white rounded p-5 seccion"> 
     <div class="modal-content">
       <div class="modal-header">

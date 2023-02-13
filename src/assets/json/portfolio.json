@@ -1,13 +1,11 @@
 {
    
-            "nombre": "Viviana",
-            "apellido": "Verachtert",
-            "titulo": "Desarrolladora Web Full Stack Jr.",
-            "foto_perfil": "./assets/IMG/IMG_20220819_215820.jpg",
-            "sobre_mi": "¡Hola! Me llamo Viviana Verachtert y vivo en Colón, provincia de Entre Ríos, República Argentina.",
-            "sobre_mi2":"Soy Desarrolladora Web Full Stack Jr. Además realizo prendas a medida como modista en Alta Costura.",
-            "sobre_mi3": "Me considero una persona creativa, responsable, con facilidad de adaptación y capacidad para trabajar en equipo. Busco un puesto desafiante y dinámico para continuar sumando experiencia, seguir aprendiendo y creciendo en conocimientos.",
-            "cv": "",
+    "nombre": "Viviana",
+    "apellido": "Verachtert",
+    "titulo": "Desarrolladora Web Full Stack Jr.",
+    "foto_perfil": "./assets/IMG/IMG_20220819_215820.jpg",
+    "textsobre_mi": "¡Hola! Me llamo Viviana Verachtert y vivo en Colón, provincia de Entre Ríos, República Argentina. Soy Desarrolladora Web Full Stack Jr.; además realizo prendas a medida como modista en Alta Costura. Me considero una persona creativa, responsable, con facilidad de adaptación y capacidad para trabajar en equipo. Busco un puesto desafiante y dinámico para continuar sumando experiencia, seguir aprendiendo y creciendo en conocimientos.",
+    "cv": "",
  
     "educaciones": [
         {

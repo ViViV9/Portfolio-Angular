@@ -1,1 +1,37 @@
-<p>skill-modal works!</p>
+<!-- Formulario "Modal Skills" REVISAR ANTES DE LINKEAR  FALTAN LOS NG-->
+<form class="bg-white rounded p-5 seccion">
+    <!-- Modal -->
+    <div class="modal fade" id="skillsModal" tabindex="-1" aria-labelledby="skillsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Skills</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div  class="modal-body">
+            <input type="hidden" formControlName="id">
+            <div class="mb-3">
+              <label for="habilidadicono" class="form-label">Modificar Icono</label>
+              <input class="form-control" type="url"  formControlName="icono" placeholder="URL Icono de Fort Awesome">
+            </div>
+            <div class="mb-3">
+              <label for="habilidadporcentaje" class="form-label">Modificar Porcentaje</label>
+              <input type="number" class="form-control"  formControlName="porcentaje" placeholder="Porcentaje" >
+            </div>
+            <div class="mb-3">
+              <label for="habilidadnombre" class="form-label">Modificar Descripción</label>
+              <input type="text" class="form-control" formControlName="descripcion">
+              <!--[ngClass]="{'is-invalid': educacionerrors && educaciontouched, 'is-valid': !educacionerrors && educaciontouched}" ESTO VA ARRIBA-->    
+              <!--[ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched} ESTO VA ARRIBA
+              </div>-->
+            </div>
+  
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btnLogin">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
