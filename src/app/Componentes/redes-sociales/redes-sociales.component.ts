@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RedesService } from '../servicios/redes.service';
+import { RedesService } from '../../servicios/redes.service';
 
 @Component({
   selector: 'app-redes-sociales',

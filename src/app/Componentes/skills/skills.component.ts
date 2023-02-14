@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HabilidadService } from '../servicios/habilidad.service';
+import { HabilidadService } from '../../servicios/habilidad.service';
 
 @Component({
   selector: 'app-skills',

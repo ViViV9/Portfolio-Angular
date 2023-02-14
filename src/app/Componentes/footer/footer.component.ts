@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RedesFooterService } from '../servicios/redes-footer.service';
+import { RedesFooterService } from '../../servicios/redes-footer.service';
 
 @Component({
   selector: 'app-footer',

@@ -9,26 +9,30 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div  class="modal-body">
-                    <input type="hidden" formControlName="id" [ngModel]="educacion.id">
+                    <input type="hidden" formControlName="id"><!--[ngModel]="educacion.id"--> >
                     <div class="mb-3">
                         <label for="educacionlogo" class="form-label">Modificar Logo</label>
-                        <input class="form-control" type="file"  formControlName="Logo" [ngModel]="educacion.logo">
+                        <input class="form-control" type="file"  formControlName="Logo"><!--[ngModel]="educacion.logo"-->
                     </div>
                     <div class="mb-3">
                         <label for="educacioninstitucion" class="form-label">Modificar Institución</label>
-                        <input type="text" class="form-control"  formControlName="institucion" placeholder="Nombre de la Institucion" [ngModel]="educacion.institucion">
+                        <input type="text" class="form-control"  formControlName="institucion" placeholder="Nombre de la Institucion">
+                        <!--[ngModel]="educacion.institucion">
+                        <p *ngIf="educacioninstitucion.hasError('required')" class="text-danger">
+                            El Nombre del Establecimiento es requerido!
+                          </p> ESTO PONER ARRIBA-->
                     </div> 
                     <div class="mb-3">
                         <label for="educacioncurso" class="form-label">Modificar Curso</label>
-                        <input type="text" class="form-control" formControlName="educacion" placeholder="Curso" [ngModel]="educacion.curso" [ngClass]="{'is-invalid': educacion.errors && educacion.touched, 'is-valid': !educacion.errors && educacion.touched}">
+                        <input type="text" class="form-control" formControlName="educacion" placeholder="Curso"><!--[ngModel]="educacion.curso" [ngClass]="{'is-invalid': educacion.errors && educacion.touched, 'is-valid': !educacion.errors && educacion.touched}">--> 
                     </div>
                     <div class="mb-3">
                         <label for="educacionPeriodoInicio" class="form-label">Modificar Desde</label>
-                        <input type="date" class="form-control" formControlName="desde" [ngModel]="educacion.desde">
+                        <input type="date" class="form-control" formControlName="desde"><!--[ngModel]="educacion.desde"--> 
                     </div>
                     <div class="mb-3">
                         <label for="educacionPeriodoFin" class="form-label">Modificar Hasta</label>
-                        <input type="date" class="form-control"  formControlName="hasta" [ngModel]="educacion.hasta">
+                        <input type="date" class="form-control"  formControlName="hasta"><!--[ngModel]= "educacion.hasta"-->
                     </div>
                 </div>
                 <div class="modal-footer">

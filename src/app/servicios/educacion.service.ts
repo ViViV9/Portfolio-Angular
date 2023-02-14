@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
+  educacion() {
+    throw new Error('Method not implemented.');
+  }
   edit(value: any) {
     throw new Error('Method not implemented.');
   }

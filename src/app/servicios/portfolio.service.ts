@@ -4,8 +4,6 @@ import { HttpClient } from '@angular/common/http';
 //Esto es para suscribirse y que se reciba respuesta de forma asincrona
 import { Observable } from 'rxjs'; 
 
-
-
 @Injectable({
   providedIn: 'root'
 })

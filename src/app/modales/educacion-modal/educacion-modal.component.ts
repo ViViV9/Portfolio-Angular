@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EducacionModalComponent implements OnInit {
   form: FormGroup;
-  educacion: any;
+  
   //arriba sacar any 
 
   constructor(

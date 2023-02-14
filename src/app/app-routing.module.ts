@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ErrorComponent } from './error/error.component';
-import { IndexComponent } from './index/index.component';
-import { LoginComponent } from './login/login.component';
+import { ErrorComponent } from './Componentes/error/error.component';
+import { IndexComponent } from './Componentes/index/index.component';
+import { LoginComponent } from './Componentes/login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { EducacionModalComponent } from './modales/educacion-modal/educacion-modal.component';
 import { ExperienciaModalComponent } from './modales/experiencia-modal/experiencia-modal.component';
