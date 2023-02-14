@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EducacionModalComponent implements OnInit {
   form: FormGroup;
-  
+  educacion: any =[];
   //arriba sacar any 
 
   constructor(
@@ -21,7 +21,7 @@ export class EducacionModalComponent implements OnInit {
     //Controles para el formulario 
     this.form= this.formBuilder.group({
       id:[''],
-      institucion:[''],
+      institucion:['',[Validators.required]],
       logo:[''],
       curso:['',[Validators.required]],
       desde:[''],

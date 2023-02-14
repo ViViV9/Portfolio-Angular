@@ -27,6 +27,7 @@ import { ExperienciaModalComponent } from './modales/experiencia-modal/experienc
 import { ProyectosModalComponent } from './modales/proyectos-modal/proyectos-modal.component';
 import { SkillModalComponent } from './modales/skill-modal/skill-modal.component';
 import { RedesModalComponent } from './modales/redes-modal/redes-modal.component';
+import { DashboardComponent } from './Componentes/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { RedesModalComponent } from './modales/redes-modal/redes-modal.component
     ExperienciaModalComponent,
     ProyectosModalComponent,
     SkillModalComponent,
-    RedesModalComponent
+    RedesModalComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
