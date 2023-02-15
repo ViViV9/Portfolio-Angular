@@ -18,7 +18,7 @@
           <div class="row mt-4" *ngFor="let educacion of educaciones"> 
             <h3 class="titulo-curso p-2"><strong>{{educacion.curso}}</strong></h3>
             <div class="col-2 p-2">
-              <img src={{educacion.logo}} class= "rounded-circle w-80" alt="Logo" width="100%">
+              <img [src]="educacion.logo" class= "rounded-circle w-80" alt="Logo" width="100%">
             </div>
             <div class="col-9 descripcion">
               <p style="text-align: justify;">Institucion: <strong> {{educacion.institucion}}</strong></p>

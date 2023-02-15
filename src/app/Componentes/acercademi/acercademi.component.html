@@ -2,7 +2,7 @@
   <main>
   <section id="sobre-mi" class="about">
     <div class="foto-perfil">
-      <img src= {{foto_perfil}} class="rounded-circle w-50"  alt="Viviana Verachtert" title="..."/>
+      <img [src]="foto_perfil" class="rounded-circle w-50"  alt="Viviana Verachtert" title="..."/>
       <button class="btn" *ngIf="usuarioLogueado"><i class="fa-solid fa-pen-to-square" type="button"></i></button>
     </div>
     <div class="container-fluid text-center">

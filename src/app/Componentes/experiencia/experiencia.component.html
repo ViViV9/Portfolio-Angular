@@ -16,7 +16,7 @@
       </div>
       <div class="row mt-4" *ngFor="let experiencia of experiencias">
         <div class="col-2">
-          <img src={{experiencia.logo}} class= "rounded w-80" alt="" width="100%">
+          <img [src]="experiencia.logo" class= "rounded w-80" alt="" width="100%">
         </div>
         <div class="col-9 descripcion descripcion">
           <p style="text-align: justify;">Empresa: <strong>{{experiencia.institucion}}</strong></p>

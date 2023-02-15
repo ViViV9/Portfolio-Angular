@@ -51,3 +51,7 @@ section.experiencia, section.educacion, section.habilidades, section.proyectos{
 section.login, section.registro{
     height: 50rem;
 }
+
+body {
+    background-color: rgb(246, 250, 248);
+}
