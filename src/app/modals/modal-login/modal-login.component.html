@@ -8,22 +8,18 @@
         </div>
         <div class="modal-body">
           <form >
+            <!--(ngSubmit)="userLogin" esto poner dentro de form-->
             <div class="mb-3">
-        
-              <label for="nombreUsuario" class="form-label">Correo</label>
-        
-              <input type="email" class="form-control" id="nombreUsuario" formControlName="nombreUsuario" aria-describedby ="Usuario" >
-        
+              <label for="nombreUsuario" class="form-label">Email</label>
+              <input type="email"  class="form-control" id="nombreUsuario" formControlName="nombreUsuario" aria-describedby ="Usuario" >
+              <!--[(ngModel)]="user.nombreUsuario" esto poner despues de type email-->
               <div id="idEH" class="form-text">Debe ser un correo válido.</div>
-        
             </div>
         
             <div class="mb-3">
-        
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-        
-              <input type="password" class="form-control" id="exampleInputPassword1">
-        
+              <label for="inputPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="password">
+              <!--[(ngModel)]="user.password"  esto poner despues de password-->
             </div>
         
             <button type="submit" class="btn btn-primary">Enviar</button>

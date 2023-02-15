@@ -9,70 +9,38 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div  class="modal-body">
-                    <input type="hidden" formControlName="id" [ngModel]="educacion.id">
+                    <input type="hidden" formControlName="id" [(ngModel)]="educacion.id">
                     <div class="mb-3">
                         <label for="educacionlogo" class="form-label">Modificar Logo</label>
-                        <input class="form-control" type="file"  formControlName="Logo" [ngModel]="educacion.logo">
+                        <input class="form-control" type="file"  formControlName="Logo" [(ngModel)]="educacion.logo">
                     </div>
                     <div class="mb-3">
                         <label for="educacioninstitucion" class="form-label">Modificar Institución</label>
-                        <input type="text" class="form-control"  formControlName="institucion" placeholder="Nombre de la Institucion" [ngModel]="educacion.institucion">
+                        <input type="text" class="form-control"  formControlName="institucion" placeholder="Nombre de la Institucion" [(ngModel)]="educacion.institucion">
                         <p *ngIf="educacion.hasError('required')" class="text-danger">
-                            El Nombre de la Institucion es requerido!
+                            El Nombre de la Institución es requerido!
                         </p>
                     </div> 
                     <div class="mb-3">
                         <label for="educacioncurso" class="form-label">Modificar Curso</label>
-                        <input type="text" class="form-control" formControlName="educacion" placeholder="Curso" [ngModel]="educacion.curso" [ngClass]="{'is-invalid': educacion.errors && educacion.touched, 'is-valid': !educacion.errors && educacion.touched}"> 
+                        <input type="text" class="form-control" formControlName="educacion" placeholder="Curso" [(ngModel)]="educacion.curso" [ngClass]="{'is-invalid': educacion.errors && educacion.touched, 'is-valid': !educacion.errors && educacion.touched}"> 
                     </div>
                     <div class="mb-3">
                         <label for="educacionPeriodoInicio" class="form-label">Modificar Desde</label>
-                        <input type="date" class="form-control" formControlName="desde" [ngModel]="educacion.desde"> 
+                        <input type="date" class="form-control" formControlName="desde" [(ngModel)]="educacion.desde"> 
                     </div>
                     <div class="mb-3">
                         <label for="educacionPeriodoFin" class="form-label">Modificar Hasta</label>
-                        <input type="date" class="form-control"  formControlName="hasta" [ngModel]="educacion.hasta">
+                        <input type="date" class="form-control"  formControlName="hasta" [(ngModel)]="educacion.hasta">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btnLogin">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Cerrar</button>
+                    <button type="submit" class="btn btnLogin">Guardar Cambios</button>
+                <!--(click)=""poner esto en guardar pero hacer antes el ts-->
                 </div>
             </div>
         </div>
     </div>
 </form>
-
-
-<!-- formulario edit educación REVISAR ANTES DE LINKEAR 
-<form [formGroup]="form" (ngSubmit)="onEnviar($event)"  name="educacionForm" class="bg-white rounded p-5 seccion"> 
-   Modal 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Educación</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" routerLink="/"></button>
-            </div>
-            <div  class="modal-body">
-            <input type="hidden" formControlName="id" [ngModel]="educacion.id">
-          
-            <div class="mb-3">
-            <label for="educacioneducacion" class="form-label">Modificar educacion</label>
-            <input type="text" class="form-control" formControlName="educacion" placeholder="Nombre nuevo" [ngModel]="educacion.educacion">
-            [ngClass]="{'is-invalid': educacionerrors && educaciontouched, 'is-valid': !educacionerrors && educaciontouched}" ESTO VA ARRIBA
-         
-            </div>     
-            
-            <div class="mb-3">
-                <label for="educacionInfo" class="form-label">Modificar Información de educacion Realizado</label>
-                <textarea class="form-control"  rows="3" formControlName="descripcion" [ngModel]="educacion.descripcion" ></textarea>
-                [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched} ESTO VA ARRIBA
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
-</form>-->
 
