@@ -1,9 +1,9 @@
 <!--Footer-->
 <section id="footer" class="footer">
-    <div class="container-fluid bg  py-1 px-sm-1 px-md-5">
+    <div class="container-fluid bg py-1 px-sm-1 px-md-5">
       <div class="container text-center py-3">
-        <div class="d-flex justify-content-center text-white mb-3" *ngFor="let redsocial of redesFotter">
-          <a class="btn btn-social mr-2" href={{redsocial.url}} target="_blank"><i class={{redsocial.icono}}></i></a>
+        <div class="d-flex justify-content-center text-white mb-3" >
+          <a class="btn btn-social mr-2" *ngFor="let redsocial of redesFooter" href={{redsocial.url}} target="_blank"><i [ngClass]=redsocial.icono></i></a>
         </div>
         <p style="color: #f0f8ff;">&copy; Copyright Viviana Verachtert - 2022</p>
         <div class="position-relative">

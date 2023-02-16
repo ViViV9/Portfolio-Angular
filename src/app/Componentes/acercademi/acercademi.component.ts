@@ -8,6 +8,8 @@ import { PortfolioService } from '../../servicios/portfolio.service';
 })
 export class AcercademiComponent implements OnInit {
   textsobre_mi: string= '';
+  textsobre_mi2: string= '';
+  textsobre_mi3: string= '';
   foto_perfil: string= '';
 
   constructor(private porfolioService: PortfolioService) { }
@@ -16,6 +18,8 @@ export class AcercademiComponent implements OnInit {
     this.porfolioService.getDatos().subscribe(datos => {
       console.log(datos);
       this.textsobre_mi=datos.textsobre_mi;
+      this.textsobre_mi2=datos.textsobre_mi2;
+      this.textsobre_mi3=datos.textsobre_mi3;
       this.foto_perfil=datos.foto_perfil;
     });
   }

@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="subtitulo text-center">Hard & Soft Skills</h2>
     </div>
-    <div class="container text-center">
+    <!--<div class="container text-center">
       <div class="row">
         <div class="col-7"></div>
         <div class="col-5">
@@ -14,10 +14,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <div class="row progress-circle-container text-center">
       <div class="col-sm-3 col-md-3 col-lg-3 text-center" *ngFor="let habilidad of habilidades">
-        <div class="progress-circle progress-90"><span><i class={{habilidad.span}}></i></span></div>
+        <div [ngClass]=habilidad.porcentaje><span><i [ngClass]=habilidad.span></i></span></div>
         <p>{{habilidad.nombre}}</p>
       </div>
     </div>

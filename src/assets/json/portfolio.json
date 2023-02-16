@@ -4,7 +4,9 @@
     "apellido": "Verachtert",
     "titulo": "Desarrolladora Web Full Stack Jr.",
     "foto_perfil": "./assets/IMG/IMG_20220819_215820.jpg",
-    "textsobre_mi": "¡Hola! Me llamo Viviana Verachtert y vivo en Colón, provincia de Entre Ríos, República Argentina. Soy Desarrolladora Web Full Stack Jr.; además realizo prendas a medida como modista en Alta Costura. Me considero una persona creativa, responsable, con facilidad de adaptación y capacidad para trabajar en equipo. Busco un puesto desafiante y dinámico para continuar sumando experiencia, seguir aprendiendo y creciendo en conocimientos.",
+    "textsobre_mi": "¡Hola! Me llamo Viviana Verachtert y vivo en la ciudad de Colón, provincia de Entre Ríos, República Argentina." ,
+    "textsobre_mi2": "Soy Desarrolladora Web Full Stack Jr.; además realizo prendas a medida como modista en Alta Costura.", 
+    "textsobre_mi3": "Me considero una persona creativa, responsable, con facilidad de adaptación y capacidad para trabajar en equipo. Busco un puesto desafiante y dinámico para continuar sumando experiencia, seguir aprendiendo y creciendo en conocimientos.",
     "cv": "",
  
     "educaciones": [
@@ -113,49 +115,49 @@
           "id": 1,
           "nombre": "HTML",
           "span": "fa-brands fa-html5",
-          "porcentaje": "progress-90"
+          "porcentaje": "progress-circle progress-90"
         },
         {
             "id": 2,
             "nombre": "CSS",
             "span": "fa-brands fa-css3-alt",
-            "porcentaje": "progress-50"
+            "porcentaje": "progress-circle progress-50"
         },
         {
             "id": 3 ,
             "nombre": "JAVA",
             "span": "fa-brands fa-java",
-            "porcentaje": "progress-50"
+            "porcentaje": "progress-circle progress-50"
         },
         {
             "id": 4 ,
             "nombre": "Bootstrap",
             "span": "fa-brands fa-bootstrap",
-            "porcentaje":"progress-90"
+            "porcentaje":"progress-circle progress-90"
         },
         {
             "id": 5,
             "nombre": "Angular",
             "span": "fa-brands fa-angular",
-            "porcentaje":"progress-80"
+            "porcentaje":"progress-circle progress-75"
         },
         {
             "id": 6,
             "nombre": "Trabajo en Equipo",
             "span": "fa-solid fa-people-group",
-            "porcentaje":"progress-90"
+            "porcentaje":"progress-circle progress-90"
         },
         {
             "id": 7 ,
             "nombre": "Capacidad de aprendizaje",
             "span": "fa-solid fa-book-open",
-            "porcentaje":"progress-75"
+            "porcentaje":"progress-circle progress-80"
         },
         {
             "id": 8 ,
             "nombre": "Resolucion de Problemas",
             "span": "fa-solid fa-lightbulb",
-            "porcentaje":"progress-85"
+            "porcentaje":"progress-circle progress-90"
         }
     ],
       
@@ -180,22 +182,19 @@
         }
     ],
     
-    "redes-footer": [
+    "redesFooter": [
         {
             "id": 1 ,
-            "nombre": "LinkedIn",
             "url": "https://www.linkedin.com/in/viviana-verachtert-709621257/",
             "icono": "fab fa-linkedin-in"
         },
         {
             "id": 2 ,
-            "nombre": "Github",
             "url": "https://github.com/ViViV9",
             "icono": "fab fa-github"
         },
         {
             "id": 3,
-            "nombre": "Instagram",
             "url": "https://instagram.com/vi.ve_code/",
             "icono": "fab fa-instagram"
         }

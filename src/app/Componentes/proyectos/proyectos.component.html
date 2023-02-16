@@ -3,7 +3,7 @@
   <div class="container">
     <h2 class="subtitulo text-center">Proyectos</h2>
     <div class="container text-center">
-      <div class="row">
+      <!--<div class="row">
         <div class="col-7"></div>
         <div class="col-5">
           <div *ngIf="usuarioLogueado">
@@ -12,7 +12,7 @@
             <button class="btn"><i class="fa-solid fa-trash-can" type="button"></i></button>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
     <div class="row" *ngFor="let proyecto of proyectos"> 
       <p class= "texto-proyectos mt-4" style="text-align: justify;">
@@ -23,8 +23,7 @@
         <div class="card">
           <img [src]="proyecto.imagenProyecto" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title text-center">"Mi portfolio"</h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">"Mi portfolio"</h5>
           </div>
         </div>
       </div>
