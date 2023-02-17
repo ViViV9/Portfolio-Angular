@@ -5,19 +5,33 @@
     <div class="row">
       <div class="col-3"></div>
       <div class="col-6">
-        <form>
+        <form [formGroup]="form" (ngSubmit)="onLogin()" novalidate name="loginForm">
           <div class="mb-3">
             <label for="idE" class="form-label">Email</label>
             <input type="email" class="form-control" id="idE" aria-describedby ="idEH">
+            <!--<div *ngIf="Nombre.errors && Nombre.touched">    
+              <p *ngIf="Nombre.hasError('required')" class="text-danger">
+                El usuario es requerido.
+              </p>
+            </div>-->
             <div id="idEH" class="form-text">Debe ser un correo válido.</div>
           </div>
       
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="password" class="form-label">Contraseña</label>
+            <!--<input type="password" class="form-control" id="password"formControlName="password" required [(ngModel)]="password"
+            placeholder="Ingrese su contraseña" [ngClass]="{'is-invalid': Password.errors && Password.touched, 'is-valid': !Password.errors && Password.touched}">
+            <div *ngIf="Password.errors && Password.touched">    
+              <p *ngIf="Password.hasError('required')" class="text-danger">
+                La contraseña es requerida.
+              </p>
+            </div>-->
           </div>
-      
-          <button type="submit" class="btn btn">Enviar</button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+            <button type="submit" class="btn btnLogin text-white" data-bs-dismiss="modal">Iniciar Sesión</button>
+          </div>
+          <!-- Este borrar pero primero probar<button type="submit" class="btn btn">Enviar</button>-->
         </form>
         <small>Si no tenes cuenta<a routerLink="/registro">Registrate</a></small>
       </div>
