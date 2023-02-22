@@ -7,22 +7,31 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form >
+          <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
             <!--(ngSubmit)="userLogin" esto poner dentro de form-->
             <div class="mb-3">
-              <label for="nombreUsuario" class="form-label">Email</label>
-              <input type="email"  class="form-control" id="nombreUsuario" formControlName="nombreUsuario" aria-describedby ="Usuario" >
-              <!--[(ngModel)]="user.nombreUsuario" esto poner despues de type email-->
-              <div id="idEH" class="form-text">Debe ser un correo válido.</div>
+              <label for="email" class="form-label">Email</label>
+              <input type="email"  class="form-control" id="nombreUsuario" formControlName="email" aria-describedby ="Usuario" [class.border-danger]= "MailInvalid">
+              <!--[(ngModel)]="user.nombreUsuario" esto poner despues de type email
+              <div id="idEH" class="form-text">Debe ser un correo válido.</div>-->
             </div>
-        
+            <div *ngIf= "Mail?.errors && Mail?.touched">
+                <p *ngIf= "Mail?.hasError('required')" class="error">
+                  El formato del email debe ser válido.
+                </p>
+              </div>
             <div class="mb-3">
               <label for="inputPassword" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password">
+              <input type="password" formControlName="password" class="form-control" id="password" [class.border-danger]= "PasswordInvalid">
               <!--[(ngModel)]="user.password"  esto poner despues de password-->
             </div>
+            <div *ngIf= "Password?.errors && Password?.touched">
+              <p *ngIf= "Password?.hasError('required')" class="error">
+                La contraseña debe ser de 8 o mas caracteres.
+              </p>
+            </div>
         
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
           </form>
           <br>
           <small> Si no tenes cuenta <a href="../registro">Registrate</a></small>
