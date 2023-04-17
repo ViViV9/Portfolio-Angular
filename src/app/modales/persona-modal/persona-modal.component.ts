@@ -5,16 +5,16 @@ import { Persona } from 'src/app/model/persona';
 import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
-  selector: 'app-persona-modal',
-  templateUrl: './persona-modal.component.html',
+  selector: 'app-persona-modal', 
+  templateUrl: './persona-modal.component.html', 
   styleUrls: ['./persona-modal.component.css']
 })
 export class PersonaModalComponent implements OnInit {
   form: FormGroup;
   personas: Persona []= [];
   
-  constructor(private formBuilder: FormBuilder,
-    private personaServ: PersonaService,
+  constructor(private formBuilder: FormBuilder, 
+    private personaServ: PersonaService, 
     private router:Router) {
       //Controles para el formulario 
     this.form= this.formBuilder.group({
