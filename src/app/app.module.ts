@@ -21,13 +21,14 @@ import { ErrorComponent } from './components/error/error.component';
 import { ModalLogoutComponent } from './modals/modal-logout/modal-logout.component';
 import { RedesSocialesComponent } from './components/redes-sociales/redes-sociales.component';
 import { EducacionModalComponent } from './modales/educacion-modal/educacion-modal.component';
-import { AcercademiModalComponent } from './modales/acercademi-modal/acercademi-modal.component';
+import { PersonaModalComponent } from './modales/persona-modal/persona-modal.component';
 import { BannerModalComponent } from './modales/banner-modal/banner-modal.component';
 import { ExperienciaModalComponent } from './modales/experiencia-modal/experiencia-modal.component';
 import { ProyectosModalComponent } from './modales/proyectos-modal/proyectos-modal.component';
 import { SkillModalComponent } from './modales/skill-modal/skill-modal.component';
 import { RedesModalComponent } from './modales/redes-modal/redes-modal.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavbarDashboardComponent } from './components/navbar-dashboard/navbar-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -48,13 +49,14 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ModalLogoutComponent,
     RedesSocialesComponent,
     EducacionModalComponent,
-    AcercademiModalComponent,
+    PersonaModalComponent,
     BannerModalComponent,
     ExperienciaModalComponent,
     ProyectosModalComponent,
     SkillModalComponent,
     RedesModalComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -65,5 +67,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

@@ -21,4 +21,5 @@ export class BannerComponent implements OnInit {
       this.titulo=datos.titulo;
     });
   }
+  
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RedesService } from '../../servicios/redes.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-redes-sociales',
@@ -8,7 +8,7 @@ import { RedesService } from '../../servicios/redes.service';
 })
 export class RedesSocialesComponent implements OnInit {
   redes: any= [];
-  constructor(private datos:RedesService) { }
+  constructor(private datos: PortfolioService) { }
 
   ngOnInit(): void {
     this.datos.getDatos().subscribe(datos => {

@@ -1,31 +1,47 @@
-<!-- Formulario "Modal Redes Sociales" REVISAR ANTES DE LINKEAR  FALTAN NG-->
-<form class="bg-white rounded p-5 seccion">
-    <!-- Modal -->
-    <div class="modal fade" id="redesModal" tabindex="-1" aria-labelledby="redesModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Redes Sociales</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div  class="modal-body">
+<!-- Modal -->
+  <div class="modal fade" id="redesModal" tabindex="-1" aria-labelledby="redesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Redes Sociales</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div  class="modal-body">
+          <!-- Formulario "Modal Redes Sociales"-->
+          <form class="bg-white rounded p-5 seccion">
             <input type="hidden" formControlName="id">
             <div class="mb-3">
-              <label for="habilidadicono" class="form-label">Modificar Icono</label>
-              <input class="form-control" type="url"  formControlName="icono" placeholder="URL Icono de Fort Awesome">
+              <label for="icono_red" class="form-label">Icono</label>
+              <input class="form-control" type="url"  formControlName="icono_red" placeholder="Enlace del Icono de Fort Awesome"[ngClass]="{'is-invalid': icono_redInvalido, 'is-valid': icono_redValido}">
+              <div *ngIf="icono_red?.errors && icono_red?.touched">
+                  <p *ngIf="icono_red?.hasError('required')" class="text-danger">
+                      Campo requerido.
+                  </p>
+                  <p *ngIf="icono_red?.errors?.['minlength']" class="text-danger">
+                      Debe ser de 3 o más caracteres.
+                  </p>
+              </div>
             </div>
             <div class="mb-3">
-              <label for="habilidadicono" class="form-label">Modificar URL</label>
-              <input class="form-control" type="url"  formControlName="url" placeholder="URL">
+              <label for="url" class="form-label">URL</label>
+              <input class="form-control" type="url"  formControlName="url" placeholder="URL" [ngClass]="{'is-invalid': urlInvalido, 'is-valid': urlValido}">
+              <div *ngIf="url?.errors && url?.touched">
+                  <p *ngIf="url?.hasError('required')" class="text-danger">
+                      Campo requerido.
+                  </p>
+                  <p *ngIf="url?.errors?.['minlength']" class="text-danger">
+                      Debe ser de 3 o más caracteres.
+                  </p>
+              </div>
             </div>
-            <!--[ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched} ESTO VA ARRIBA
-            </div>-->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btnLogin">Guardar</button>
-          </div>
+
+            <div class="modal-footer">
+              <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+              <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </form>
+  </div>
+  

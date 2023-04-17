@@ -5,31 +5,32 @@
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Proyectos</h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Proyectos</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <input type="hidden" formControlName="id">
             <div class="mb-3">
-              <label for="proyectoImg" class="form-label">Modificar Imagen</label>
-              <input class="form-control" type="file"  formControlName="imagen" >
+              <label for="titulo_proyecto" class="form-label">Título del proyecto</label>
+              <textarea type="text" class="form-control" formControlName="titulo_proyecto"></textarea>
+            </div>  
+            <div class="mb-3">
+              <label for="imagen_proyecto" class="form-label">Imagen</label>
+              <input class="form-control" type="file"  formControlName="imagen_proyecto" >
             </div>
             <div class="mb-3">
-              <label for="proyectourl" class="form-label">URL</label>
-              <input type="url" class="form-control"  formControlName="institucion" placeholder="URL" >
+              <label for="url_proyecto" class="form-label">URL</label>
+              <input type="url" class="form-control"  formControlName="url_proyecto" placeholder="URL" >
             </div>
             <div class="mb-3">
-              <label for="proyectodescripcion" class="form-label">Modificar Descripción</label>
-              <textarea type="text" class="form-control" formControlName="educacion" placeholder="Descripcion del proyecto"></textarea>
-              <!--[ngClass]="{'is-invalid': educacionerrors && educaciontouched, 'is-valid': !educacionerrors && educaciontouched}" ESTO VA ARRIBA-->
+              <label for="descripcion" class="form-label">Descripción</label>
+              <textarea type="text" class="form-control" formControlName="descripcion" placeholder="Descripcion del proyecto"></textarea>
             </div>     
-            <!--[ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched} ESTO VA ARRIBA
-            </div>-->
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btnLogin">Guardar</button>
-          </div>
+            <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+            <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
+        </div>
         </div>
       </div>
     </div>

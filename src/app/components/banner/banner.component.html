@@ -1,16 +1,29 @@
 <!--Banner-->
 <header>
-  <section class="banner">
-    <div class="container-fluid text-center">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col-10 align-self-center">
-          <h1 class="nombre text-center">{{nombre}} {{apellido}}</h1>
-          <h3 class="titulo text-center">{{titulo}}</h3> 
-        </div>
-        <div class="col">
+  <section class="banner" id="banner">
+    <div class="container text-center">
+      <!--Menu lateral-->
+      <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="row align-items-center">
+            <div class="col-2"></div>
+            <div class="col-9">
+            </div>
+            <div class="col">
+              <ul class="list-group list-group-horizontal flex-column px-3 mb-3 bottom-0 end-0" id="menu" data-bs-root-margin="0px 0px -30%" class="scrollspy-example p-3 rounded-2" tabindex="0">
+                <li class="list-group-item list-group-item-action rounded-5"><a class="nav-link" href="index#presentacion"><i class="fa-solid fa-house"></i></a><span class="list-item-name">Sobre mi</span></li>
+                <li class="list-group-item list-group-item-action rounded-5"><a class="nav-link" href='index#experiencia'><i class="fa-solid fa-briefcase" ></i></a><span class="list-item-name">Experiencia</span></li>
+                <li class="list-group-item list-group-item-action rounded-5"><a class="nav-link" href="index#educacion"><i class="fa-solid fa-graduation-cap"></i></a><span class="list-item-name">Educación</span></li>
+                <li class="list-group-item list-group-item-action rounded-5"><a class="nav-link" href="index#habilidades"><i class="fa-solid fa-star"></i></a><span class="list-item-name">Habilidades</span></li>
+                <li class="list-group-item list-group-item-action rounded-5"><a class="nav-link" href="index#proyectos"><i class="fa-solid fa-folder"></i></a><span class="list-item-name">Proyectos</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+      <!--Banner-->
+      <h1 class="nombre text-center">{{nombre}} {{apellido}}</h1><br>
+      <h3 class="titulo text-center fs-3">{{titulo}}</h3>  
     </div>
   </section>
 </header>

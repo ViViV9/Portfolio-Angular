@@ -39,12 +39,12 @@
 .row.progress-circle-container.text-center{
     max-width: 100%;
 }
+
 .progress-circle span:after { 
     content: ""; 
     font-weight: 600; 
     color: #8b8b8b; 
 }
-
 
 .progress-circle.progress-50:after { 
     background-image: linear-gradient(-90deg, #f13081 50%, transparent 50%, transparent), linear-gradient(270deg, #f13081 50%, #ebebeb 50%, #ebebeb); 
@@ -68,5 +68,7 @@
 
 
 @keyframes colorload { 
-    0% { opacity: 0; transform: rotate(0deg); } 100% { opacity: 1; transform: rotate(360deg); } 
-} /* ===== termina Circulos de progreso ===== */
+    0% { opacity: 0; transform: rotate(0deg); } 100% { opacity: 1; transform: rotate(360deg); }
+} 
+
+/* ===== termina Circulos de progreso ===== */

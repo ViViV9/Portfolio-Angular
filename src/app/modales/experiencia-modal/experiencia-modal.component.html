@@ -5,38 +5,57 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Experiencia Laboral</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Experiencia Laboral</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div  class="modal-body">
           <input type="hidden" formControlName="id">
+          
           <div class="mb-3">
-            <label for="experiencialogo" class="form-label">Modificar Logo</label>
-            <input class="form-control" type="file"  formControlName="Logo" >
+            <label for="nombre_empresa" class="form-label">Empresa</label>
+            <input type="text" class="form-control"  formControlName="nombre_empresa" placeholder="Nombre de la Empresa" [ngClass]="{'is-invalid': nombre_empresaInvalido, 'is-valid': nombre_empresaValido}">
+            <div *ngIf="nombre_empresa?.errors && nombre_empresa?.touched">
+              <p *ngIf="nombre_empresa?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="nombre_empresa?.errors?.['minlength']" class="text-danger">
+                Debe ser de 3 o más caracteres.
+              </p>
+           </div>
           </div>
+
           <div class="mb-3">
-            <label for="experienciainstitucion" class="form-label">Modificar Empresa</label>
-            <input type="text" class="form-control"  formControlName="institucion" placeholder="Nombre de Empresa" >
-          </div>
-          <div class="mb-3">
-            <label for="experienciacargo" class="form-label">Modificar Cargo</label>
-            <input type="text" class="form-control" formControlName="cargo" placeholder="Cargo-Puesto">
-            <!--[ngClass]="{'is-invalid': educacionerrors && educaciontouched, 'is-valid': !educacionerrors && educaciontouched}" ESTO VA ARRIBA-->
+            <label for="puesto" class="form-label">Puesto</label>
+            <input type="text" class="form-control" formControlName="puesto" placeholder="Puesto" [ngClass]="{'is-invalid': puestoInvalido, 'is-valid': puestoValido}">
+            <div *ngIf="puesto?.errors && puesto?.touched">
+              <p *ngIf="puesto?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="puesto?.errors?.['minlength']" class="text-danger">
+                Debe ser de 3 o más caracteres.
+              </p>
+           </div>
           </div> 
+          
           <div class="mb-3">
-            <label for="experienciaPeriodoInicio" class="form-label">Modificar Desde</label>
+            <label for="logo" class="form-label">Logo</label>
+            <input class="form-control" type="file"  formControlName="logo" placeholder="Logo de la empresa">
+          </div>
+
+          <div class="mb-3">
+            <label for="desde" class="form-label">Desde</label>
             <input type="date" class="form-control" formControlName="desde" >
           </div>
+
           <div class="mb-3">
-            <label for="experienciaPeriodoFin" class="form-label">Modificar Hasta</label>
+            <label for="hasta" class="form-label">Hasta</label>
             <input type="date" class="form-control"  formControlName="hasta">
           </div>
-            <!--[ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched} ESTO VA ARRIBA
-          </div>-->
+  
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="submit" class="btn btnLogin">Guardar</button>
+          <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+          <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
         </div>
       </div>
     </div>

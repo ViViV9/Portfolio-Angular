@@ -1,23 +1,38 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-//import { Observable } from 'rxjs';
-//import { JwtDto } from '../model/jwt-dto';
-//import { LoginUsuario } from '../model/login-usuario';
-//import { NuevoUsuario } from '../model/nuevo-usuario';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { BehaviorSubject, Observable, map } from 'rxjs';
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  //authUrl:string = "aca poner link ";
+  authUrl:string = 'http://localhost:8080/login';
+  currentUserSubject: BehaviorSubject<any>;
+//#91
+  constructor(private httpClient: HttpClient) {
+    console.log("Está corriendo el servicio de autenticación");
+    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
+   }
 
-  constructor(private httpClient: HttpClient) { }
-
-  //public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-   // return this.httpClient.post<any>(this.authUrl + 'nuevo', nuevoUsuario);
-  //}
-  //public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-   // return this.httpClient.post<JwtDto>(this.authUrl + 'login', loginUsuario);
- // }
+loginUser(credenciales: any): Observable<any> {
+ var httpOptions = {
+  headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+ }
+ return this.httpClient.post<any>(this.authUrl, credenciales, httpOptions).pipe(map(data => {
+    sessionStorage.setItem('currentUser', JSON.stringify(data));
+    this.currentUserSubject.next(data);
+    console.log("Servicio esta corriendo" + JSON.stringify(data));
+  return data;
+  }));
 }
+
+get usuarioAutenticado() {
+  return this.currentUserSubject.value;
+}
+
+}
+

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HabilidadService } from '../../servicios/habilidad.service';
-
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
@@ -9,7 +8,7 @@ import { HabilidadService } from '../../servicios/habilidad.service';
 export class SkillsComponent implements OnInit {
   habilidades: any= [];
 
-  constructor(private datos: HabilidadService) { }
+  constructor(private datos: PortfolioService) { }
   usuarioLogueado= true
   ngOnInit(): void {
     this.datos.getDatos().subscribe(datos => {

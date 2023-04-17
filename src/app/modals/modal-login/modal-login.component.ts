@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginuserService } from 'src/app/servicios/loginuser.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { Persona } from 'src/app/model/persona';
+
 
 @Component({
   selector: 'app-modal-login',
@@ -8,21 +13,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./modal-login.component.css']
 })
 export class ModalLoginComponent implements OnInit {
-  //user: User= new User();
   form: FormGroup
-  
-  constructor(private formBuilder: FormBuilder) {
+  email = '';
+  password = '';
+  //authService: any;
+
+  persona: Persona = new Persona("", "", "", "", "", "", "", "", "", "");
+
+  constructor(private formBuilder: FormBuilder, private auhtServ: AuthService, private router: Router) {
     this.form= this.formBuilder.group({
-      password:['', [Validators.required, Validators.
-      minLength(8)]],
       email:['', [Validators.required, Validators.email]],
+      password:['', [Validators.required, Validators.minLength(8)]],
     })
    }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    sessionStorage.setItem('currentUser', "");
+  }
 
 
-  get Mail(){
+  get Email(){
     return this.form.get("email")
   }
 
@@ -34,23 +44,36 @@ export class ModalLoginComponent implements OnInit {
     return this.Password?.touched && !this.Password?.valid;
   }
 
-  get MailInvalid(){
-    return this.Mail?.touched && !this.Mail?.valid;
+  get EmailInvalid(){
+    return this.Email?.touched && !this.Email?.valid;
   }
 
   onEnviar(event: Event){
     event.preventDefault;
 
     if(this.form.valid){
-      alert("Todo salio bien. Enviar Formulario")
-    }else{
-      this.form.markAllAsTouched();
+      console.log(JSON.stringify(this.form.value));
+      this.auhtServ.loginUser(this.form.value).subscribe(data => {
+        console.log("DATA: " + JSON.stringify(data.id));
+        if (data.id) {
+          alert("Puedes editar el portfolio");
+          this.router.navigate(['/dashboard']);
+        } else {
+          alert("Error al iniciar sesión, credenciales no válidas!!!");
+        }
+      }, error => {
+        alert("ERROR!!!");
+      })
+    } else {
+      sessionStorage.setItem('currentUser', "");
+      alert("Error! No tienes acceso");
+      this.router.navigate(['/']);
     }
   }
-  //userLogin(){
-    //console.log(this.user);
-    //this.loginuserservice.
-  //}
   
-
+  limpiar() {
+    console.log("Se limpió el formulario");
+    this.form.reset();
+    this.router.navigate(['/']);
+  }
 }

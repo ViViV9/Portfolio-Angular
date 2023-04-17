@@ -1,7 +1,8 @@
   <!-- Experiencia-->
   <section id="experiencia" class="experiencia container container-fluid rounded shadow-sm">
     <div class="container">
-      <h2 class="subtitulo text-center">Experiencia</h2>
+      <div class="container text-center">
+      <h2 class="subtitulo text-center" id="experiencia">Experiencia</h2>
       <div class="container text-center">
         <!--div class="row">
           <div class="col-7"></div>
@@ -16,10 +17,10 @@
       </div>
       <div class="row mt-4" *ngFor="let experiencia of experiencias">
         <div class="col-2">
-          <img [src]="experiencia.logo" class= "rounded w-80" alt="" width="100%">
+          <img [src]="experiencia.logo_expe" class= "rounded w-80" alt="" width="100%">
         </div>
         <div class="col-9 descripcion descripcion">
-          <p style="text-align: justify;">Empresa: <strong>{{experiencia.institucion}}</strong></p>
+          <p style="text-align: justify;">Empresa: <strong>{{experiencia.nombre_empresa}}</strong></p>
           <p style="text-align: justify;">Cargo: <strong>{{experiencia.puesto}}</strong></p>
           <p style="text-align: justify;">Desde: {{experiencia.desde}}</p>
           <p style="text-align: justify;">Hasta: {{experiencia.hasta}}</p>
@@ -28,4 +29,5 @@
       </div>
       <br>
     </div>
+  </div>
   </section>

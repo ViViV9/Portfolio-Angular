@@ -15,7 +15,7 @@
             "curso": "Argentina Programa",
             "institucion": "Secretaría de Economía del Conocimiento, Ministerio de Economía de la Nación." ,
             "titulo_curso": "Se Programar",
-            "logo": "./assets/IMG/Logo-ArgProg.png",
+            "logo_educ": "./assets/IMG/Logo-ArgProg.png",
             "inicio": "Febrero del año 2022",
             "fin": "Marzo del año 2022"
         },
@@ -24,7 +24,7 @@
             "curso": "Yo Programo",
             "institucion": "Secretaría de Economía del Conocimiento, Ministerio de Economía de la Nación.", 
             "titulo_curso": "Desarrolladora Web Full Stack Jr.",
-            "logo": "./assets/IMG/Logo-ArgProg.png",
+            "logo_educ": "./assets/IMG/Logo-ArgProg.png",
             "inicio": "Junio del año 2022",
             "fin": "Enero del año 2023"
         },
@@ -33,7 +33,7 @@
             "curso": "Idioma Inglés",
             "institucion": "Centro Universitario de Idiomas, UBA.",
             "titulo_curso": "Inglés con orientación en programación.",
-            "logo": "./assets/IMG/Logo-CUI.png",
+            "logo_educ": "./assets/IMG/Logo-CUI.png",
             "inicio": "Diciembre del año 2022",
             "fin": "Enero del año 2023"
         },
@@ -42,7 +42,7 @@
             "curso": "Secundario",
             "institucion": "Dirección de Educación de Jóvenes y Adultos; CGE Provincia de Entre Ríos", 
             "titulo_curso": "Bachiller en Economía y Administración.",
-            "logo": "./assets/IMG/Logo-oportunidades.png",
+            "logo_educ": "./assets/IMG/Logo-oportunidades.png",
             "inicio": "Julio del año 2019",
             "fin": "Julio del año 2022"
         },
@@ -51,7 +51,7 @@
             "curso":"Confeccionista de Alta Costura",
             "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos", 
             "titulo_curso": "Confeccionista de Alta Costura",
-            "logo": "./assets/IMG/Logo-EJA.png",
+            "logo_educ": "./assets/IMG/Logo-EJA.png",
             "inicio": "Marzo del año 2019",
             "fin": "Julio del año 2021"
         },
@@ -60,7 +60,7 @@
             "curso": "Confeccionista de prendas a medida",
             "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos", 
             "titulo_curso": "Modista",
-            "logo": "./assets/IMG/Logo-EJA.png",
+            "logo_educ": "./assets/IMG/Logo-EJA.png",
             "inicio": "Marzo del año 2018",
             "fin": "Diciembre del año 2018"
         },
@@ -69,7 +69,7 @@
             "curso": "Operadora de PC",
             "institucion": "Asociación Civil para la investigación y el desarrollo de la ciencia informática (ACIDCI)", 
             "titulo_curso": "Operadora de PC con orientación administrativa.",
-            "logo": "./assets/IMG/Logo-pc.png",
+            "logo_educ": "./assets/IMG/Logo-pc.png",
             "inicio": "Marzo del año 1999",
             "fin": "Diciembre del año 1999"
         }
@@ -78,33 +78,33 @@
     "experiencias": [
         {
             "id": 1,
-            "institucion": "Independiente",
+            "nombre_empresa": "Independiente",
             "puesto": "Modista",
-            "logo": "./assets/IMG/Viviana-logo-modista.png", 
+            "logo_expe": "./assets/IMG/Viviana-logo-modista.png", 
             "desde": "2019",
             "hasta": "Actualidad"
         },
         {
             "id": 2,
-            "institucion": "Avon",
+            "nombre_empresa": "Avon",
             "puesto": "Vendedora",
-            "logo": "./assets/IMG/Logo-Avon.png", 
+            "logo_expe": "./assets/IMG/Logo-Avon.png", 
             "desde": "2018",
             "hasta": "2019"
         },
         {
             "id": 3,
-            "institucion": "Violetta Cosmeticos",
+            "nombre_empresa": "Violetta Cosmeticos",
             "puesto": "Vendedora",
-            "logo": "./assets/IMG/Logo-Violetta.png", 
+            "logo_expe": "./assets/IMG/Logo-Violetta.png", 
             "desde": "2018",
             "hasta": "2019"
         },
         {
             "id": 3,
-            "institucion": "Tsu Cosmeticos",
+            "nombre_empresa": "Tsu Cosmeticos",
             "puesto": "Vendedora",
-            "logo": "./assets/IMG/Tsu-logo.png", 
+            "logo_expe": "./assets/IMG/Tsu-logo.png", 
             "desde": "2018",
             "hasta": "2019"
         }
@@ -113,49 +113,55 @@
     "habilidades" : [
         {
           "id": 1,
-          "nombre": "HTML",
+          "nombre_skill": "HTML",
           "span": "fa-brands fa-html5",
           "porcentaje": "progress-circle progress-90"
         },
         {
             "id": 2,
-            "nombre": "CSS",
+            "nombre_skill": "CSS",
             "span": "fa-brands fa-css3-alt",
             "porcentaje": "progress-circle progress-50"
         },
         {
             "id": 3 ,
-            "nombre": "JAVA",
+            "nombre_skill": "JAVA",
             "span": "fa-brands fa-java",
             "porcentaje": "progress-circle progress-50"
         },
         {
             "id": 4 ,
-            "nombre": "Bootstrap",
+            "nombre_skill": "Bootstrap",
             "span": "fa-brands fa-bootstrap",
             "porcentaje":"progress-circle progress-90"
         },
         {
             "id": 5,
-            "nombre": "Angular",
+            "nombre_skill": "Angular",
             "span": "fa-brands fa-angular",
             "porcentaje":"progress-circle progress-75"
         },
         {
             "id": 6,
-            "nombre": "Trabajo en Equipo",
+            "nombre_skill": "Ingles",
+            "span": "fa-solid fa-language",
+            "porcentaje":"progress-circle progress-50"
+        },
+        {
+            "id": 7,
+            "nombre_skill": "Trabajo en Equipo",
             "span": "fa-solid fa-people-group",
             "porcentaje":"progress-circle progress-90"
         },
         {
-            "id": 7 ,
-            "nombre": "Capacidad de aprendizaje",
+            "id": 8,
+            "nombre_skill": "Capacidad de aprendizaje",
             "span": "fa-solid fa-book-open",
             "porcentaje":"progress-circle progress-80"
         },
         {
-            "id": 8 ,
-            "nombre": "Resolucion de Problemas",
+            "id": 9,
+            "nombre_skill": "Resolucion de Problemas",
             "span": "fa-solid fa-lightbulb",
             "porcentaje":"progress-circle progress-90"
         }
@@ -164,21 +170,18 @@
     "redes": [
         {
             "id": 1 ,
-            "nombre": "LinkedIn",
             "url": "https://www.linkedin.com/in/viviana-verachtert-709621257/",
-            "icono": "fa-brands fa-linkedin fa-2xl"
+            "icono_red": "fa-brands fa-linkedin fa-2xl"
         },
         {
             "id": 2 ,
-            "nombre": "Github",
             "url": "https://github.com/ViViV9",
-            "icono": "fa-brands fa-github fa-2xl"
+            "icono_red": "fa-brands fa-github fa-2xl"
         },
         {
             "id": 3,
-            "nombre": "Instagram",
             "url": "https://instagram.com/vi.ve_code/",
-            "icono": "fa-brands fa-instagram fa-2xl"
+            "icono_red": "fa-brands fa-instagram fa-2xl"
         }
     ],
     
@@ -202,12 +205,10 @@
     "proyectos": [
         {
             "id": 1,
-            "tituloProyecto": "Porfolio Argentina Programa",
-            "imagenProyecto": "./assets/IMG/Portada-proyecto.png",
-            "urlProyecto": "",
-            "descripcion": "Mi primer proyecto como desarrolladora web full stack, es un Portfolio web; en el cual apliqué diferentes tecnologías, tanto para la parte del FrontEnd como Backend. Creando un diseño resceptivo y adaptable a cualquier dispositivo.",
-            "inicio": "28-06-2022",
-            "fin": "13-01-2023"
+            "titulo_proyecto": "Porfolio Argentina Programa",
+            "imagen_proyecto": "./assets/IMG/Portada-proyecto.png",
+            "url_proyecto": "",
+            "descripcion": "Mi primer proyecto como desarrolladora web full stack, es un Portfolio web; en el cual apliqué diferentes tecnologías, tanto para la parte del FrontEnd como Backend. Creando un diseño resceptivo y adaptable a cualquier dispositivo."
         }
     ]
 }

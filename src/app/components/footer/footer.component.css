@@ -7,11 +7,9 @@ footer{
     padding: 1rem;
 }
 
-.fa-solid.fa-angle-up{
-    color: #f0f8ff;
-}
 
 /* ===== Redes Sociales Footer ====== */
 .fab {
-    color: #f0f8ff;
+    color: rgb(240, 248, 255);
 }
+

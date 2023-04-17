@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     background-attachment: fixed;
     height: 75vh;
 }
@@ -13,10 +13,12 @@
 h1.nombre {
     font-family: Georgia,serif;
     font-style:italic;
-    color: #f13081;
+    color: rgb(241, 48, 129);
     text-shadow: 0.125rem 0.125rem 0.25rem #8d8585;
     font-size: 4rem;
-    transform: translateY(8rem)
+    transform: translateY(8rem);
+    position: relative;
+    z-index: 8;
 }
 
 /* Titulo "Desarroladora Full Stack" */
@@ -24,11 +26,15 @@ h3.titulo {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 2rem;
     transform: translateY(8rem);
+    position: relative;
+    z-index: 4;
 }
 
-/*boton de edicion */
+
+
+/*boton de edicion 
 .btn.banner{
     position: absolute;
     z-index: 0;
     text-shadow: 0.125rem 0.125rem 0.25rem #8d8585;
-}
+}*/

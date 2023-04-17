@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienciaService } from '../../servicios/experiencia.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -8,8 +8,20 @@ import { ExperienciaService } from '../../servicios/experiencia.service';
 })
 export class ExperienciaComponent implements OnInit {
   experiencias: any= [];
+  //sacar lo de arriba y reemplazar con lo de abajo
+//experiencias: Experiencia[]=[];
+//constructor(private servExpe: ExperienciaService) { }
 
-  constructor(private datos: ExperienciaService) { }
+//ngOnInit(): void {
+  //this.listaExperiencia();
+//}
+
+//listaExperiencia():void{
+  //this.servExpe.lista().suscribe(data => {this.experiencias=data})
+//}
+
+//esto eliminar
+  constructor(private datos: PortfolioService) { }
   usuarioLogueado= true
   ngOnInit(): void {
     this.datos.getDatos().subscribe(datos => {
