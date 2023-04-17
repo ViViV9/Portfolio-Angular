@@ -54,17 +54,39 @@
         </div>
       </div>
       <div class="col-4 text-center">
-        <div class="card" id="dashboard">
-          <img src="./assets/IMG/Redes_Sociales.png" class="card-img-top" alt="Edición de redes sociales">
-          <div class="btn-group" role="group" aria-label="First group">
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#redesModal"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#redesModal"><i class="fa-solid fa-trash"></i></a>
-          </div>
+        <div class="card" id="dashboard" data-bs-toggle="modal" href="#exampleModalToggle">
+          <a class="btn"><img src="./assets/IMG/Redes_Sociales.png" class="card-img-top" alt="Edición de redes sociales"></a>
         </div>
       </div>
     </div>
   </div>
 </section> 
+
+<!--Modal para redes-->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen-lg-down modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Redes Sociales</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Elija la opción que desee para crear, editar o eliminar las redes sociales.
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-primary mt-4" type="button" data-bs-target="#redesModal" data-bs-toggle="modal">Redes Sociales navbar</button>
+          <button class="btn btn-primary" type="button" data-bs-target="#redSFooterModal" data-bs-toggle="modal">Redes Sociales footer</button>
+        </div>
+      
+      </div>
+      <div class="modal-footer">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end"> 
+          <button class="btn btn-outline-secondary me-md-2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Volver</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Dahsboard-->
   <app-persona-modal></app-persona-modal>
@@ -73,3 +95,4 @@
   <app-skill-modal></app-skill-modal>
   <app-proyectos-modal></app-proyectos-modal>
   <app-redes-modal></app-redes-modal>
+  <app-rsocialfooter-modal></app-rsocialfooter-modal>

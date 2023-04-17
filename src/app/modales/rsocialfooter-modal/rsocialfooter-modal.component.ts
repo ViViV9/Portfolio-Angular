@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Redsocial } from 'src/app/model/redsocial';
-import { RedesService } from 'src/app/servicios/redes.service';
+import { Redsocialfooter } from 'src/app/model/redsocialfooter';
+import { RedesFooterService } from 'src/app/servicios/redes-footer.service';
 
 @Component({
-  selector: 'app-redes-modal',
-  templateUrl: './redes-modal.component.html',
-  styleUrls: ['./redes-modal.component.css']
+  selector: 'app-rsocialfooter-modal',
+  templateUrl: './rsocialfooter-modal.component.html',
+  styleUrls: ['./rsocialfooter-modal.component.css']
 })
-export class RedesModalComponent implements OnInit {
+export class RsocialfooterModalComponent implements OnInit {
   form: FormGroup;
-  redesSociales: Redsocial[] =[];
-  constructor(
-    private formBuilder: FormBuilder, 
-    private redsService: RedesService,
+  redesSFooter: Redsocialfooter[] =[];
+  constructor( private formBuilder: FormBuilder, 
+    private redSFooterServ: RedesFooterService,
     private router:Router) {
       //Controles para el formulario 
     this.form= this.formBuilder.group({
@@ -25,11 +24,11 @@ export class RedesModalComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    this.cargarRedSocial();
+    this.cargarRedSFooter();
   }
 
   onUpdate():void{
-    this.redsService.editarRedSocial(this.form.value), {
+    this.redSFooterServ.editarRedSFooter(this.form.value), {
     }
   }
 
@@ -46,7 +45,7 @@ export class RedesModalComponent implements OnInit {
   }
 
   get icono_red() {
-    return this.form.get("icono_red");
+    return this.form.get("icono_redF");
   }
 
   get icono_redInvalido(){
@@ -57,8 +56,8 @@ export class RedesModalComponent implements OnInit {
     return !this.icono_red?.errors && this.icono_red?.touched;
   }
 
-  get RedSocial(){
-    return this.form.get("redSocial");
+  get RedSFooter(){
+    return this.form.get("redSFooter");
   }
 
   onEnviar(event:Event){
@@ -71,10 +70,10 @@ export class RedesModalComponent implements OnInit {
     }
   }
 
-  cargarRedSocial(): void{
-    this.redsService.verRedSociales().subscribe({
+  cargarRedSFooter(): void{
+    this.redSFooterServ.verRedSocialesFooter().subscribe({
       next: (data) => {
-        this.redesSociales=data;
+        this.redesSFooter=data;
         console.log("Lista cargada correctamente");
       },
       error: (e) => console.error(e),
@@ -83,7 +82,7 @@ export class RedesModalComponent implements OnInit {
 }
 
   cargarDetalle(id: number){
-    this.redsService.buscarRedSocial(id).subscribe({
+    this.redSFooterServ.buscarRedSFooter(id).subscribe({
         next: (data) => {
           this.form.setValue(data);
         },
@@ -93,9 +92,9 @@ export class RedesModalComponent implements OnInit {
     }
 
   guardar() {
-    let reds = this.form.value;
-    if (reds.id == '') {
-      this.redsService.crearRedSocial(reds).subscribe({
+    let rsfooter = this.form.value;
+    if (rsfooter.id == '') {
+      this.redSFooterServ.crearRedSFooter(rsfooter).subscribe({
         next: (data) => {
           this.limpiar();
         },
@@ -105,7 +104,7 @@ export class RedesModalComponent implements OnInit {
       window.location.reload();
       console.log("Su red social se creo correctamente");
     } else {
-      this.redsService.editarRedSocial(reds).subscribe({
+      this.redSFooterServ.editarRedSFooter(rsfooter).subscribe({
         next: (data) => {
           this.limpiar();
         },
@@ -119,7 +118,7 @@ export class RedesModalComponent implements OnInit {
 
   borrar(id: number) {
     if (confirm("Confirme si desea eliminar")) {
-      this.redsService.borrarRedSocial(id).subscribe(data => {});
+      this.redSFooterServ.borrarRedSFooter(id).subscribe(data => {});
       window.location.reload();
       console.log("Se eliminó correctamente");
     }

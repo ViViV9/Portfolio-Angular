@@ -1,16 +1,17 @@
-<!-- Formulario "Modal Acerca_de_MI" REVISAR ANTES DE LINKEAR -->
-<form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="bg-white rounded p-5 seccion">
-  <!-- Modal -->
-  <div class="modal fade" id="acercademiModal" tabindex="-1" aria-labelledby="acercademiModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Datos personales</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div  class="modal-body">
+<!-- Modal -->
+<div class="modal fade" id="acercademiModal" tabindex="-1" aria-labelledby="acercademiModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Datos personales</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+      </div>
+      
+      <div  class="modal-body">
+        <!-- Formulario "Modal Acerca_de_MI"-->
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="bg-white rounded p-5 seccion">
           <input type="hidden" formControlName="id">
-        
+          
           <div class="mb-3">
             <label for="foto_perfil" class="form-label">Foto de Perfil</label>
             <input class="form-control" type="file"  formControlName="foto_perfil" placeholder="Imagen de perfil(formato 4x4 o cuadrada)">
@@ -66,14 +67,15 @@
             <label for="cv" class="form-label">Curriculum Vitae</label>
             <input class="form-control" type="file"  formControlName="cv" >
           </div>
-        </div>
+        </form>
+      </div>
 
-        <div class="modal-footer">
-          <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-          <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
-        </div>
+      <div class="modal-footer">
+        <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+        <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
       </div>
     </div>
   </div>
-</form>
+</div>
+
 

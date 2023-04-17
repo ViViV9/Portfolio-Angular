@@ -7,13 +7,6 @@ import { Redsocialfooter } from '../model/redsocialfooter';
   providedIn: 'root'
 })
 export class RedesFooterService {
-  redSFooter() {
-    throw new Error('Method not implemented.');
-    }
-  
-   edit(value: any) {
-      throw new Error('Method not implemented.');
-    }
     
    url= 'http://localhost:8080/redSFooter/'
   constructor(private http:HttpClient) { }

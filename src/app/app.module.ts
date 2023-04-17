@@ -29,6 +29,7 @@ import { SkillModalComponent } from './modales/skill-modal/skill-modal.component
 import { RedesModalComponent } from './modales/redes-modal/redes-modal.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarDashboardComponent } from './components/navbar-dashboard/navbar-dashboard.component';
+import { RsocialfooterModalComponent } from './modales/rsocialfooter-modal/rsocialfooter-modal.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { NavbarDashboardComponent } from './components/navbar-dashboard/navbar-d
     SkillModalComponent,
     RedesModalComponent,
     DashboardComponent,
-    NavbarDashboardComponent
+    NavbarDashboardComponent,
+    RsocialfooterModalComponent
   ],
   imports: [
     BrowserModule,

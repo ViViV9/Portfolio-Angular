@@ -8,14 +8,6 @@ import { Redsocial } from '../model/redsocial';
   providedIn: 'root'
 })
 export class RedesService {
-  redSocial() {
-    throw new Error('Method not implemented.');
-    }
-  
-   edit(value: any) {
-      throw new Error('Method not implemented.');
-    }
-    
    url= 'http://localhost:8080/redSocial/'
 
   constructor(private http:HttpClient) { }
