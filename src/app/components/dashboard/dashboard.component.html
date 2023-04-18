@@ -5,30 +5,18 @@
   <div class="container text-center d-flex">
     <div class="row mt-4">
       <div class="col-4 text-center">
-        <div class="card" id="dashboard">
-          <img src="./assets/IMG/Acerca_de_MI.png" class="card-img" alt="Edición de Acerca de mi">
-          <div class="btn-group" role="group" aria-label="First group">
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#acercademiModal"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#acercademiModal"><i class="fa-solid fa-trash"></i></a>
-          </div>
+        <div class="card" id="dashboard" data-bs-toggle="modal" data-bs-target="#acercademiModal">
+          <a class="btn text-light" type="button"><img src="./assets/IMG/Acerca_de_MI.png" class="card-img" alt="Edición de Acerca de mi"></a>
         </div>
       </div>
       <div class="col-4 text-center">
-        <div class="card" id="dashboard">
-          <img src="./assets/IMG/Experiencia.png" class="card-img-top" alt="Edición de experiencia laboral">
-          <div class="btn-group" role="group" aria-label="First group">
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#experienciasModal"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#experienciaModalEd"><i class="fa-solid fa-trash"></i></a>
-          </div>
+        <div class="card" id="dashboard" data-bs-toggle="modal" data-bs-target="#experienciasModal">
+          <a class="btn text-light" type="button" ><img src="./assets/IMG/Experiencia.png" class="card-img-top" alt="Edición de experiencia laboral"></a>
         </div>
       </div>
       <div class="col-4 text-center">
-        <div class="card" id="dashboard">
-          <img src="./assets/IMG/Educacion.png" class="card-img-top" alt="Edición de educación">
-          <div class="btn-group" role="group" aria-label="First group">
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#educacionModal"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#educacionModal"><i class="fa-solid fa-trash"></i></a>
-          </div>
+        <div class="card" id="dashboard" data-bs-toggle="modal" data-bs-target="#educacionModal">
+          <a class="btn text-light" type="button"><img src="./assets/IMG/Educacion.png" class="card-img-top" alt="Edición de educación"></a>
         </div>
       </div>
     </div>
@@ -36,31 +24,24 @@
   <div class="container text-center d-flex">    
     <div class="row mt-4">
       <div class="col-4 text-center">
-        <div class="card" id="dashboard">
-          <img src="./assets/IMG/Skills.png" class="card-img-top" alt="Edición de habilidades">
-          <div class="btn-group" role="group" aria-label="First group">
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#skillsModal"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#skillsModal"><i class="fa-solid fa-trash"></i></a>
-          </div>
+        <div class="card" id="dashboard" data-bs-toggle="modal" data-bs-target="#skillsModal">
+          <a class="btn text-light" type="button"><img src="./assets/IMG/Skills.png" class="card-img-top" alt="Edición de habilidades"></a> 
         </div>
       </div>
       <div class="col-4 text-center">
-        <div class="card" id="dashboard">
-          <img src="./assets/IMG/Proyectos.png" class="card-img-top" alt="Edición de Proyecto">
-          <div class="btn-group" role="group" aria-label="First group">
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid fa-trash"></i></a>
-          </div>
+        <div class="card" id="dashboard" data-bs-toggle="modal" data-bs-target="#proyectosModal">
+          <a class="btn text-light" type="button"><img src="./assets/IMG/Proyectos.png" class="card-img-top" alt="Edición de Proyecto"></a>
         </div>
       </div>
       <div class="col-4 text-center">
         <div class="card" id="dashboard" data-bs-toggle="modal" href="#exampleModalToggle">
-          <a class="btn"><img src="./assets/IMG/Redes_Sociales.png" class="card-img-top" alt="Edición de redes sociales"></a>
+          <a class="btn text-light"><img src="./assets/IMG/Redes_Sociales.png" class="card-img-top" alt="Edición de redes sociales"></a>
         </div>
       </div>
     </div>
   </div>
 </section> 
+
 
 <!--Modal para redes-->
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -86,6 +67,7 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>
 
 
 <!-- Dahsboard-->
@@ -96,3 +78,12 @@
   <app-proyectos-modal></app-proyectos-modal>
   <app-redes-modal></app-redes-modal>
   <app-rsocialfooter-modal></app-rsocialfooter-modal>
+
+
+  <!--botones
+  <div class="card" id="dashboard">
+          <img src="./assets/IMG/Proyectos.png" class="card-img-top" alt="Edición de Proyecto">
+          <div class="btn-group" role="group" aria-label="First group">
+            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid fa-trash"></i></a>
+          </div>-->

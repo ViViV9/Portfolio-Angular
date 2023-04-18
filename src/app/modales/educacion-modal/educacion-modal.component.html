@@ -8,7 +8,7 @@
                 </div>
                 <!--Formulario "Modal Educacion"--> 
                 <div  class="modal-body">
-                    <form [formGroup]="form" name="educacionForm" class="bg-white rounded p-5 seccion">
+                    <form [formGroup]="form" name="educacionForm" class="bg-white rounded seccion">
                         <ul class="p-0">
                             <li *ngFor="let educacion of educaciones" class="d-flex justify-content-between align-items-center m-1 ">
                                 <span>{{educacion.id}} {{educacion.curso|uppercase}}</span>

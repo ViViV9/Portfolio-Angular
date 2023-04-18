@@ -7,6 +7,8 @@
 
 body {
   background-color: rgb(246, 250, 248);
+  height: 100%;
+  width: 100%;
 }
 
 /* ======Foto de Perfil =======*/
@@ -97,7 +99,6 @@ section.experiencia, section.educacion, section.habilidades, section.proyectos{
 /*====================== buttom up  ==================*/
 
 .to-top {
-    background-attachment: scroll;
     position: fixed;
     display: fixed;
     width: 30px;
@@ -107,10 +108,10 @@ section.experiencia, section.educacion, section.habilidades, section.proyectos{
     z-index: 11;
     animation: action 1s infinite alternate;
     right: 50px;
-    z-index: 9999;
+    z-index: 999;
     font-size:30px;
     color: #797575;
-    
+    scroll-behavior: smooth;
   }
   
   @media screen and (max-width: 767px) {
