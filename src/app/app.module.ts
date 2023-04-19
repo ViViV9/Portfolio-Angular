@@ -22,7 +22,6 @@ import { ModalLogoutComponent } from './modals/modal-logout/modal-logout.compone
 import { RedesSocialesComponent } from './components/redes-sociales/redes-sociales.component';
 import { EducacionModalComponent } from './modales/educacion-modal/educacion-modal.component';
 import { PersonaModalComponent } from './modales/persona-modal/persona-modal.component';
-import { BannerModalComponent } from './modales/banner-modal/banner-modal.component';
 import { ExperienciaModalComponent } from './modales/experiencia-modal/experiencia-modal.component';
 import { ProyectosModalComponent } from './modales/proyectos-modal/proyectos-modal.component';
 import { SkillModalComponent } from './modales/skill-modal/skill-modal.component';
@@ -51,7 +50,6 @@ import { RsocialfooterModalComponent } from './modales/rsocialfooter-modal/rsoci
     RedesSocialesComponent,
     EducacionModalComponent,
     PersonaModalComponent,
-    BannerModalComponent,
     ExperienciaModalComponent,
     ProyectosModalComponent,
     SkillModalComponent,

@@ -32,7 +32,7 @@ export class SkillModalComponent implements OnInit {
   }
 
   onUpdate():void{
-    this.skillServ.edit(this.form.value), {
+    this.skillServ.editarHabilidad(this.form.value), {
     }
   }
 

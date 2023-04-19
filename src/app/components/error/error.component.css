@@ -1,9 +1,9 @@
-#error{
+.error{
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    width: 100%;
 }
 
-.error .subtitulo{
-    font-size: 10rem;
+.subtitulo{
+    font-size: 8rem; 
 }

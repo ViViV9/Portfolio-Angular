@@ -8,7 +8,31 @@
         </div>
         <div  class="modal-body">
           <!-- Formulario "Modal Redes Sociales"-->
-          <form [formGroup]="form" name="redSFooterForm" class="bg-white rounded seccion">
+          <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="redSFooterForm" class="bg-white rounded seccion">
+            <ul class="p-0">
+              <li *ngFor="let redfooter of redesSFooter" class="d-flex justify-content-between align-items-center m-1 ">
+                <span>{{redfooter.id}} {{redfooter.icono|uppercase}}</span>
+                <span class="d-flex justify-content-between gap-2">
+                  <!--Lapiz para editar-->
+                  <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(redfooter.id)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+  
+                  <!--Boton para borrar-->
+                  <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(redfooter.id)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </span>
+              </li>
+            </ul>
+            <!--Validacion condicional-->
+            <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+              <div class="input-group-prepend border-0">
+                <span class="input-group-text border-0" id="basic-addon1">ID:</span>
+              </div>
+              <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
+            </div>
+
             <input type="hidden" formControlName="id">
             <div class="mb-3">
               <label for="icono_red" class="form-label">Icono</label>

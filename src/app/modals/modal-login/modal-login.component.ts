@@ -16,7 +16,7 @@ export class ModalLoginComponent implements OnInit {
   form: FormGroup
   email = '';
   password = '';
-  //authService: any;
+  authService: any;
 
   persona: Persona = new Persona("", "", "", "", "", "", "", "", "", "");
 
@@ -30,7 +30,6 @@ export class ModalLoginComponent implements OnInit {
   ngOnInit(): void {
     sessionStorage.setItem('currentUser', "");
   }
-
 
   get Email(){
     return this.form.get("email")

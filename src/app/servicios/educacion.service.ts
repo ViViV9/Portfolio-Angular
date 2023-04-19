@@ -7,13 +7,6 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
- educacion() {
-  throw new Error('Method not implemented.');
-  }
-
- edit(value: any) {
-    throw new Error('Method not implemented.');
-  }
   
  url= 'http://localhost:8080/educacion/'
   constructor(private http:HttpClient) { }
@@ -38,11 +31,6 @@ export class EducacionService {
   public borrarEducacion(id: number): Observable<Educacion>{
     return this.http.delete<any>(this.url + 'borrar/${id}');
   }
-  
-  getDatos():Observable<any>{
-   return this.http.get('./assets/json/portfolio.json');
-  }
-
   
 }
   

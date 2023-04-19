@@ -11,7 +11,7 @@ import { RedesService } from 'src/app/servicios/redes.service';
 })
 export class RedesModalComponent implements OnInit {
   form: FormGroup;
-  redesSociales: Redsocial[] =[];
+  redes: Redsocial[] =[];
   constructor(
     private formBuilder: FormBuilder, 
     private redsService: RedesService,
@@ -74,7 +74,7 @@ export class RedesModalComponent implements OnInit {
   cargarRedSocial(): void{
     this.redsService.verRedSociales().subscribe({
       next: (data) => {
-        this.redesSociales=data;
+        this.redes=data;
         console.log("Lista cargada correctamente");
       },
       error: (e) => console.error(e),

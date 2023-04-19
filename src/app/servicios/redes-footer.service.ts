@@ -11,7 +11,7 @@ export class RedesFooterService {
    url= 'http://localhost:8080/redSFooter/'
   constructor(private http:HttpClient) { }
 
-  public verRedSocialesFooter(): Observable<Redsocialfooter[]>{
+  public verRedSFooter(): Observable<Redsocialfooter[]>{
     return this.http.get<Redsocialfooter[]>(this.url + 'lista');
   }
 

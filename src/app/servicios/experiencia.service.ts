@@ -7,15 +7,8 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  experiencia() {
-    throw new Error('Method not implemented.');
-    }
-  
-  edit(value: any) {
-    throw new Error('Method not implemented.');
-  }
-
   url= 'http://localhost:8080/experiencia/'
+
   constructor(private httpClient:HttpClient) { }
   
   public verExperiencias(): Observable<Experiencia[]>{
@@ -37,18 +30,5 @@ export class ExperienciaService {
   public borrarExperiencia(id: number): Observable<Experiencia>{
     return this.httpClient.delete<any>(this.url + 'borrar/${id}');
   }
-    
-  getDatos():Observable<any>{
-    return this.httpClient.get('./assets/json/portfolio.json');
-  }
 
-  //esto poner en lugar de getdatos
-  //public list():Observable<Experiencia[]>{
-   // return this.httpClient.get<Experiencia[]>('this.url + 'lista');
-  //}
-
-  //public borrar(id: number):Observable<any>{
-  //  return this.httpClient.delete<Experiencia[]>('this.url + 'delete/${id}');
-  //}
-  //aca seguir agregando los metodos para guardar editar ect que tenemos en intelling
 }

@@ -9,11 +9,10 @@ import { AuthService } from './auth.service';
 export class GuardGuard implements CanActivate {
   constructor(private authService:AuthService, private router:Router)
   {}
-  //#91
+  
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      //Falta agregar del JWT en auth para luego quitar los comentarios. 
       let currentUser=this.authService.usuarioAutenticado;
       if (currentUser && currentUser.id){
         this.router.navigate(['dashboard']);

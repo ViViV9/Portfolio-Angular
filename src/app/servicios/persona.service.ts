@@ -31,8 +31,5 @@ public borrarPersona(id: number): Observable<Persona>{
   return this.httpClient.delete<any>(this.url + 'borrar/${id}');
 }
 
-getDatos():Observable<any>{
- return this.httpClient.get('./assets/json/portfolio.json');
-}
 
 }

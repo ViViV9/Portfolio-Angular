@@ -32,7 +32,7 @@ export class ProyectosModalComponent implements OnInit {
   }
 
   onUpdate():void{
-    this.proyectoServ.edit(this.form.value), {
+    this.proyectoServ.editarProyecto(this.form.value), {
     }
   }
 

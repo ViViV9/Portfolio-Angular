@@ -36,7 +36,7 @@ export class EducacionModalComponent implements OnInit {
   }
   
   onUpdate():void{
-    this.educService.edit(this.form.value), {
+    this.educService.editarEducacion(this.form.value), {
     }
   }
 

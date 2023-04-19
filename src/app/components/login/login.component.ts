@@ -3,8 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona';
 import { AuthService } from 'src/app/servicios/auth.service';
-import { TokenService } from 'src/app/servicios/token.service';
-//aca poner el model ej:import { LoginUsuario } from 'src/app/model/login-usuario';
+//import { HttpClient } from '@angular/common/http';
+//import { HttpHeaders } from '@angular/common/http';
+//Estos import esta sin uso, fijarse para desmarcar o eliminar
 
 
 
@@ -14,7 +15,7 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup
+  form: FormGroup;
   email = '';
   password = '';
   authService: any;

@@ -7,15 +7,8 @@ import { Habilidad } from '../model/habilidad';
   providedIn: 'root'
 })
 export class HabilidadService {
-  habilidad() {
-    throw new Error('Method not implemented.');
-    }
-  
-   edit(value: any) {
-      throw new Error('Method not implemented.');
-    }
     
-   url= 'http://localhost:8080/habilidad/'
+ url= 'http://localhost:8080/habilidad/'
   constructor(private http:HttpClient) { }
 
   public verHabilidades(): Observable<Habilidad[]>{
@@ -38,7 +31,4 @@ export class HabilidadService {
     return this.http.delete<any>(this.url + 'borrar/${id}');
   }
 
-  getDatos():Observable<any>{
-    return this.http.get('./assets/json/portfolio.json');
-  }
 }

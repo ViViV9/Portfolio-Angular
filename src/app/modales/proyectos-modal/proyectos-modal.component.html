@@ -1,37 +1,63 @@
-<!-- Formulario "Modal Proyectos" REVISAR ANTES DE LINKEAR FALTAN LOs NG-->
-<form class="bg-white rounded seccion">
-    <!-- Modal -->
-    <div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Proyectos</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Modal -->
+<div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Proyectos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Formulario "Modal Proyectos"-->
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="proyectoForm" class="bg-white rounded seccion">
+          <ul class="p-0">
+            <li *ngFor="let proyecto of proyectos" class="d-flex justify-content-between align-items-center m-1 ">
+              <span>{{proyecto.id}} {{proyecto.titulo_proyecto|uppercase}}</span>
+              <span class="d-flex justify-content-between gap-2">
+                <!--Lapiz para editar-->
+                <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(proyecto.id)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+
+                <!--Boton para borrar-->
+                <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(proyecto.id)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </span>
+            </li>
+          </ul>
+
+          <!--Validacion condicional-->
+          <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+            <div class="input-group-prepend border-0">
+              <span class="input-group-text border-0" id="basic-addon1">ID:</span>
+            </div>
+            <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
           </div>
-          <div class="modal-body">
-            <input type="hidden" formControlName="id">
-            <div class="mb-3">
-              <label for="titulo_proyecto" class="form-label">Título del proyecto</label>
-              <textarea type="text" class="form-control" formControlName="titulo_proyecto"></textarea>
-            </div>  
-            <div class="mb-3">
-              <label for="imagen_proyecto" class="form-label">Imagen</label>
-              <input class="form-control" type="file"  formControlName="imagen_proyecto" >
-            </div>
-            <div class="mb-3">
-              <label for="url_proyecto" class="form-label">URL</label>
-              <input type="url" class="form-control"  formControlName="url_proyecto" placeholder="URL" >
-            </div>
-            <div class="mb-3">
-              <label for="descripcion" class="form-label">Descripción</label>
-              <textarea type="text" class="form-control" formControlName="descripcion" placeholder="Descripcion del proyecto"></textarea>
-            </div>     
+          
+          
+          <input type="hidden" formControlName="id">
+          <div class="mb-3">
+            <label for="titulo_proyecto" class="form-label">Título del proyecto</label>
+            <textarea type="text" class="form-control" formControlName="titulo_proyecto"></textarea>
+          </div>  
+          <div class="mb-3">
+            <label for="imagen_proyecto" class="form-label">Imagen</label>
+            <input class="form-control" type="file" formControlName="imagen_proyecto" >
+          </div>
+          <div class="mb-3">
+            <label for="url_proyecto" class="form-label">URL</label>
+            <input type="url" class="form-control"  formControlName="url_proyecto" placeholder="URL" >
+          </div>
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea type="text" class="form-control" formControlName="descripcion" placeholder="Descripcion del proyecto"></textarea>
           </div>
           <div class="modal-footer">
             <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
             <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
-        </div>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
-  </form>
+  </div>
+</div>

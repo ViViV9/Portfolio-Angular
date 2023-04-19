@@ -71,7 +71,7 @@ export class RsocialfooterModalComponent implements OnInit {
   }
 
   cargarRedSFooter(): void{
-    this.redSFooterServ.verRedSocialesFooter().subscribe({
+    this.redSFooterServ.verRedSFooter().subscribe({
       next: (data) => {
         this.redesSFooter=data;
         console.log("Lista cargada correctamente");

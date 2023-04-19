@@ -7,13 +7,6 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  proyecto() {
-    throw new Error('Method not implemented.');
-    }
-  
-   edit(value: any) {
-      throw new Error('Method not implemented.');
-    }
     
    url= 'http://localhost:8080/proyecto/'
 
@@ -39,8 +32,4 @@ export class ProyectoService {
     return this.http.delete<any>(this.url + 'borrar/${id}');
   }
  
- 
-  getDatos():Observable<any>{
-    return this.http.get('./assets/json/portfolio.json');
-  }
 }

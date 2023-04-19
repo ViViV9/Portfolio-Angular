@@ -32,7 +32,4 @@ export class RedesService {
     return this.http.delete<any>(this.url + 'borrar/${id}');
   }
   
-  getDatos():Observable<any>{
-    return this.http.get('./assets/json/portfolio.json');
-  }
 }

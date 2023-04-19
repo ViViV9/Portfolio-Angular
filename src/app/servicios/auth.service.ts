@@ -9,6 +9,8 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 })
 export class AuthService {
   authUrl:string = 'http://localhost:8080/login';
+  //aca poner ej authUrl o url y agregar el link para unir back de render
+  
   currentUserSubject: BehaviorSubject<any>;
 //#91
   constructor(private httpClient: HttpClient) {
