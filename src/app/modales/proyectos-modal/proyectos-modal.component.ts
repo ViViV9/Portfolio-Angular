@@ -36,6 +36,18 @@ export class ProyectosModalComponent implements OnInit {
     }
   }
 
+  get titulo_proyecto(){
+    return this.form.get("titulo_proyecto");
+  }
+  get url_proyecto(){
+    return this.form.get("url_proyecto");
+  }
+  get imagen_proyecto(){
+    return this.form.get("imagen_proyecto");
+  }
+  get descripcion(){
+    return this.form.get("descripcion");
+  }
   get Proyecto(){
     return this.form.get("proyecto");
   }

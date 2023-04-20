@@ -45,7 +45,7 @@ export class RsocialfooterModalComponent implements OnInit {
   }
 
   get icono_red() {
-    return this.form.get("icono_redF");
+    return this.form.get("icono_red");
   }
 
   get icono_redInvalido(){

@@ -8,6 +8,20 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ProyectosComponent implements OnInit {
   proyectos: any= [];
+  //sacar lo de arriba y reemplazar con lo de abajo
+//proyectos: Proyecto[]=[];
+//constructor(private proyectoServ: ProyectoService) { }
+
+//ngOnInit(): void {
+ // this.cargarProyecto();
+//}
+
+//cargarProyecto():void{
+  //this.servExpe.verProyectos().subscribe(data => {
+   // this.proyectos=data})
+//}
+
+//esto eliminar
 
   constructor(private datos: PortfolioService) { }
   usuarioLogueado= true

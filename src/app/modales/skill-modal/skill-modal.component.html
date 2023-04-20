@@ -38,7 +38,7 @@
 
           <div class="mb-3">
             <label for="nombre_skill" class="form-label">Habilidad</label>
-            <input type="text" class="form-control" formControlName="nombre_skill" placeholder="Describe la habilidad ej: Angular, etc." [ngClass]="{'is-invalid': nombre_skillInvalido, 'is-valid': nombre_skillValido}">
+            <input type="text" class="form-control" formControlName="nombre_skill" placeholder="Habilidad ej: Angular, HTML, idioma, etc." [ngModel]="nombre_skill" [ngClass]="{'is-invalid': nombre_skillInvalido, 'is-valid': nombre_skillValido}">
             <div *ngIf="nombre_skill?.errors && nombre_skill?.touched">
               <p *ngIf="nombre_skill?.hasError('required')" class="text-danger">
                 Campo requerido.
@@ -51,7 +51,7 @@
 
           <div class="mb-3">
             <label for="span" class="form-label">Icono</label>
-            <input type="url" class="form-control" formControlName="span" placeholder="URL Icono de Fort Awesome" [ngClass]="{'is-invalid': spanInvalido, 'is-valid': spanValido}">
+            <input type="url" class="form-control" formControlName="span" placeholder="URL Icono de Fort Awesome" [ngModel]="span" [ngClass]="{'is-invalid': spanInvalido, 'is-valid': spanValido}">
             <div *ngIf="span?.errors && span?.touched">
               <p *ngIf="span?.hasError('required')" class="text-danger">
                 Campo requerido.
@@ -64,7 +64,7 @@
 
           <div class="mb-3">
             <label for="porcentaje" class="form-label">Porcentaje</label>
-            <input type="number" class="form-control"  formControlName="porcentaje" placeholder="Porcentaje" [ngClass]="{'is-invalid': porcentajeInvalido, 'is-valid': porcentajeValido}">
+            <input type="number" class="form-control"  formControlName="porcentaje" placeholder="Porcentaje" [ngModel]="porcentaje" [ngClass]="{'is-invalid': porcentajeInvalido, 'is-valid': porcentajeValido}">
             <div *ngIf="porcentaje?.errors && porcentaje?.touched">
               <p *ngIf="porcentaje?.hasError('required')" class="text-danger">
                 Campo requerido.

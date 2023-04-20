@@ -42,10 +42,6 @@ export class PersonaModalComponent implements OnInit {
    }
   }
 
-  get foto_perfil() {
-    return this.form.get("foto_perfil");
-  }
-
   get nombre() {
     return this.form.get("nombre");
   }
@@ -68,6 +64,30 @@ export class PersonaModalComponent implements OnInit {
 
   get apellidoValido(){
     return !this.apellido?.errors && this.apellido?.touched;
+  }
+
+  get titulo() {
+    return this.form.get("titulo");
+  }
+
+  get foto_perfil() {
+    return this.form.get("foto_perfil");
+  }
+
+  get textsobre_mi() {
+    return this.form.get("textsobre_mi");
+  }
+  
+  get textsobre_mi2() {
+    return this.form.get("textsobre_mi2");
+  }
+
+  get textsobre_mi3() {
+    return this.form.get("textsobre_mi3");
+  }
+
+  get cv(){
+    return this.form.get("cv");
   }
 
   get Persona(){
@@ -106,9 +126,9 @@ export class PersonaModalComponent implements OnInit {
   }
 
   guardar() {
-    let pers = this.form.value;
-    if (pers.id == '') {
-      this.personaServ.crearPersona(pers).subscribe({
+    let perso = this.form.value;
+    if (perso.id == '') {
+      this.personaServ.crearPersona(perso).subscribe({
         next: (data) => {
         this.limpiar();
       },
@@ -118,7 +138,7 @@ export class PersonaModalComponent implements OnInit {
       window.location.reload();
       console.log("La persona se creo correctamente");
     } else {
-      this.personaServ.editarPersona(pers).subscribe({
+      this.personaServ.editarPersona(perso).subscribe({
         next: (data) => {
           this.limpiar();
         },

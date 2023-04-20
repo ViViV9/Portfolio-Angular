@@ -8,6 +8,20 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class RedesSocialesComponent implements OnInit {
   redes: any= [];
+  //sacar lo de arriba y reemplazar con lo de abajo
+ //redes: Redsocial[]=[];
+ //constructor(private redServ:RedesService) { }
+
+ //ngOnInit(): void {
+ // this.cargarRedSocial();
+ //}
+
+//cargarRedSocial():void{
+  //this.redServ.verRedSociales().subscribe(data => {
+   // this.redes=data})
+//}
+
+//esto eliminar
   constructor(private datos: PortfolioService) { }
 
   ngOnInit(): void {

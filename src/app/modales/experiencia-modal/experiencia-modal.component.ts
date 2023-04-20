@@ -32,12 +32,8 @@ export class ExperienciaModalComponent implements OnInit {
   }
 
    onUpdate():void{
-    this.expeService.edit(this.form.value), {
+    this.expeService.editarExperiencia(this.form.value), {
    }
-  }
-
-  get logo() {
-    return this.form.get("logo");
   }
 
   get nombre_empresa() {
@@ -62,6 +58,18 @@ export class ExperienciaModalComponent implements OnInit {
 
   get puestoValido(){
     return !this.puesto?.errors && this.puesto?.touched;
+  }
+
+  get logo() {
+    return this.form.get("logo");
+  }
+
+  get desde() {
+    return this.form.get("desde");
+  }
+
+  get hasta() {
+    return this.form.get("hasta");
   }
 
   get Experiencia(){

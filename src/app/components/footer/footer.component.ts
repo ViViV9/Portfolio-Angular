@@ -9,6 +9,20 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class FooterComponent implements OnInit {
   redesFooter: any= [];
+  //sacar lo de arriba y reemplazar con lo de abajo
+ //redesFooter: Redsocialfooter[]=[];
+ //constructor(private redSFooterServ: Redes-FooterService) { }
+
+ //ngOnInit(): void {
+ // this.cargarRedSFooter();
+ //}
+
+//cargarRedSFooter():void{
+  //this.redSFooterServ.verRedSFooter().subscribe(data => {
+   // this.redesFooter=data})
+//}
+
+//esto eliminar
 
   constructor(private portfolioService: PortfolioService) { }
   usuarioLogueado= true

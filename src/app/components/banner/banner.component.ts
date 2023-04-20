@@ -11,6 +11,21 @@ export class BannerComponent implements OnInit {
   apellido: string= '';
   titulo: string= '';
 
+  //sacar lo de arriba y reemplazar con lo de abajo
+ //personas: Persona[]=[];
+ //constructor(private persoServ: PersonaService) { }
+
+ //ngOnInit(): void {
+ // this.cargarPersona();
+ //}
+
+//cargarPersona():void{
+  //this.persoServ.verPersonas().subscribe(data => {
+   // this.personas=data})
+//}
+
+//esto eliminar
+
   constructor(private porfolioService: PortfolioService) { }
   usuarioLogueado= true
   ngOnInit(): void {

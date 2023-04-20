@@ -40,10 +40,6 @@ export class EducacionModalComponent implements OnInit {
     }
   }
 
-  get logo() {
-    return this.form.get("logo");
-  }
-
   get institucion() {
     return this.form.get("institucion");
   }
@@ -70,6 +66,22 @@ export class EducacionModalComponent implements OnInit {
 
   get Educacion(){
     return this.form.get("educacion");
+  }
+
+  get titulo_curso(){
+    return this.form.get("titulo_curso");
+  }
+  
+  get logo_educ() {
+    return this.form.get("logo_educ");
+  }
+
+  get inicio(){
+    return this.form.get("inicio");
+  }
+
+  get fin(){
+    return this.form.get("fin");
   }
 
   onEnviar(event:Event){
@@ -104,9 +116,9 @@ export class EducacionModalComponent implements OnInit {
     }
 
   guardar() {
-    let edu = this.form.value;
-    if (edu.id == '') {
-      this.educService.crearEducacion(edu).subscribe({
+    let educ = this.form.value;
+    if (educ.id == '') {
+      this.educService.crearEducacion(educ).subscribe({
         next: (data) => {
           this.limpiar();
         },
@@ -116,7 +128,7 @@ export class EducacionModalComponent implements OnInit {
       window.location.reload();
       console.log("Su nueva educación se creo correctamente");
     } else {
-      this.educService.editarEducacion(edu).subscribe({
+      this.educService.editarEducacion(educ).subscribe({
         next: (data) => {
           this.limpiar();
         },

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Experiencia } from 'src/app/model/experiencia';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -13,17 +15,18 @@ export class ExperienciaComponent implements OnInit {
 //constructor(private servExpe: ExperienciaService) { }
 
 //ngOnInit(): void {
-  //this.listaExperiencia();
+ // this.cargarExperiencia();
 //}
 
-//listaExperiencia():void{
-  //this.servExpe.lista().suscribe(data => {this.experiencias=data})
+//cargarExperiencia():void{
+  //this.servExpe.verExperiencias().subscribe(data => {
+   // this.experiencias=data})
 //}
 
 //esto eliminar
-  constructor(private datos: PortfolioService) { }
-  usuarioLogueado= true
-  ngOnInit(): void {
+ constructor(private datos: PortfolioService) { }
+ usuarioLogueado= true
+ ngOnInit(): void {
     this.datos.getDatos().subscribe(datos => {
       this.experiencias= datos.experiencias;
     });

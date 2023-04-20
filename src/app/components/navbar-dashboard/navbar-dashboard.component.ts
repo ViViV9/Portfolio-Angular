@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { RedesService } from 'src/app/servicios/redes.service';
 
 @Component({
@@ -8,8 +9,22 @@ import { RedesService } from 'src/app/servicios/redes.service';
 })
 export class NavbarDashboardComponent implements OnInit {
   redes: any= [];
-  constructor(private datos:RedesService) { }
+  //sacar lo de arriba y reemplazar con lo de abajo
+ //redes: Redsocial[]=[];
+ //constructor(private redServ:RedesService) { }
 
+ //ngOnInit(): void {
+ // this.cargarRedSocial();
+ //}
+
+//cargarRedSocial():void{
+  //this.redServ.verRedSociales().subscribe(data => {
+   // this.redes=data})
+//}
+
+//esto eliminar
+  
+  constructor(private datos: PortfolioService) { }
   ngOnInit(): void {
     this.datos.getDatos().subscribe(datos => {
       this.redes=datos.redes;
