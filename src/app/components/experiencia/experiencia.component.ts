@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+//import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -9,26 +9,26 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  experiencias: any= [];
+  //experiencias: any= [];
   //sacar lo de arriba y reemplazar con lo de abajo
-//experiencias: Experiencia[]=[];
-//constructor(private servExpe: ExperienciaService) { }
+experiencias: Experiencia[]= [];
+constructor(private servExpe: ExperienciaService) { }
 
-//ngOnInit(): void {
- // this.cargarExperiencia();
-//}
+ngOnInit(): void {
+  this.cargarExperiencia();
+}
 
-//cargarExperiencia():void{
-  //this.servExpe.verExperiencias().subscribe(data => {
-   // this.experiencias=data})
-//}
+cargarExperiencia():void{
+  this.servExpe.verExperiencias().subscribe(data => {
+    this.experiencias=data})
+}
 
 //esto eliminar
- constructor(private datos: PortfolioService) { }
- usuarioLogueado= true
- ngOnInit(): void {
-    this.datos.getDatos().subscribe(datos => {
-      this.experiencias= datos.experiencias;
-    });
-  }
+ //constructor(private datos: PortfolioService) { }
+ //usuarioLogueado= true
+ //ngOnInit(): void {
+  //  this.datos.getDatos().subscribe(datos => {
+  //    this.experiencias= datos.experiencias;
+   // });
+  //}
 }

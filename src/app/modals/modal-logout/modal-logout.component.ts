@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal-logout',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalLogoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  cerrarSesion() {
+    if (confirm("Desea salir del Dashboard?")) {
+      this.router.navigate(['/']);
+      console.log("Has cerrado la sesión");
+    }
   }
 
 }

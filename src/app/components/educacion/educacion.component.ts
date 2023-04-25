@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Educacion } from 'src/app/model/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -7,27 +9,27 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educaciones: any= [];
+  //educaciones: any= [];
   //sacar lo de arriba y reemplazar con lo de abajo
- //educaciones: Educacion[]=[];
- //constructor(private educServ: EducacionService) { }
+ educaciones: Educacion[]= [];
+ constructor(private educServ: EducacionService) { }
 
- //ngOnInit(): void {
- // this.cargarEducacion();
- //}
+ ngOnInit(): void {
+  this.cargarEducacion();
+ }
 
-//cargarEducacion():void{
-  //this.educServ.verEducaciones().subscribe(data => {
-   // this.educaciones=data})
-//}
+cargarEducacion():void{
+  this.educServ.verEducaciones().subscribe(data => {
+    this.educaciones=data})
+  }
 
 //esto eliminar
 
-  constructor(private datos: PortfolioService) { }
-  usuarioLogueado= true
-  ngOnInit(): void {
-    this.datos.getDatos().subscribe(datos => {
-      this.educaciones= datos.educaciones;
-    });
-  }
+ // constructor(private datos: PortfolioService) { }
+ // usuarioLogueado= true
+ // ngOnInit(): void {
+  //  this.datos.getDatos().subscribe(datos => {
+   //   this.educaciones= datos.educaciones;
+   // });
+  //}
 }

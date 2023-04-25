@@ -2,13 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, map } from 'rxjs';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl:string = 'http://localhost:8080/login';
+  authUrl:string = 'http://localhost:8080/persona/';
   //aca poner ej authUrl o url y agregar el link para unir back de render
   
   currentUserSubject: BehaviorSubject<any>;

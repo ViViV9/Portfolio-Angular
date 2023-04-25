@@ -14,7 +14,6 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ModalLoginComponent } from './modals/modal-login/modal-login.component';
-import { RegistroComponent } from './registro/registro.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { IndexComponent } from './components/index/index.component';
 import { ErrorComponent } from './components/error/error.component';
@@ -42,7 +41,6 @@ import { RsocialfooterModalComponent } from './modales/rsocialfooter-modal/rsoci
     FooterComponent,
     ProyectosComponent,
     ModalLoginComponent,
-    RegistroComponent,
     SkillsComponent,
     IndexComponent,
     ErrorComponent,

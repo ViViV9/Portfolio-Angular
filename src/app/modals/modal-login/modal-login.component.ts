@@ -16,7 +16,7 @@ export class ModalLoginComponent implements OnInit {
   form: FormGroup
   email = '';
   password = '';
-  authService: any;
+  //authService: any;
 
   persona: Persona = new Persona("", "", "", "", "", "", "", "", "", "");
 
@@ -34,7 +34,14 @@ export class ModalLoginComponent implements OnInit {
   get Email(){
     return this.form.get("email")
   }
+  
+  get EmailValid(){
+    return this.Email?.touched && !this.Email?.valid;
+  }
 
+  get EmailInvalid(){
+    return this.Email?.touched && !this.Email?.valid;
+  }
   get Password(){
     return this.form.get("password");
   }
@@ -43,20 +50,16 @@ export class ModalLoginComponent implements OnInit {
     return this.Password?.touched && !this.Password?.valid;
   }
 
-  get EmailInvalid(){
-    return this.Email?.touched && !this.Email?.valid;
-  }
 
   onEnviar(event: Event){
     event.preventDefault;
-
     if(this.form.valid){
       console.log(JSON.stringify(this.form.value));
       this.auhtServ.loginUser(this.form.value).subscribe(data => {
         console.log("DATA: " + JSON.stringify(data.id));
         if (data.id) {
           alert("Puedes editar el portfolio");
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['dashboard']);
         } else {
           alert("Error al iniciar sesión, credenciales no válidas!!!");
         }

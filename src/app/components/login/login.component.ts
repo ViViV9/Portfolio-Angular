@@ -3,8 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona';
 import { AuthService } from 'src/app/servicios/auth.service';
-//import { HttpClient } from '@angular/common/http';
-//import { HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
+
 //Estos import esta sin uso, fijarse para desmarcar o eliminar
 
 
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   email = '';
   password = '';
-  authService: any;
+  //authService: any;
 
   persona: Persona = new Persona("", "", "", "", "", "", "", "", "", "");
 
@@ -27,7 +28,6 @@ export class LoginComponent implements OnInit {
      this.form= this.formBuilder.group({
       email:['',[Validators.required, Validators.email]],      
       password:['', [Validators.required, Validators.minLength(8)]],
-      //seguir masterclass 8 15:57
     })
   }
 
@@ -37,31 +37,31 @@ export class LoginComponent implements OnInit {
 
 
   get Email(){
-    return this.form.get("email")
+    return this.form.get('email')
   }
-
+ 
+  get EmailValid(){
+    return this.Email?.touched && !this.Email?.valid;
+  }
   get Password(){
-    return this.form.get("password");
+    return this.form.get('password');
   }
 
-  get PasswordInvalid(){
+  get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;
   }
 
-  get EmailInvalid(){
-    return this.Email?.touched && !this.Email?.valid;
-  }
+ 
 
   onEnviar(event: Event){
     event.preventDefault;
-
     if(this.form.valid){
       console.log(JSON.stringify(this.form.value));
       this.authServ.loginUser(this.form.value).subscribe(data => {
         console.log("DATA: " + JSON.stringify(data.id));
         if (data.id) {
           alert("Puedes editar el portfolio");
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['/dashboard']);
         } else {
           alert("Error al iniciar sesión, credenciales no válidas!!!");
         }

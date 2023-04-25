@@ -8,11 +8,11 @@ import { Redsocial } from '../model/redsocial';
   providedIn: 'root'
 })
 export class RedesService {
-   url= 'http://localhost:8080/redSocial/'
+   url= 'http://localhost:8080/redsocial/'
 
   constructor(private http:HttpClient) { }
 
-  public verRedSociales(): Observable<Redsocial[]>{
+  public verRedesSociales(): Observable<Redsocial[]>{
     return this.http.get<Redsocial[]>(this.url + 'lista');
   }
 
@@ -20,12 +20,12 @@ export class RedesService {
     return this.http.get<Redsocial>(this.url+ 'buscar/${id}');
   }
 
-  public crearRedSocial(redSocial: Redsocial): Observable<any>{
-    return this.http.post<any>(this.url + 'crear', redSocial);
+  public crearRedSocial(reds: Redsocial): Observable<any>{
+    return this.http.post<any>(this.url + 'crear', reds);
   }
 
-  public editarRedSocial(redSocial: Redsocial): Observable<any>{
-    return this.http.put<Redsocial>(this.url + 'editar', redSocial);
+  public editarRedSocial(reds: Redsocial): Observable<any>{
+    return this.http.put<Redsocial>(this.url + 'editar', reds);
   }
 
   public borrarRedSocial(id: number): Observable<Redsocial>{

@@ -10,7 +10,7 @@
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="login">
               <div class="login__field">
                 <i class="login__icon fas fa-user"></i>
-                <input type="email" [(ngModel)]="persona.email" class="login__input form-control"  formControlName="email" placeholder="Email" id="nombreUsuario" aria-describedby ="Usuario" [class.border-danger]= "EmailInvalid"
+                <input type="email" class="login__input form-control"  formControlName="email" placeholder="Email" id="email" aria-describedby ="email" 
                 [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
               </div>
               <div *ngIf= "Email?.errors && Email?.touched">
@@ -23,7 +23,7 @@
               </div>
               <div class="login__field">
                 <i class="login__icon fas fa-lock"></i>
-                <input type="password" [(ngModel)]="persona.password" formControlName="password" class="login__input form-control" placeholder="Contraseña" id="password" [class.border-danger]= "PasswordInvalid"
+                <input type="password" formControlName="password" class="login__input form-control" placeholder="Contraseña" id="password" 
                 [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
               </div>              
               <div *ngIf= "Password?.errors && Password?.touched">
@@ -34,8 +34,8 @@
                   La contraseña debe ser de 8 o mas caracteres.
                 </p>
               </div>
-              <button class="button login__submit text-center" type="submit">
-                <span class="button__text">Ingresar</span>
+              <button class="button login__submit text-center" >
+                <span class="button__text" type="submit">Ingresar</span>
                 <i class="button__icon fas fa-chevron-right"></i>
               </button>
             </form>

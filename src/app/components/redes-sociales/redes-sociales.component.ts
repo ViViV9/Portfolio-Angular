@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Redsocial } from 'src/app/model/redsocial';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { RedesService } from 'src/app/servicios/redes.service';
 
 @Component({
   selector: 'app-redes-sociales',
@@ -7,27 +9,27 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./redes-sociales.component.css']
 })
 export class RedesSocialesComponent implements OnInit {
-  redes: any= [];
+  //redes: any= [];
   //sacar lo de arriba y reemplazar con lo de abajo
- //redes: Redsocial[]=[];
- //constructor(private redServ:RedesService) { }
+ redes: Redsocial[]= [];
+ constructor(private redsocServ:RedesService) { }
 
- //ngOnInit(): void {
- // this.cargarRedSocial();
- //}
+ ngOnInit(): void {
+  this.cargarRedSocial();
+ }
 
-//cargarRedSocial():void{
-  //this.redServ.verRedSociales().subscribe(data => {
-   // this.redes=data})
-//}
+cargarRedSocial():void{
+  this.redsocServ.verRedesSociales().subscribe(data => {
+    this.redes=data})
+}
 
 //esto eliminar
-  constructor(private datos: PortfolioService) { }
+ // constructor(private datos: PortfolioService) { }
 
-  ngOnInit(): void {
-    this.datos.getDatos().subscribe(datos => {
-      this.redes=datos.redes;
-    });
-  }
+ // ngOnInit(): void {
+   // this.datos.getDatos().subscribe(datos => {
+   //   this.redes=datos.redes;
+    //});
+ // }
 
 }

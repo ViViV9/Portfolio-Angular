@@ -7,7 +7,7 @@
     "textsobre_mi": "¡Hola! Me llamo Viviana Verachtert y vivo en la ciudad de Colón, provincia de Entre Ríos, República Argentina." ,
     "textsobre_mi2": "Soy Desarrolladora Web Full Stack Jr.; además realizo prendas a medida como modista en Alta Costura.", 
     "textsobre_mi3": "Me considero una persona creativa, responsable, con facilidad de adaptación y capacidad para trabajar en equipo. Busco un puesto desafiante y dinámico para continuar sumando experiencia, seguir aprendiendo y creciendo en conocimientos.",
-    "cv": "",
+    "cv": "./assets/download/VivianaVerachtertCV.pdf",
  
     "educaciones": [
         {
@@ -35,7 +35,7 @@
             "titulo_curso": "Inglés con orientación en programación.",
             "logo_educ": "./assets/IMG/Logo-CUI.png",
             "inicio": "Diciembre del año 2022",
-            "fin": "Enero del año 2023"
+            "fin": "Abril del año 2023"
         },
         {
             "id": 4,
@@ -48,7 +48,7 @@
         },
         {
             "id": 5,
-            "curso":"Confeccionista de Alta Costura",
+            "curso":"Confección de prendas en Alta Costura",
             "institucion": "Dirección de Educación de Jóvenes y Adultos; Consejo General de Educación Provincia de Entre Ríos", 
             "titulo_curso": "Confeccionista de Alta Costura",
             "logo_educ": "./assets/IMG/Logo-EJA.png",
@@ -101,12 +101,20 @@
             "hasta": "2019"
         },
         {
-            "id": 3,
+            "id": 4,
             "nombre_empresa": "Tsu Cosmeticos",
             "puesto": "Vendedora",
             "logo_expe": "./assets/IMG/Tsu-logo.png", 
             "desde": "2018",
             "hasta": "2019"
+        },
+        {
+            "id": 5,
+            "nombre_empresa": "Estudio Administrativo",
+            "puesto": "Administrativa",
+            "logo_expe": "./assets/IMG/Logo-EA.png", 
+            "desde": "2003",
+            "hasta": "2014"
         }
     ],
     
@@ -180,7 +188,7 @@
         },
         {
             "id": 3,
-            "url": "https://instagram.com/vi.ve_code/",
+            "url": "https://instagram.com/vivianavd_/",
             "icono_red": "fa-brands fa-instagram fa-2xl"
         }
     ],
@@ -198,7 +206,7 @@
         },
         {
             "id": 3,
-            "url": "https://instagram.com/vi.ve_code/",
+            "url": "https://instagram.com/vivianavd_/",
             "icono": "fab fa-instagram"
         }
     ],

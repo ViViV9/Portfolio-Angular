@@ -72,7 +72,7 @@ export class RedesModalComponent implements OnInit {
   }
 
   cargarRedSocial(): void{
-    this.redsService.verRedSociales().subscribe({
+    this.redsService.verRedesSociales().subscribe({
       next: (data) => {
         this.redes=data;
         console.log("Lista cargada correctamente");

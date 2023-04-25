@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './components/error/error.component';
 import { IndexComponent } from './components/index/index.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegistroComponent } from './registro/registro.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GuardGuard } from './servicios/guard.guard';
 
@@ -14,7 +13,6 @@ const routes: Routes = [
   {path: 'index', component: IndexComponent},
   {path: 'login', component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate:[GuardGuard]},
-  {path: 'registro', component: RegistroComponent},
   {path: '', redirectTo: '/index', pathMatch:'full'},
   {path:'**', component:ErrorComponent}
 ];

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Redsocial } from 'src/app/model/redsocial';
+//import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { RedesService } from 'src/app/servicios/redes.service';
 
 @Component({
@@ -8,27 +9,28 @@ import { RedesService } from 'src/app/servicios/redes.service';
   styleUrls: ['./navbar-dashboard.component.css']
 })
 export class NavbarDashboardComponent implements OnInit {
-  redes: any= [];
+  //redes: any= [];
   //sacar lo de arriba y reemplazar con lo de abajo
- //redes: Redsocial[]=[];
- //constructor(private redServ:RedesService) { }
+ redes: Redsocial[]=[];
+ constructor(private redServ:RedesService) { }
 
- //ngOnInit(): void {
- // this.cargarRedSocial();
- //}
+ ngOnInit(): void {
+  this.cargarRedSocial();
+ }
 
-//cargarRedSocial():void{
-  //this.redServ.verRedSociales().subscribe(data => {
-   // this.redes=data})
-//}
+cargarRedSocial():void{
+  this.redServ.verRedesSociales().subscribe(data => {
+    this.redes=data
+  })
+}
 
 //esto eliminar
   
-  constructor(private datos: PortfolioService) { }
-  ngOnInit(): void {
-    this.datos.getDatos().subscribe(datos => {
-      this.redes=datos.redes;
-    });
-  }
+ //constructor(private datos: PortfolioService) { }
+  //ngOnInit(): void {
+   //this.datos.getDatos().subscribe(datos => {
+     //this.redes=datos.redes;
+   //});
+ //}
 
 }

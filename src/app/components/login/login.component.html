@@ -2,13 +2,13 @@
 <!-- Formulario de login -->
 <section class="login">
   <div class="container">
-    <div class="row">
+    <div class="row" >
       <div class="col-3"></div>
       <div class="col-6">
-        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <form [formGroup]="form"  name="loginform" (ngSubmit)="onEnviar($event)">
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" [(ngModel)]="persona.email" class="form-control" id="nombreUsuario" formControlName="email" placeholder="email@dominio.com" aria-describedby ="Usuario" [class.border-danger]= "EmailInvalid"
+            <input type="email"  class="form-control" id="nombreUsuario" formControlName="email" placeholder="email@dominio.com" aria-describedby ="email" 
             [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
           </div>
           <div *ngIf= "Email?.errors && Email?.touched">
@@ -21,7 +21,7 @@
             </div>
           <div class="mb-3">
             <label for="inputPassword" class="form-label">Contraseña</label>
-            <input type="password" [(ngModel)]="persona.password" formControlName="password" placeholder="********" class="form-control" id="password" [class.border-danger]= "PasswordInvalid"
+            <input type="password" formControlName="password" placeholder="********" class="form-control" id="password" 
             [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
           </div>
           <div *ngIf= "Password?.errors && Password?.touched">
@@ -35,8 +35,8 @@
           <div class="container fluid text-center">
             <button type="submit" class="btn btn-dark m-2">Iniciar Sesión</button>
           </div>
-          </form>
-        </div>    
+        </form>
+      </div>    
       <div class="col-3"></div>
     </div>
   </div>
