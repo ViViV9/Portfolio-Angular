@@ -36,7 +36,7 @@
             <input type="hidden" formControlName="id">
             <div class="mb-3">
               <label for="icono_red" class="form-label">Icono</label>
-              <input class="form-control" type="url"  formControlName="icono_red" placeholder="Enlace del Icono de Fort Awesome" [ngModel]="icono_red" [ngClass]="{'is-invalid': icono_redInvalido, 'is-valid': icono_redValido}">
+              <input class="form-control" type="url"  formControlName="icono_red" placeholder="Enlace del Icono de Fort Awesome" [ngClass]="{'is-invalid': icono_redInvalido, 'is-valid': icono_redValido}">
               <div *ngIf="icono_red?.errors && icono_red?.touched">
                   <p *ngIf="icono_red?.hasError('required')" class="text-danger">
                       Campo requerido.
@@ -48,7 +48,7 @@
             </div>
             <div class="mb-3">
               <label for="url" class="form-label">URL</label>
-              <input class="form-control" type="url"  formControlName="url" placeholder="URL" [ngModel]="url" [ngClass]="{'is-invalid': urlInvalido, 'is-valid': urlValido}">
+              <input class="form-control" type="url"  formControlName="url" placeholder="URL" [ngClass]="{'is-invalid': urlInvalido, 'is-valid': urlValido}">
               <div *ngIf="url?.errors && url?.touched">
                   <p *ngIf="url?.hasError('required')" class="text-danger">
                       Campo requerido.

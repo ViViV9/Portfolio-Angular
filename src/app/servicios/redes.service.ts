@@ -17,7 +17,7 @@ export class RedesService {
   }
 
   public buscarRedSocial(id: number): Observable<Redsocial> {
-    return this.http.get<Redsocial>(this.url+ 'buscar/${id}');
+    return this.http.get<Redsocial>(this.url + `buscar/${id}`);
   }
 
   public crearRedSocial(reds: Redsocial): Observable<any>{
@@ -29,7 +29,7 @@ export class RedesService {
   }
 
   public borrarRedSocial(id: number): Observable<Redsocial>{
-    return this.http.delete<any>(this.url + 'borrar/${id}');
+    return this.http.delete<any>(this.url + `borrar/${id}`);
   }
   
 }

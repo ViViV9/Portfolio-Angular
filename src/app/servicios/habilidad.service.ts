@@ -16,7 +16,7 @@ export class HabilidadService {
   }
 
   public buscarHabilidad(id: number): Observable<Habilidad> {
-    return this.http.get<Habilidad>(this.url + 'buscar/${id}');
+    return this.http.get<Habilidad>(this.url + `buscar/${id}`);
   }
 
   public crearHabilidad(skill: Habilidad): Observable<any>{
@@ -28,7 +28,7 @@ export class HabilidadService {
   }
 
   public borrarHabilidad(id: number): Observable<Habilidad>{
-    return this.http.delete<any>(this.url + 'borrar/${id}');
+    return this.http.delete<any>(this.url + `borrar/${id}`);
   }
 
 }

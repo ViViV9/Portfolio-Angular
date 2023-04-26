@@ -34,7 +34,7 @@
                         <input type="hidden" formControlName="id">
                         <div class="mb-3">
                             <label for="curso" class="form-label">Curso</label>
-                            <input type="text" class="form-control" formControlName="curso" placeholder="Curso" [ngModel]="curso" [ngClass]="{'is-invalid': cursoInvalido, 'is-valid': cursoValido}">
+                            <input type="text" class="form-control" formControlName="curso" placeholder="Curso" [ngClass]="{'is-invalid': cursoInvalido, 'is-valid': cursoValido}">
                             <div *ngIf="curso?.errors && curso?.touched">
                                 <p *ngIf="curso?.hasError('required')" class="text-danger">
                                     Campo requerido.
@@ -46,7 +46,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="institucion" class="form-label">Institución</label>
-                            <input type="text" class="form-control"  id="educacionEducacion" formControlName="institucion" placeholder="Nombre de la Institución" [ngModel]="institucion" [ngClass]="{'is-invalid': institInvalido, 'is-valid': institValido}">
+                            <input type="text" class="form-control"  id="educacionEducacion" formControlName="institucion" placeholder="Nombre de la Institución" [ngClass]="{'is-invalid': institInvalido, 'is-valid': institValido}">
                             <div *ngIf="institucion?.errors && institucion?.touched">
                                 <p *ngIf="institucion?.hasError('required')" class="text-danger">
                                     Campo requerido.
@@ -58,19 +58,19 @@
                         </div>
                         <div class="mb-3">
                             <label for="titulo_curso" class="form-label">Título del Curso</label>
-                            <input type="text" class="form-control" formControlName="titulo_curso" [ngModel]="titulo_curso"> 
+                            <input type="text" class="form-control" formControlName="titulo_curso"> 
                         </div>
                         <div class="mb-3">
                             <label for="logo_educ" class="form-label">Logo</label>
-                            <input class="form-control" type="file"  formControlName="logo_educ" [ngModel]="logo_educ">
+                            <input class="form-control" type="file"  formControlName="logo_educ">
                         </div>
                         <div class="mb-3">
                             <label for="inicio" class="form-label">Fecha de inicio</label>
-                            <input type="date" class="form-control" formControlName="inicio" [ngModel]="inicio"> 
+                            <input type="date" class="form-control" formControlName="inicio"> 
                         </div>
                         <div class="mb-3">
                             <label for="fin" class="form-label">Fecha de finalización</label>
-                            <input type="date" class="form-control"  formControlName="fin" [ngModel]="fin">
+                            <input type="date" class="form-control"  formControlName="fin">
                         </div>
                         <div class="modal-footer">
                             <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>

@@ -38,7 +38,7 @@
           
           <div class="mb-3">
             <label for="nombre_empresa" class="form-label">Empresa</label>
-            <input type="text" class="form-control"  formControlName="nombre_empresa" placeholder="Nombre de la Empresa" [ngModel]="nombre_empresa" [ngClass]="{'is-invalid': nombre_empresaInvalido, 'is-valid': nombre_empresaValido}">
+            <input type="text" class="form-control"  formControlName="nombre_empresa" placeholder="Nombre de la Empresa" [ngClass]="{'is-invalid': nombre_empresaInvalido, 'is-valid': nombre_empresaValido}">
             <div *ngIf="nombre_empresa?.errors && nombre_empresa?.touched">
               <p *ngIf="nombre_empresa?.hasError('required')" class="text-danger">
                 Campo requerido.
@@ -51,7 +51,7 @@
 
           <div class="mb-3">
             <label for="puesto" class="form-label">Puesto</label>
-            <input type="text" class="form-control" formControlName="puesto" placeholder="Puesto" [ngModel]="puesto" [ngClass]="{'is-invalid': puestoInvalido, 'is-valid': puestoValido}">
+            <input type="text" class="form-control" formControlName="puesto" placeholder="Puesto" [ngClass]="{'is-invalid': puestoInvalido, 'is-valid': puestoValido}">
             <div *ngIf="puesto?.errors && puesto?.touched">
               <p *ngIf="puesto?.hasError('required')" class="text-danger">
                 Campo requerido.
@@ -69,12 +69,12 @@
 
           <div class="mb-3">
             <label for="desde" class="form-label">Desde</label>
-            <input type="date" class="form-control" formControlName="desde" [ngModel]="desde">
+            <input type="date" class="form-control" formControlName="desde">
           </div>
 
           <div class="mb-3">
             <label for="hasta" class="form-label">Hasta</label>
-            <input type="date" class="form-control"  formControlName="hasta" [ngModel]="hasta">
+            <input type="date" class="form-control"  formControlName="hasta">
           </div>
           
           <div class="modal-footer">

@@ -16,7 +16,7 @@ url= 'http://localhost:8080/persona/'
 }
 
 public buscarPersona(id: number): Observable<Persona> {
-  return this.httpClient.get<Persona>(this.url+ 'buscar/${id}');
+  return this.httpClient.get<Persona>(this.url+ `buscar/${id}`);
 }
 
 public crearPersona(persona: Persona): Observable<any>{
@@ -28,7 +28,7 @@ public editarPersona(persona: Persona): Observable<any>{
 }
 
 public borrarPersona(id: number): Observable<Persona>{
-  return this.httpClient.delete<any>(this.url + 'borrar/${id}');
+  return this.httpClient.delete<any>(this.url + `borrar/${id}`);
 }
 
 

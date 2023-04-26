@@ -17,7 +17,7 @@ export class ProyectoService {
   }
 
   public buscarProyecto(id: number): Observable<Proyecto> {
-    return this.http.get<Proyecto>(this.url+ 'buscar/${id}');
+    return this.http.get<Proyecto>(this.url + `buscar/${id}`);
   }
 
   public crearProyecto(proyecto: Proyecto): Observable<any>{
@@ -29,7 +29,7 @@ export class ProyectoService {
   }
 
   public borrarProyecto(id: number): Observable<Proyecto>{
-    return this.http.delete<any>(this.url + 'borrar/${id}');
+    return this.http.delete<any>(this.url + `borrar/${id}`);
   }
  
 }

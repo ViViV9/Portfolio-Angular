@@ -17,7 +17,7 @@ export class EducacionService {
   }
 
   public buscarEducacion(id: number): Observable<Educacion> {
-    return this.http.get<Educacion>(this.url+ 'buscar/${id}');
+    return this.http.get<Educacion>(this.url + `buscar/${id}`);
   }
 
   public crearEducacion(educacion: Educacion): Observable<any>{
@@ -29,7 +29,7 @@ export class EducacionService {
   }
 
   public borrarEducacion(id: number): Observable<Educacion>{
-    return this.http.delete<any>(this.url + 'borrar/${id}');
+    return this.http.delete<any>(this.url + `borrar/${id}`);
   }
   
 }

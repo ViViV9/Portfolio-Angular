@@ -16,7 +16,7 @@ export class RedesFooterService {
   }
 
   public buscarRedSFooter(id: number): Observable<Redsocialfooter> {
-    return this.http.get<Redsocialfooter>(this.url+ 'buscar/${id}');
+    return this.http.get<Redsocialfooter>(this.url + `buscar/${id}`);
   }
 
   public crearRedSFooter(redfooter: Redsocialfooter): Observable<any>{
@@ -28,6 +28,6 @@ export class RedesFooterService {
   }
 
   public borrarRedSFooter(id: number): Observable<Redsocialfooter>{
-    return this.http.delete<any>(this.url + 'borrar/${id}');
+    return this.http.delete<any>(this.url + `borrar/${id}`);
   }
 }

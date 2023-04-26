@@ -1,4 +1,4 @@
-#Portfolioangular
+Proyecto Integrador: Portfolio Web 
 
 Este proyecto fue creado como trabajo final del curso Argentina Programa "Yo Programo"; y es mi primer proyecto como Desarrolladora Web Full Stack Jr.
 
