@@ -9,7 +9,7 @@ import { Proyecto } from '../model/proyecto';
 export class ProyectoService {
     
   // url= 'http://localhost:8080/proyecto/'
-  url= 'https://portfolio-backend-m2u5.onrender.com';
+  url= 'https://portfoliobackendvd.onrender.com/proyecto/';
   constructor(private http:HttpClient) { }
   
   public verProyectos(): Observable<Proyecto[]>{

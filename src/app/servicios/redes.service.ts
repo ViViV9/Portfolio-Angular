@@ -9,7 +9,7 @@ import { Redsocial } from '../model/redsocial';
 })
 export class RedesService {
   // url= 'http://localhost:8080/redsocial/'
-  url= 'https://portfolio-backend-m2u5.onrender.com';
+  url= 'https://portfoliobackendvd.onrender.com/redsocial/';
 
   constructor(private http:HttpClient) { }
 

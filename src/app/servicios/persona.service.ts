@@ -9,7 +9,7 @@ import { Persona } from '../model/persona';
 export class PersonaService {
  
 //url= 'http://localhost:8080/persona/'
-url= 'https://portfolio-backend-m2u5.onrender.com';
+url= 'https://portfoliobackendvd.onrender.com/persona/';
   constructor(private httpClient:HttpClient) { }
 
   public verPersonas(): Observable<Persona[]>{

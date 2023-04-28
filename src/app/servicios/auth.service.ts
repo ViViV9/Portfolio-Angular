@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 })
 export class AuthService {
   //authUrl:string = 'http://localhost:8080/persona/login';
-  authUrl:string = 'https://portfolio-backend-m2u5.onrender.com';
+  authUrl:string = 'https://portfoliobackendvd.onrender.com/persona/login';
   //aca poner ej authUrl o url y agregar el link para unir back de render
   
   currentUserSubject: BehaviorSubject<any>;

@@ -9,7 +9,7 @@ import { Redsocialfooter } from '../model/redsocialfooter';
 export class RedesFooterService {
     
   // url= 'http://localhost:8080/redfooter/'
-  url= 'https://portfolio-backend-m2u5.onrender.com';
+  url= 'https://portfoliobackendvd.onrender.com/redfooter/';
   constructor(private http:HttpClient) { }
 
   public verRedSFooter(): Observable<Redsocialfooter[]>{
