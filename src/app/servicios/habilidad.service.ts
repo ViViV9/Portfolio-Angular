@@ -8,7 +8,8 @@ import { Habilidad } from '../model/habilidad';
 })
 export class HabilidadService {
     
- url= 'http://localhost:8080/habilidad/'
+ //url= 'http://localhost:8080/habilidad/'
+  url= 'https://portfolio-backend-m2u5.onrender.com';
   constructor(private http:HttpClient) { }
 
   public verHabilidades(): Observable<Habilidad[]>{

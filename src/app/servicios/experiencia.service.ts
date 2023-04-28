@@ -7,8 +7,9 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url= 'http://localhost:8080/experiencia/'
-
+  //url= 'http://localhost:8080/experiencia/'
+  url= 'https://portfolio-backend-m2u5.onrender.com';
+  
   constructor(private httpClient:HttpClient) { }
   
   public verExperiencias(): Observable<Experiencia[]>{

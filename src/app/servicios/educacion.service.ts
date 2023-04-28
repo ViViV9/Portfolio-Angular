@@ -8,7 +8,8 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
   
- url= 'http://localhost:8080/educacion/'
+ //url= 'http://localhost:8080/educacion/'
+ url= 'https://portfolio-backend-m2u5.onrender.com';
   constructor(private http:HttpClient) { }
 
 

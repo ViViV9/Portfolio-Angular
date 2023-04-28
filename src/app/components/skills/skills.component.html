@@ -6,7 +6,7 @@
     </div>
     <br>
     <div class="row progress-circle-container text-center">
-      <div class="col-sm-3 col-md-3 col-lg-3 text-center" *ngFor="let habilidad of habilidades">
+      <div class="col-sm-4 col-md-4 col-lg-4 text-center" *ngFor="let habilidad of habilidades">
         <div [ngClass]=habilidad.porcentaje><span><i [ngClass]=habilidad.span></i></span></div>
         <p>{{habilidad.nombre_skill}}</p>
       </div>

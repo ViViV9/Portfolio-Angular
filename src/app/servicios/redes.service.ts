@@ -8,7 +8,8 @@ import { Redsocial } from '../model/redsocial';
   providedIn: 'root'
 })
 export class RedesService {
-   url= 'http://localhost:8080/redsocial/'
+  // url= 'http://localhost:8080/redsocial/'
+  url= 'https://portfolio-backend-m2u5.onrender.com';
 
   constructor(private http:HttpClient) { }
 
