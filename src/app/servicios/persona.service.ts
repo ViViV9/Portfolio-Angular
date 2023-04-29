@@ -12,25 +12,24 @@ export class PersonaService {
 url= 'https://portfoliobackendvd.onrender.com/persona/';
   constructor(private httpClient:HttpClient) { }
 
-  public verPersonas(): Observable<Persona[]>{
+ public verPersonas(): Observable<Persona[]>{
   return this.httpClient.get<Persona[]>(this.url + 'lista');
 }
 
-public buscarPersona(id: number): Observable<Persona> {
-  return this.httpClient.get<Persona>(this.url+ `buscar/${id}`);
+ public buscarPersona(id: number): Observable<Persona> {
+  return this.httpClient.get<Persona>(this.url + `buscar/${id}`);
 }
 
-public crearPersona(persona: Persona): Observable<any>{
+  public crearPersona(persona: Persona): Observable<any>{
   return this.httpClient.post<any>(this.url + 'crear', persona);
 }
 
-public editarPersona(persona: Persona): Observable<any>{
+ public editarPersona(persona: Persona): Observable<any>{
   return this.httpClient.put<Persona>(this.url + 'editar', persona);
 }
 
-public borrarPersona(id: number): Observable<Persona>{
-  return this.httpClient.delete<any>(this.url + `borrar/${id}`);
-}
-
+///public borrarPersona(id: number): Observable<Persona>{
+  //return this.httpClient.delete<any>(this.url + `borrar/${id}`);
+///}
 
 }

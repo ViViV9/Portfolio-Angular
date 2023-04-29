@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from '../../servicios/portfolio.service';
+//import { PortfolioService } from '../../servicios/portfolio.service';
 import { PersonaService } from 'src/app/servicios/persona.service';
 import { Persona } from 'src/app/model/persona';
 
@@ -27,7 +27,7 @@ export class AcercademiComponent implements OnInit {
     this.personas=data})
 }
 
-//esto eliminar
+
   //constructor(private porfolioService: PortfolioService) { }
   //usuarioLogueado= true
  // ngOnInit(): void {

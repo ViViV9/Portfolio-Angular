@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { identity } from 'rxjs';
 import { Persona } from 'src/app/model/persona';
 import { PersonaService } from 'src/app/servicios/persona.service';
 
@@ -13,9 +14,7 @@ export class PersonaModalComponent implements OnInit {
   form: FormGroup;
   personas: Persona []= [];
   
-  constructor(private formBuilder: FormBuilder, 
-    private personaServ: PersonaService, 
-    private router:Router) {
+  constructor(private formBuilder: FormBuilder, private personaServ: PersonaService, private router:Router) {
       //Controles para el formulario 
     this.form= this.formBuilder.group({
       id:[''],
@@ -31,7 +30,7 @@ export class PersonaModalComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    this.cargarPersona();
+   this.cargarPersona();
   }
   
   onUpdate():void{
@@ -150,13 +149,13 @@ export class PersonaModalComponent implements OnInit {
     }
   }
 
-  borrar(id: number) {
-   if (confirm("Confirme si desea eliminar")) {
-      this.personaServ.borrarPersona(id).subscribe(data => {});
-      window.location.reload();
-      console.log("Se eliminó correctamente");
-    }
-  }
+  //borrar(id: number) {
+   //if (confirm("Confirme si desea eliminar")) {
+   //   this.personaServ.borrarPersona(id).subscribe(data => {});
+    //  window.location.reload();
+    //  console.log("Se eliminó correctamente");
+    //}
+  //}
 
  limpiar() {
   console.log("Se limpió el formulario");
