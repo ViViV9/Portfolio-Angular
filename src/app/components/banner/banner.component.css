@@ -10,26 +10,74 @@
 }
 
 /* Nombre y Apellido*/
-h1.nombre {
+.display-1{
     font-family: Georgia,serif;
     font-style:italic;
     color: rgb(241, 48, 129);
     text-shadow: 0.125rem 0.125rem 0.25rem #8d8585;
-    font-size: 4rem;
     transform: translateY(8rem);
-    position: relative;
-    z-index: 8;
 }
 
 /* Titulo "Desarroladora Full Stack" */
-h3.titulo {
+.titulo-banner {
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 2rem;
-    transform: translateY(8rem);
-    position: relative;
-    z-index: 4;
+    transform: translateY(6rem);
 }
 
+/* Menú Lateral*/
+#menu{
+    z-index: 6;
+    position: absolute;
+  }
+
+  .list-group-item.list-group-item-action {
+    list-style-type: none;
+    flex-basis: 80%;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0);
+    transition: transform 0.5s ease, opacity 0.2s ease;
+    cursor: pointer;
+    color: #2d2d2e;
+  }
+  
+  .list-item-name {
+    font-size: 14px;
+    font-weight: 200;
+    position: absolute;
+    transform: translate(0, 50px);
+    transition: transform 0.5s ease, opacity 0.2s ease;
+    opacity: 0;
+  }
+  
+  .list-group-item.list-group-item-action:hover {
+    color: rgb(247, 22, 108);
+    transform: translateY(-5px);
+    background-color: transparent;
+  }
+
+  .list-group-item.list-group-item-action:hover .list-item-name {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  
+  @media (max-width: 200px) {
+    .navbar-menu {
+      flex-direction: column;
+      align-items: right;
+      max-width: 80px;
+    }
+
+    .list-group-item.list-group-item-action {
+        flex-basis: auto;
+      }
+      
+    .list-group-item.list-group-item-action:hover .list-item-name {
+      transform: translateY(25px);
+    }
+  }
 
 
 /*boton de edicion 

@@ -40,62 +40,6 @@ section.experiencia, section.educacion, section.habilidades, section.proyectos{
   background-image: linear-gradient(to top, #f7628f 0%, #fe5196 100%);
 }
 
-
-
-/* Menú Lateral*/
-#menu{
-    z-index: 900;
-    position: absolute;
-  }
-
-  
-  .list-group-item.list-group-item-action {
-    list-style-type: none;
-    flex-basis: 80%;
-    min-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.5s ease, opacity 0.2s ease;
-    cursor: pointer;
-    color: #2d2d2e;
-  }
-  
-  .list-item-name {
-    font-size: 11px;
-    font-weight: 200;
-    position: absolute;
-    transform: translate(0, 50px);
-    transition: transform 0.5s ease, opacity 0.2s ease;
-    opacity: 0;
-  }
-  
-  .list-group-item.list-group-item-action:hover {
-    color: rgb(247, 22, 108);
-    transform: translateY(-6px);
-    background-color: transparent;
-  }
-
-  .list-group-item.list-group-item-action:hover .list-item-name {
-    transform: translateY(20px);
-    opacity: 1;
-  }
-  
-  @media (max-width: 200px) {
-    .navbar-menu {
-      flex-direction: column;
-      align-items: right;
-      max-width: 60px;
-    }
-
-  
-    .list-group-item.list-group-item-action:hover .list-item-name {
-      transform: translateY(25px);
-    }
-  }
-
-
-
 /*====================== buttom up  ==================*/
 
 .to-top {

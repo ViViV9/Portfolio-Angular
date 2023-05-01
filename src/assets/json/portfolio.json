@@ -215,7 +215,7 @@
             "id": 1,
             "titulo_proyecto": "Porfolio Argentina Programa",
             "imagen_proyecto": "./assets/IMG/Portada-proyecto.png",
-            "url_proyecto": "",
+            "url_proyecto": "https://portfoliovivianaverachtert.web.app",
             "descripcion": "Mi primer proyecto como desarrolladora web full stack, es un Portfolio web; en el cual apliqué diferentes tecnologías, tanto para la parte del FrontEnd como Backend. Creando un diseño resceptivo y adaptable a cualquier dispositivo."
         }
     ]

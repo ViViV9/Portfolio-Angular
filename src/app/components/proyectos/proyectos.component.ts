@@ -23,7 +23,6 @@ cargarProyecto():void{
     this.proyectos=data})
 }
 
-//esto eliminar
 
  // constructor(private datos: PortfolioService) { }
  // usuarioLogueado= true

@@ -2,18 +2,6 @@
 <section id="proyectos" class="proyectos container container-fluid rounded shadow-sm">
   <div class="container">
     <h2 class="subtitulo text-center">Proyectos</h2>
-    <div class="container text-center">
-      <!--<div class="row">
-        <div class="col-7"></div>
-        <div class="col-5">
-          <div *ngIf="usuarioLogueado">
-            <button class="btn"><i class="fa-solid fa-pen-to-square" type="button"></i></button>
-            <button class="btn"><i class="fa-regular fa-floppy-disk" type="button"></i></button>
-            <button class="btn"><i class="fa-solid fa-trash-can" type="button"></i></button>
-          </div>
-        </div>
-      </div>-->
-    </div>
     <div class="row" *ngFor="let proyecto of proyectos"> 
       <p class="titulo-proyecto mt-2" style="text-align: center;">
       {{proyecto.titulo_proyecto}}</p>
@@ -25,7 +13,7 @@
         <div class="card">
           <img [src]="proyecto.imagen_proyecto" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">"Mi portfolio"</h5>
+            <a [href]="proyecto.url_proyecto"><h5 class="card-title" type="button">"Mi portfolio"</h5></a>
           </div>
         </div>
       </div>
