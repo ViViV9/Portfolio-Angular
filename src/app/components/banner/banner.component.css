@@ -60,7 +60,6 @@
     .navbar-menu {
       flex-direction: column;
       align-items: right;
-      max-width: 3rem;
     }
 
     .list-group-item.list-group-item-action {
