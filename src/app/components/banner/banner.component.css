@@ -37,7 +37,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(0);
     transition: transform 0.5s ease, opacity 0.2s ease;
     cursor: pointer;
     color: #2d2d2e;
