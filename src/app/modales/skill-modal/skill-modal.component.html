@@ -59,12 +59,13 @@
               <p *ngIf="span?.errors?.['minlength']" class="text-danger">
                 Debe ser de 2 o más caracteres.
               </p>
-            </div> 
+            </div>
+            <p>Haga <a href="https://fontawesome.com/search">click aquí</a> para buscar el ícono.</p> 
           </div>
 
           <div class="mb-3">
             <label for="porcentaje" class="form-label">Porcentaje</label>
-            <input type="number" class="form-control"  formControlName="porcentaje" placeholder="Porcentaje" [ngClass]="{'is-invalid': porcentajeInvalido, 'is-valid': porcentajeValido}">
+            <input type="text" class="form-control"  formControlName="porcentaje" placeholder="Porcentaje" [ngClass]="{'is-invalid': porcentajeInvalido, 'is-valid': porcentajeValido}">
             <div *ngIf="porcentaje?.errors && porcentaje?.touched">
               <p *ngIf="porcentaje?.hasError('required')" class="text-danger">
                 Campo requerido.

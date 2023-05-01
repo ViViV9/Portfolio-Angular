@@ -8,11 +8,15 @@
                 </div>
                 <!--Formulario "Modal Educacion"--> 
                 <div  class="modal-body">
-                    <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm" class="bg-white rounded seccion">
+                    <form [formGroup]="form" name="educacionForm" class="bg-white rounded seccion">
                         <ul class="p-0">
                             <li *ngFor="let educacion of educaciones" class="d-flex justify-content-between align-items-center m-1 ">
                                 <span>{{educacion.id}} {{educacion.curso}}</span>
                                 <span class="d-flex justify-content-between gap-2">
+                                    <!--Plus para crear-->
+                                    <button type="button" class="btn btn-sm btn-outline-secondary pl-1 pr-1 m-0" (click)="cargarDetalle(educacion.id)">
+                                        <i class="fa-solid fa-plus"></i>
+                                      </button>
                                     <!--Lapiz para editar-->
                                     <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(educacion.id)">
                                       <i class="fa-solid fa-pencil"></i>
@@ -66,15 +70,15 @@
                         </div>
                         <div class="mb-3">
                             <label for="inicio" class="form-label">Fecha de inicio</label>
-                            <input type="date" class="form-control" formControlName="inicio"> 
+                            <input type="text" class="form-control" formControlName="inicio"> 
                         </div>
                         <div class="mb-3">
                             <label for="fin" class="form-label">Fecha de finalización</label>
-                            <input type="date" class="form-control"  formControlName="fin">
+                            <input type="text" class="form-control"  formControlName="fin">
                         </div>
                         <div class="modal-footer">
                             <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                            <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
+                            <button type="submit" (click)="guardar()" class="btn btnLogin" [disabled]="form.invalid">Guardar</button>
                         </div>
                     </form>
                 </div>

@@ -38,13 +38,14 @@
               <label for="icono_red" class="form-label">Icono</label>
               <input class="form-control" type="url"  formControlName="icono_red" placeholder="Enlace del Icono de Fort Awesome" [ngClass]="{'is-invalid': icono_redInvalido, 'is-valid': icono_redValido}">
               <div *ngIf="icono_red?.errors && icono_red?.touched">
-                  <p *ngIf="icono_red?.hasError('required')" class="text-danger">
-                      Campo requerido.
-                  </p>
-                  <p *ngIf="icono_red?.errors?.['minlength']" class="text-danger">
-                      Debe ser de 3 o más caracteres.
-                  </p>
+                <p *ngIf="icono_red?.hasError('required')" class="text-danger">
+                  Campo requerido.
+                </p>
+                <p *ngIf="icono_red?.errors?.['minlength']" class="text-danger">
+                  Debe ser de 3 o más caracteres.
+                </p>
               </div>
+              <p>Haga <a href="https://fontawesome.com/search">click aquí</a> para buscar el ícono</p>
             </div>
             <div class="mb-3">
               <label for="url" class="form-label">URL</label>
