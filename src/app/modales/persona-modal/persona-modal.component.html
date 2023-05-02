@@ -18,11 +18,6 @@
                 <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(persona.id)">
                   <i class="fa-solid fa-pencil"></i>
                 </button>
-
-                <!--Boton para borrar-->
-                <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0">
-                  <i class="fa-solid fa-trash"></i>
-                </button>
               </span>
             </li>
           </ul>
@@ -66,7 +61,6 @@
               </p>
            </div>
           </div>
-
           <div class="mb-3">
             <label for="titulo" class="form-label">Título</label>
             <input type="text" class="form-control" formControlName="titulo" placeholder="Título">
@@ -74,17 +68,17 @@
 
           <div class="mb-3">
             <label for="textsobre_mi" class="form-label">Acerca de mi parrafo (1)</label>
-            <textarea type="text" class="form-control"  formControlName="textsobre_mi" placeholder="Breve descripción"></textarea>
+            <input type="text" class="form-control"  formControlName="textsobre_mi" placeholder="Breve descripción">
           </div>
         
           <div class="mb-3">
             <label for="textsobre_mi2" class="form-label">Acerca de mi parrafo (2)</label>
-            <textarea type="text" class="form-control"  formControlName="textsobre_mi2" placeholder="Breve descripción"></textarea>
+            <input type="text" class="form-control"  formControlName="textsobre_mi2" placeholder="Breve descripción">
           </div>
         
           <div class="mb-3">
             <label for="textsobre_mi3" class="form-label">Acerca de mi parrafo (3)</label>
-            <textarea type="text" class="form-control"  formControlName="textsobre_mi3" placeholder="Breve descripción"></textarea>
+            <input type="text" class="form-control"  formControlName="textsobre_mi3" placeholder="Breve descripción">
           </div>
 
           <div class="mb-3">
@@ -96,7 +90,7 @@
 
       <div class="modal-footer">
         <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-        <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
+        <button type="submit" (click)="guardar()" class="btn btnLogin" [disabled]="form.invalid">Guardar</button>
       </div>
     </div>
   </div>

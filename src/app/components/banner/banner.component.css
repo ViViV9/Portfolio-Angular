@@ -6,7 +6,7 @@
     position: relative;
     z-index: 0;
     background-attachment: fixed;
-    height: 75vh;
+    height: 85vh;
 }
 
 /* Nombre y Apellido*/
@@ -15,13 +15,13 @@
     font-style:italic;
     color: rgb(241, 48, 129);
     text-shadow: 0.125rem 0.125rem 0.25rem #8d8585;
-    transform: translateY(4rem);
+    transform: translateY(8rem);
 }
 
 /* Titulo "Desarroladora Full Stack" */
 .titulo-banner {
     font-family: 'Trebuchet MS', sans-serif;
-    transform: translateY(2rem);
+    transform: translateY(6rem);
 }
 
 /* Menú Lateral*/
@@ -70,11 +70,3 @@
       transform: translateY(25px);
     }
   }
-
-
-/*boton de edicion 
-.btn.banner{
-    position: absolute;
-    z-index: 0;
-    text-shadow: 0.125rem 0.125rem 0.25rem #8d8585;
-}*/

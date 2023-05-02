@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/model/proyecto';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+//import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
 
 @Component({
@@ -10,7 +10,6 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
 })
 export class ProyectosComponent implements OnInit {
   //proyectos: any= [];
-  //sacar lo de arriba y reemplazar con lo de abajo
 proyectos: Proyecto[]= [];
 constructor(private proyectoServ: ProyectoService) { }
 

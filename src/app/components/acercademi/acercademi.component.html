@@ -1,13 +1,13 @@
   <!-- Acerca de mi -->
-  <main>
+<main>
   <section id="sobre-mi" class="about" *ngFor="let persona of personas">
     <div class="foto-perfil">
       <img [src]="persona.foto_perfil" class="rounded-circle w-50"  alt="Viviana Verachtert" title="..."/>
     </div>
     <div class="container-fluid text-center">
       <div class="row info-personal">
-        <div class="col-1"></div>
-        <div class="col-9 align-self-center" id="presentacion">
+        <div class="col-2"></div>
+        <div class="col-8 align-self-center" id="presentacion">
           <div class="container text-center">
             <h2 class="subtitulo text-center">Acerca de mi</h2>
           </div>
@@ -16,10 +16,9 @@
           <p>{{persona.textsobre_mi2}}</p>
           <p>{{persona.textsobre_mi3}}</p>
           <br>
-          <a [href]="persona.cv"  download="vivianaverachtert_cv" type="button" class="btn btn-outline"><i class="fa-solid fa-download" ></i> Descargar CV </a>
+          <a [href]="persona.cv" download="vivianaverachtert_cv" type="button" class="btn btn-outline"><i class="fa-solid fa-download" ></i> Descargar CV </a>
         </div>
-        <div class="col-1">          
-        </div>
+        <div class="col-2"></div>
       </div>
     </div>
   </section>

@@ -3,17 +3,14 @@
   <div class="container">
     <h2 class="subtitulo text-center">Proyectos</h2>
     <div class="row" *ngFor="let proyecto of proyectos"> 
-      <p class="titulo-proyecto mt-2" style="text-align: center;">
-      {{proyecto.titulo_proyecto}}</p>
-      <p class= "texto-proyectos mt-4" style="text-align: justify;">
-      {{proyecto.descripcion}}</p>
-      <div class="col-3">
-      </div>
+      <p class="titulo-proyecto mt-2" style="text-align: center;">{{proyecto.titulo_proyecto}}</p>
+      <p class= "texto-proyectos mt-4" style="text-align: justify;">{{proyecto.descripcion}}</p>
+      <div class="col-3"></div>
       <div class="col-6">
         <div class="card">
           <img [src]="proyecto.imagen_proyecto" class="card-img-top" alt="...">
           <div class="card-body">
-            <a [href]="proyecto.url_proyecto"><h5 class="card-title">"Mi portfolio"</h5></a>
+            <a [href]="proyecto.url_proyecto" type="button" class="link"><h5 class="card-title">"Mi portfolio"</h5></a>
           </div>
         </div>
       </div>
