@@ -9,7 +9,7 @@ import { HabilidadService } from 'src/app/servicios/habilidad.service';
 })
 export class SkillsComponent implements OnInit {
   //habilidades: any= [];
-  //sacar lo de arriba y reemplazar con lo de abajo
+  
  habilidades: Habilidad[]=[];
  constructor(private habilidadServ: HabilidadService) { }
 
@@ -22,7 +22,6 @@ cargarHabilidad():void{
     this.habilidades=data})
 }
 
-//esto eliminar
 
   //constructor(private datos: PortfolioService) { }
   //usuarioLogueado= true

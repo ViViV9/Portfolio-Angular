@@ -10,7 +10,7 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 })
 export class ExperienciaComponent implements OnInit {
   //experiencias: any= [];
-  //sacar lo de arriba y reemplazar con lo de abajo
+  
 experiencias: Experiencia[]= [];
 constructor(private servExpe: ExperienciaService) { }
 
@@ -23,7 +23,6 @@ cargarExperiencia():void{
     this.experiencias=data})
 }
 
-//esto eliminar
  //constructor(private datos: PortfolioService) { }
  //usuarioLogueado= true
  //ngOnInit(): void {

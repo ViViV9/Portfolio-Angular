@@ -63,27 +63,59 @@
           </div>
           <div class="mb-3">
             <label for="titulo" class="form-label">Título</label>
-            <input type="text" class="form-control" formControlName="titulo" placeholder="Título">
+            <input type="text" class="form-control" formControlName="titulo" placeholder="Título" [ngClass]="{'is-invalid': tituloInvalido, 'is-valid': tituloValido}">
+            <div *ngIf="titulo?.errors && titulo?.touched">
+              <p *ngIf="titulo?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="titulo?.errors?.['minlength']" class="text-danger">
+                Debe ser de 3 o más caracteres.
+              </p>
+           </div>
           </div>
 
           <div class="mb-3">
             <label for="textsobre_mi" class="form-label">Acerca de mi parrafo (1)</label>
-            <input type="text" class="form-control"  formControlName="textsobre_mi" placeholder="Breve descripción">
+            <input type="text" class="form-control"  formControlName="textsobre_mi" placeholder="Breve descripción" [ngClass]="{'is-invalid': textsobre_miInvalido, 'is-valid': textsobre_miValido}">
+            <div *ngIf="textsobre_mi?.errors && textsobre_mi?.touched">
+              <p *ngIf="textsobre_mi?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="textsobre_mi?.errors?.['minlength']" class="text-danger">
+                Debe ser de 3 o más caracteres.
+              </p>
+           </div>
           </div>
         
           <div class="mb-3">
             <label for="textsobre_mi2" class="form-label">Acerca de mi parrafo (2)</label>
-            <input type="text" class="form-control"  formControlName="textsobre_mi2" placeholder="Breve descripción">
+            <input type="text" class="form-control"  formControlName="textsobre_mi2" placeholder="Breve descripción" [ngClass]="{'is-invalid': textsobre_mi2Invalido, 'is-valid': textsobre_mi2Valido}">
+            <div *ngIf="textsobre_mi2?.errors && textsobre_mi2?.touched">
+              <p *ngIf="textsobre_mi2?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="textsobre_mi2?.errors?.['minlength']" class="text-danger">
+                Debe ser de 3 o más caracteres.
+              </p>
+           </div>
           </div>
         
           <div class="mb-3">
             <label for="textsobre_mi3" class="form-label">Acerca de mi parrafo (3)</label>
-            <input type="text" class="form-control"  formControlName="textsobre_mi3" placeholder="Breve descripción">
+            <input type="text" class="form-control"  formControlName="textsobre_mi3" placeholder="Breve descripción" [ngClass]="{'is-invalid': textsobre_mi3Invalido, 'is-valid': textsobre_mi3Valido}">
+            <div *ngIf="textsobre_mi3?.errors && textsobre_mi3?.touched">
+              <p *ngIf="textsobre_mi3?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="textsobre_mi3?.errors?.['minlength']" class="text-danger">
+                Debe ser de 3 o más caracteres.
+              </p>
+           </div>
           </div>
 
           <div class="mb-3">
             <label for="cv" class="form-label">Curriculum Vitae</label>
-            <input class="form-control" type="file"  formControlName="cv">
+            <input class="form-control" type="text" formControlName="cv" [ngClass]="{'is-invalid': cvInvalido, 'is-valid': cvValido}">
           </div>
         </form>
       </div>

@@ -58,19 +58,27 @@
                         </div>
                         <div class="mb-3">
                             <label for="titulo_curso" class="form-label">Título del Curso</label>
-                            <input type="text" class="form-control" formControlName="titulo_curso"> 
+                            <input type="text" class="form-control" formControlName="titulo_curso" [ngClass]="{'is-invalid': titulo_cursoInvalido, 'is-valid': titulo_cursoValido}"> 
+                            <div *ngIf="titulo_curso?.errors && titulo_curso?.touched">
+                                <p *ngIf="titulo_curso?.hasError('required')" class="text-danger">
+                                    Campo requerido.
+                                </p>
+                                <p *ngIf="titulo_curso?.errors?.['minlength']" class="text-danger">
+                                    Debe ser de 3 o más caracteres.
+                                </p>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="logo_educ" class="form-label">Logo</label>
-                            <input class="form-control" type="file"  formControlName="logo_educ">
+                            <input class="form-control" type="file"  formControlName="logo_educ" [ngClass]="{'is-invalid': logo_educInvalido, 'is-valid': logo_educValido}">
                         </div>
                         <div class="mb-3">
                             <label for="inicio" class="form-label">Fecha de inicio</label>
-                            <input type="text" class="form-control" formControlName="inicio"> 
+                            <input type="text" class="form-control" formControlName="inicio" [ngClass]="{'is-invalid': inicioInvalido, 'is-valid': inicioValido}"> 
                         </div>
                         <div class="mb-3">
                             <label for="fin" class="form-label">Fecha de finalización</label>
-                            <input type="text" class="form-control"  formControlName="fin">
+                            <input type="text" class="form-control"  formControlName="fin" [ngClass]="{'is-invalid': finInvalido, 'is-valid': finValido}">
                         </div>
                         <div class="modal-footer">
                             <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>

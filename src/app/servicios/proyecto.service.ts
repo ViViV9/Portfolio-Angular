@@ -20,12 +20,12 @@ export class ProyectoService {
     return this.http.get<Proyecto>(this.url + `buscar/${id}`);
   }
 
-  public crearProyecto(proyecto: Proyecto): Observable<any>{
-    return this.http.post<any>(this.url + 'crear', proyecto);
+  public crearProyecto(proyect: Proyecto): Observable<any>{
+    return this.http.post<any>(this.url + 'crear', proyect);
   }
 
-  public editarProyecto(proyecto: Proyecto): Observable<any>{
-    return this.http.put<Proyecto>(this.url + 'editar', proyecto);
+  public editarProyecto(proyect: Proyecto): Observable<any>{
+    return this.http.put<Proyecto>(this.url + 'editar', proyect);
   }
 
   public borrarProyecto(id: number): Observable<Proyecto>{

@@ -10,7 +10,7 @@ import { RedesService } from 'src/app/servicios/redes.service';
 })
 export class RedesSocialesComponent implements OnInit {
   //redes: any= [];
-  //sacar lo de arriba y reemplazar con lo de abajo
+  
  redes: Redsocial[]= [];
  constructor(private redsocServ:RedesService) { }
 
@@ -23,7 +23,7 @@ cargarRedSocial():void{
     this.redes=data})
 }
 
-//esto eliminar
+
  // constructor(private datos: PortfolioService) { }
 
  // ngOnInit(): void {

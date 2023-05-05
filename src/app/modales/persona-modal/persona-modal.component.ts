@@ -20,11 +20,11 @@ export class PersonaModalComponent implements OnInit {
       id:[''],
       nombre:['',[Validators.required, Validators.minLength(3)]],
       apellido:['',[Validators.required, Validators.minLength(3)]],
-      titulo:[''],
-      foto_perfil:[''],
-      textsobre_mi:[''],
-      textsobre_mi2:[''],
-      textsobre_mi3:[''],
+      titulo:['',[Validators.required, Validators.minLength(3)]],
+      foto_perfil:['',[Validators.required, Validators.minLength(3)]],
+      textsobre_mi:['',[Validators.required, Validators.minLength(3)]],
+      textsobre_mi2:['',[Validators.required, Validators.minLength(3)]],
+      textsobre_mi3:['',[Validators.required, Validators.minLength(3)]],
       cv:[''],
     })
      }
@@ -37,18 +37,15 @@ export class PersonaModalComponent implements OnInit {
    this.personaServ.editarPersona(this.form.value).subscribe(data => {
     alert("La persona ha sido modificada.");
     this.router.navigate(['']);
-   }), {
-   }
+   })
   }
 
   get nombre() {
     return this.form.get("nombre");
   }
-
   get nombreInvalido(){
     return this.nombre?.errors && this.nombre?.touched;
   }
-
   get nombreValido(){
     return !this.nombre?.errors && this.nombre?.touched;
   }
@@ -56,11 +53,9 @@ export class PersonaModalComponent implements OnInit {
   get apellido() {
     return this.form.get("apellido");
   }
-
   get apellidoInvalido(){
     return this.apellido?.errors && this.apellido?.touched;
   }
-
   get apellidoValido(){
     return !this.apellido?.errors && this.apellido?.touched;
   }
@@ -68,25 +63,61 @@ export class PersonaModalComponent implements OnInit {
   get titulo() {
     return this.form.get("titulo");
   }
+  get tituloInvalido(){
+    return this.titulo?.errors && this.titulo?.touched;
+  }
+  get tituloValido(){
+    return !this.titulo?.errors && this.titulo?.touched;
+  }
 
   get foto_perfil() {
     return this.form.get("foto_perfil");
+  }
+  get foto_perfilInvalido(){
+    return this.foto_perfil?.errors && this.foto_perfil?.touched;
+  }
+  get foto_perfilValido(){
+    return !this.foto_perfil?.errors && this.foto_perfil?.touched;
   }
 
   get textsobre_mi() {
     return this.form.get("textsobre_mi");
   }
-  
+  get textsobre_miInvalido(){
+    return this.textsobre_mi?.errors && this.textsobre_mi?.touched;
+  }
+  get textsobre_miValido(){
+    return !this.textsobre_mi?.errors && this.textsobre_mi?.touched;
+  }
+
   get textsobre_mi2() {
     return this.form.get("textsobre_mi2");
+  }
+  get textsobre_mi2Invalido(){
+    return this.textsobre_mi2?.errors && this.textsobre_mi2?.touched;
+  }
+  get textsobre_mi2Valido(){
+    return !this.textsobre_mi2?.errors && this.textsobre_mi2?.touched;
   }
 
   get textsobre_mi3() {
     return this.form.get("textsobre_mi3");
   }
+  get textsobre_mi3Invalido(){
+    return this.textsobre_mi3?.errors && this.textsobre_mi3?.touched;
+  }
+  get textsobre_mi3Valido(){
+    return !this.textsobre_mi3?.errors && this.textsobre_mi3?.touched;
+  }
 
   get cv(){
     return this.form.get("cv");
+  }
+  get cvInvalido(){
+    return this.cv?.errors && this.cv?.touched;
+  }
+  get cvValido(){
+    return !this.cv?.errors && this.cv?.touched;
   }
 
   get Persona(){

@@ -6,7 +6,7 @@
     position: relative;
     z-index: 0;
     background-attachment: fixed;
-    height: 85vh;
+    height: 500px;
 }
 
 /* Nombre y Apellido*/
@@ -28,13 +28,15 @@
   .list-group-item.list-group-item-action {
     list-style-type: none;
     flex-basis: 50%;
-    min-height: 5rem;
+    min-height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateY(0);
     transition: transform 0.5s ease, opacity 0.2s ease;
     cursor: pointer;
     color: #2d2d2e;
+    text-shadow: 2px 2px 4px #f5efef;
   }
   
   .list-item-name {
@@ -56,10 +58,11 @@
     opacity: 1;
   }
   
-  @media (max-width: 12rem) {
+  @media (max-width: 200px) {
     .navbar-menu {
       flex-direction: column;
       align-items: right;
+      max-width: 80px;
     }
 
     .list-group-item.list-group-item-action {

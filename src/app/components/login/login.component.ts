@@ -6,7 +6,6 @@ import { AuthService } from 'src/app/servicios/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 
-//Estos import esta sin uso, fijarse para desmarcar o eliminar
 
 
 
@@ -35,7 +34,6 @@ export class LoginComponent implements OnInit {
     sessionStorage.setItem('currentUser', "");
   }
 
-
   get Email(){
     return this.form.get('email')
   }
@@ -50,8 +48,6 @@ export class LoginComponent implements OnInit {
   get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;
   }
-
- 
 
   onEnviar(event: Event){
     event.preventDefault;

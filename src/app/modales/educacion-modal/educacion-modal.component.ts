@@ -43,11 +43,9 @@ export class EducacionModalComponent implements OnInit {
   get institucion() {
     return this.form.get("institucion");
   }
-
   get institInvalido(){
     return this.institucion?.errors && this.institucion?.touched;
   }
-
   get institValido(){
     return !this.institucion?.errors && this.institucion?.touched;
   }
@@ -55,11 +53,9 @@ export class EducacionModalComponent implements OnInit {
   get curso() {
     return this.form.get("curso");
   }
-
   get cursoInvalido(){
     return this.curso?.errors && this.curso?.touched;
   }
-
   get cursoValido(){
     return !this.curso?.errors && this.curso?.touched;
   }
@@ -71,17 +67,41 @@ export class EducacionModalComponent implements OnInit {
   get titulo_curso(){
     return this.form.get("titulo_curso");
   }
+  get titulo_cursoInvalido(){
+    return this.titulo_curso?.errors && this.titulo_curso?.touched;
+  }
+  get titulo_cursoValido(){
+    return !this.titulo_curso?.errors && this.titulo_curso?.touched;
+  }
   
   get logo_educ() {
     return this.form.get("logo_educ");
+  }
+  get logo_educInvalido(){
+    return this.logo_educ?.errors && this.logo_educ?.touched;
+  }
+  get logo_educValido(){
+    return !this.logo_educ?.errors && this.logo_educ?.touched;
   }
 
   get inicio(){
     return this.form.get("inicio");
   }
+  get inicioInvalido(){
+    return this.inicio?.errors && this.inicio?.touched;
+  }
+  get inicioValido(){
+    return !this.inicio?.errors && this.inicio?.touched;
+  }
 
   get fin(){
     return this.form.get("fin");
+  }
+  get finInvalido(){
+    return this.fin?.errors && this.fin?.touched;
+  }
+  get finValido(){
+    return !this.fin?.errors && this.fin?.touched;
   }
 
   onEnviar(event:Event){

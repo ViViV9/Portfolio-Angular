@@ -13,7 +13,6 @@ export class BannerComponent implements OnInit {
  // apellido: string= '';
  // titulo: string= '';
 
-  //sacar lo de arriba y reemplazar con lo de abajo
  personas: Persona[]=[];
  constructor(private persoServ: PersonaService) { }
 
@@ -26,8 +25,6 @@ cargarPersona():void{
     this.personas=data})
 }
 
-
-//esto eliminar
 
   //constructor(private porfolioService: PortfolioService) { }
  // usuarioLogueado= true

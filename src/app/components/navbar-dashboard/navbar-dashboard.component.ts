@@ -10,7 +10,7 @@ import { RedesService } from 'src/app/servicios/redes.service';
 })
 export class NavbarDashboardComponent implements OnInit {
   //redes: any= [];
-  //sacar lo de arriba y reemplazar con lo de abajo
+  
  redes: Redsocial[]=[];
  constructor(private redServ:RedesService) { }
 
@@ -24,7 +24,6 @@ cargarRedSocial():void{
   })
 }
 
-//esto eliminar
   
  //constructor(private datos: PortfolioService) { }
   //ngOnInit(): void {

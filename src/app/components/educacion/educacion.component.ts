@@ -10,7 +10,6 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EducacionComponent implements OnInit {
   //educaciones: any= [];
-  //sacar lo de arriba y reemplazar con lo de abajo
  educaciones: Educacion[]= [];
  constructor(private educServ: EducacionService) { }
 
@@ -23,7 +22,6 @@ cargarEducacion():void{
     this.educaciones=data})
   }
 
-//esto eliminar
 
  // constructor(private datos: PortfolioService) { }
  // usuarioLogueado= true

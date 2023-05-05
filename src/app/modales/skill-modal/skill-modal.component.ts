@@ -39,11 +39,9 @@ export class SkillModalComponent implements OnInit {
   get nombre_skill() {
     return this.form.get("nombre_skill");
   }
-
   get nombre_skillInvalido(){
     return this.nombre_skill?.errors && this.nombre_skill?.touched;
   }
-
   get nombre_skillValido(){
     return !this.nombre_skill?.errors && this.nombre_skill?.touched;
   }
@@ -51,11 +49,9 @@ export class SkillModalComponent implements OnInit {
   get span() {
     return this.form.get("span");
   }
-
   get spanInvalido(){
     return this.span?.errors && this.span?.touched;
   }
-
   get spanValido(){
     return !this.span?.errors && this.span?.touched;
   }
@@ -63,11 +59,9 @@ export class SkillModalComponent implements OnInit {
   get porcentaje() {
     return this.form.get("porcentaje");
   }
-
   get porcentajeInvalido(){
     return this.porcentaje?.errors && this.porcentaje?.touched;
   }
-
   get porcentajeValido(){
     return !this.porcentaje?.errors && this.porcentaje?.touched;
   }

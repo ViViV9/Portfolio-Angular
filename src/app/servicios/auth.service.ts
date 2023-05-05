@@ -8,10 +8,9 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 export class AuthService {
   //authUrl:string = 'http://localhost:8080/persona/login';
   authUrl:string = 'https://portfoliobackendvd.onrender.com/persona/login';
-  //aca poner ej authUrl o url y agregar el link para unir back de render
   
   currentUserSubject: BehaviorSubject<any>;
-//#91
+
   constructor(private httpClient: HttpClient) {
     console.log("Está corriendo el servicio de autenticación");
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));

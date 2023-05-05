@@ -33,8 +33,9 @@
             </div>
             <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
           </div>
-          
+
           <input type="hidden" formControlName="id">
+          
           <div class="mb-3">
             <label for="nombre_empresa" class="form-label">Empresa</label>
             <input type="text" class="form-control"  formControlName="nombre_empresa" placeholder="Nombre de la Empresa" [ngClass]="{'is-invalid': nombre_empresaInvalido, 'is-valid': nombre_empresaValido}">
@@ -63,17 +64,17 @@
           
           <div class="mb-3">
             <label for="logo" class="form-label">Logo</label>
-            <input class="form-control" type="file"  formControlName="logo" placeholder="Logo de la empresa" [ngModel]="logo">
+            <input class="form-control" type="text"  formControlName="logo" placeholder="Logo de la empresa" [ngClass]="{'is-invalid': logoInvalido, 'is-valid': logoValido}">
           </div>
 
           <div class="mb-3">
             <label for="desde" class="form-label">Desde</label>
-            <input type="text" class="form-control" formControlName="desde">
+            <input type="text" class="form-control" formControlName="desde" [ngClass]="{'is-invalid': desdeInvalido, 'is-valid': desdeValido}">
           </div>
 
           <div class="mb-3">
             <label for="hasta" class="form-label">Hasta</label>
-            <input type="text" class="form-control"  formControlName="hasta">
+            <input type="text" class="form-control"  formControlName="hasta" [ngClass]="{'is-invalid': hastaInvalido, 'is-valid': hastaValido}">
           </div>
           
           <div class="modal-footer">

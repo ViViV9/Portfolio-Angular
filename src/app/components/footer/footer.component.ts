@@ -10,7 +10,7 @@ import { Redsocialfooter } from 'src/app/model/redsocialfooter';
 })
 export class FooterComponent implements OnInit {
   //redesFooter: any= [];
-  //sacar lo de arriba y reemplazar con lo de abajo
+  
  redesFooter: Redsocialfooter[]=[];
  constructor(private redSFooterServ: RedesFooterService) { }
 
@@ -23,7 +23,7 @@ cargarRedSFooter():void{
     this.redesFooter=data})
 }
 
-//esto eliminar
+
 
   //constructor(private portfolioService: PortfolioService) { }
   //usuarioLogueado= true

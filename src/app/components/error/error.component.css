@@ -1,9 +1,28 @@
-.error{
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+.subtitulo{
+    font-size: 5rem;
+    position: absolute;
+    z-index: 3;
 }
 
-.subtitulo{
-    font-size: 8rem; 
+#error{
+    background-color: #f0f8ff;
+    background-size: cover;
+    min-height: 100vh;
 }
+
+.gif{
+    margin-top: 6rem;
+}
+
+.btn.btn-info{
+    background-color: #83e5ec;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.btn-error{
+    text-decoration: none;
+    color: #0c050a;
+}
+
+

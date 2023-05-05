@@ -19,7 +19,7 @@ export class RsocialfooterModalComponent implements OnInit {
     this.form= this.formBuilder.group({
       id:[''],
       url:['',[Validators.required, Validators.minLength(3)]],
-      icono_red:['',[Validators.required, Validators.minLength(3)]],
+      icono:['',[Validators.required, Validators.minLength(3)]],
     })
      }
 
@@ -44,16 +44,16 @@ export class RsocialfooterModalComponent implements OnInit {
     return !this.url?.errors && this.url?.touched;
   }
 
-  get icono_red() {
-    return this.form.get("icono_red");
+  get icono() {
+    return this.form.get("icono");
   }
 
-  get icono_redInvalido(){
-    return this.icono_red?.errors && this.icono_red?.touched;
+  get iconoInvalido(){
+    return this.icono?.errors && this.icono?.touched;
   }
 
-  get icono_redValido(){
-    return !this.icono_red?.errors && this.icono_red?.touched;
+  get iconoValido(){
+    return !this.icono?.errors && this.icono?.touched;
   }
 
   get RedSFooter(){
@@ -92,9 +92,9 @@ export class RsocialfooterModalComponent implements OnInit {
     }
 
   guardar() {
-    let rsfooter = this.form.value;
-    if (rsfooter.id == '') {
-      this.redSFooterServ.crearRedSFooter(rsfooter).subscribe({
+    let redfooter = this.form.value;
+    if (redfooter.id == '') {
+      this.redSFooterServ.crearRedSFooter(redfooter).subscribe({
         next: (data) => {
           this.limpiar();
         },
@@ -104,7 +104,7 @@ export class RsocialfooterModalComponent implements OnInit {
       window.location.reload();
       console.log("Su red social se creo correctamente");
     } else {
-      this.redSFooterServ.editarRedSFooter(rsfooter).subscribe({
+      this.redSFooterServ.editarRedSFooter(redfooter).subscribe({
         next: (data) => {
           this.limpiar();
         },

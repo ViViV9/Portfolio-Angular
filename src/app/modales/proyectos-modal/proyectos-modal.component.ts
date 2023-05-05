@@ -11,7 +11,7 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
 })
 export class ProyectosModalComponent implements OnInit {
   form: FormGroup;
-  proyectos: Proyecto []= [];
+  proyectos: Proyecto[]= [];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -39,15 +39,43 @@ export class ProyectosModalComponent implements OnInit {
   get titulo_proyecto(){
     return this.form.get("titulo_proyecto");
   }
+  get titulo_proyectoInvalido(){
+    return this.titulo_proyecto?.errors && this.titulo_proyecto?.touched;
+  }
+  get titulo_proyectoValido(){
+    return !this.titulo_proyecto?.errors && this.titulo_proyecto?.touched;
+  }
+
   get url_proyecto(){
     return this.form.get("url_proyecto");
   }
+  get url_proyectoInvalido(){
+    return this.url_proyecto?.errors && this.url_proyecto?.touched;
+  }
+  get url_proyectoValido(){
+    return !this.url_proyecto?.errors && this.url_proyecto?.touched;
+  }
+
   get imagen_proyecto(){
     return this.form.get("imagen_proyecto");
   }
+  get imagen_proyectoInvalido(){
+    return this.imagen_proyecto?.errors && this.imagen_proyecto?.touched;
+  }
+  get imagen_proyectoValido(){
+    return !this.imagen_proyecto?.errors && this.imagen_proyecto?.touched;
+  }
+
   get descripcion(){
     return this.form.get("descripcion");
   }
+  get descripcionInvalido(){
+    return this.descripcion?.errors && this.descripcion?.touched;
+  }
+  get descripcionValido(){
+    return !this.descripcion?.errors && this.descripcion?.touched;
+  }
+
   get Proyecto(){
     return this.form.get("proyecto");
   }

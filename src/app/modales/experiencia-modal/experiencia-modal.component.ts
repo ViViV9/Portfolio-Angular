@@ -39,11 +39,9 @@ export class ExperienciaModalComponent implements OnInit {
   get nombre_empresa() {
     return this.form.get("nombre_empresa");
   }
-
   get nombre_empresaInvalido(){
     return this.nombre_empresa?.errors && this.nombre_empresa?.touched;
   }
-
   get nombre_empresaValido(){
     return !this.nombre_empresa?.errors && this.nombre_empresa?.touched;
   }
@@ -51,11 +49,9 @@ export class ExperienciaModalComponent implements OnInit {
   get puesto() {
     return this.form.get("puesto");
   }
-
   get puestoInvalido(){
     return this.puesto?.errors && this.puesto?.touched;
   }
-
   get puestoValido(){
     return !this.puesto?.errors && this.puesto?.touched;
   }
@@ -63,13 +59,31 @@ export class ExperienciaModalComponent implements OnInit {
   get logo() {
     return this.form.get("logo");
   }
+  get logoInvalido(){
+    return this.logo?.errors && this.logo?.touched;
+  }
+  get logoValido(){
+    return !this.logo?.errors && this.logo?.touched;
+  }
 
   get desde() {
     return this.form.get("desde");
   }
+  get desdeInvalido(){
+    return this.desde?.errors && this.desde?.touched;
+  }
+  get desdeValido(){
+    return !this.desde?.errors && this.desde?.touched;
+  }
 
   get hasta() {
     return this.form.get("hasta");
+  }
+  get hastaInvalido(){
+    return this.hasta?.errors && this.hasta?.touched;
+  }
+  get hastaValido(){
+    return !this.hasta?.errors && this.hasta?.touched;
   }
 
   get Experiencia(){
@@ -106,6 +120,7 @@ export class ExperienciaModalComponent implements OnInit {
         complete: () => console.info('complete')
     });
   }
+
 
   guardar() {
     let expe = this.form.value;
@@ -148,6 +163,5 @@ export class ExperienciaModalComponent implements OnInit {
   volver(){
     this.router.navigate(['/dashboard']);
   }
-
 
 }

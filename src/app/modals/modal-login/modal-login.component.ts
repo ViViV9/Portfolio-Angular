@@ -59,7 +59,7 @@ export class ModalLoginComponent implements OnInit {
         console.log("DATA: " + JSON.stringify(data.id));
         if (data.id) {
           alert("Puedes editar el portfolio");
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['/dashboard']);
         } else {
           alert("Error al iniciar sesión, credenciales no válidas!!!");
         }
