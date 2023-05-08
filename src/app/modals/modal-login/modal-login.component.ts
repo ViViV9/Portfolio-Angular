@@ -27,29 +27,23 @@ export class ModalLoginComponent implements OnInit {
     })
    }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
     sessionStorage.setItem('currentUser', "");
   }
 
   get Email(){
-    return this.form.get("email")
+    return this.form.get('email')
   }
-  
   get EmailValid(){
     return this.Email?.touched && !this.Email?.valid;
   }
 
-  get EmailInvalid(){
-    return this.Email?.touched && !this.Email?.valid;
-  }
   get Password(){
-    return this.form.get("password");
+    return this.form.get('password');
   }
-
-  get PasswordInvalid(){
+  get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;
   }
-
 
   onEnviar(event: Event){
     event.preventDefault;
@@ -59,7 +53,7 @@ export class ModalLoginComponent implements OnInit {
         console.log("DATA: " + JSON.stringify(data.id));
         if (data.id) {
           alert("Puedes editar el portfolio");
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['dashboard']);
         } else {
           alert("Error al iniciar sesión, credenciales no válidas!!!");
         }

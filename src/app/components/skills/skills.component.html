@@ -1,16 +1,16 @@
   <!-- Hard & Soft Skills-->
-  <section id="habilidades" class="habilidades container container-fluid rounded shadow-sm" >
-    <div class="container" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-    <div class="container" >
+  <section id="habilidades" class="habilidades container container-fluid rounded shadow-sm">
+    <div class="container">
       <h2 class="subtitulo text-center">Habilidades</h2>
+        <li class="skill-info mt-3 text-center" *ngFor="let habilidad of habilidades">
+          <p style="font-size: large;"><i [ngClass]=habilidad.span class="fa-2xl"></i> {{habilidad.nombre_skill}}</p>
+          <div class="container"> 
+            <div class="progress" style="height: 1.5rem" role="progressbar" aria-label="Info striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" [style.width.%]= "habilidad.porcentaje">{{habilidad.porcentaje}} %</div></div>
+          </div>
+        </li>
+        <br>
     </div>
-    <br>
-    <div class="row progress-circle-container text-center">
-      <div class="col-sm-4 col-md-4 col-lg-4 text-center" *ngFor="let habilidad of habilidades">
-        <div [ngClass]=habilidad.porcentaje><span><i [ngClass]=habilidad.span></i></span></div>
-        <p>{{habilidad.nombre_skill}}</p>
-      </div>
-    </div>
-  </div>
-    <br>
   </section>
+
+  

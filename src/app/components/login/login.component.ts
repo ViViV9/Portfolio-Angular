@@ -37,14 +37,13 @@ export class LoginComponent implements OnInit {
   get Email(){
     return this.form.get('email')
   }
- 
   get EmailValid(){
     return this.Email?.touched && !this.Email?.valid;
   }
+
   get Password(){
     return this.form.get('password');
   }
-
   get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;
   }

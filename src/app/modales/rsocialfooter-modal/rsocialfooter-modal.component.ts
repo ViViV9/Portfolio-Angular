@@ -18,8 +18,8 @@ export class RsocialfooterModalComponent implements OnInit {
       //Controles para el formulario 
     this.form= this.formBuilder.group({
       id:[''],
-      url:['',[Validators.required, Validators.minLength(3)]],
       icono:['',[Validators.required, Validators.minLength(3)]],
+      url:['',[Validators.required, Validators.minLength(3)]],
     })
      }
 
@@ -32,18 +32,6 @@ export class RsocialfooterModalComponent implements OnInit {
     }
   }
 
-  get url() {
-    return this.form.get("url");
-  }
-
-  get urlInvalido(){
-    return this.url?.errors && this.url?.touched;
-  }
-
-  get urlValido(){
-    return !this.url?.errors && this.url?.touched;
-  }
-
   get icono() {
     return this.form.get("icono");
   }
@@ -54,6 +42,18 @@ export class RsocialfooterModalComponent implements OnInit {
 
   get iconoValido(){
     return !this.icono?.errors && this.icono?.touched;
+  }
+
+  get url() {
+    return this.form.get("url");
+  }
+
+  get urlInvalido(){
+    return this.url?.errors && this.url?.touched;
+  }
+
+  get urlValido(){
+    return !this.url?.errors && this.url?.touched;
   }
 
   get RedSFooter(){

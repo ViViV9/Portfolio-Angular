@@ -21,9 +21,9 @@ export class ExperienciaModalComponent implements OnInit {
       id:[''],
       nombre_empresa:['',[Validators.required, Validators.minLength(3)]],
       puesto:['',[Validators.required, Validators.minLength(3)]],
-      logo:[''],
-      desde:[''],
-      hasta:[''],
+      logo_expe:[''],
+      desde:['',[Validators.required, Validators.minLength(4)]],
+      hasta:['',[Validators.required, Validators.minLength(4)]],
     })
   }
 
@@ -56,14 +56,14 @@ export class ExperienciaModalComponent implements OnInit {
     return !this.puesto?.errors && this.puesto?.touched;
   }
 
-  get logo() {
+  get logo_expe() {
     return this.form.get("logo");
   }
-  get logoInvalido(){
-    return this.logo?.errors && this.logo?.touched;
+  get logo_expeInvalido(){
+    return this.logo_expe?.errors && this.logo_expe?.touched;
   }
-  get logoValido(){
-    return !this.logo?.errors && this.logo?.touched;
+  get logo_expeValido(){
+    return !this.logo_expe?.errors && this.logo_expe?.touched;
   }
 
   get desde() {

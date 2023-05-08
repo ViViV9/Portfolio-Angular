@@ -33,7 +33,6 @@
             </div>
             <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
           </div>
-
           <input type="hidden" formControlName="id">
           
           <div class="mb-3">
@@ -63,18 +62,34 @@
           </div> 
           
           <div class="mb-3">
-            <label for="logo" class="form-label">Logo</label>
-            <input class="form-control" type="text"  formControlName="logo" placeholder="Logo de la empresa" [ngClass]="{'is-invalid': logoInvalido, 'is-valid': logoValido}">
+            <label for="logo_expe" class="form-label">Logo</label>
+            <input class="form-control" type="url"  formControlName="logo_expe" placeholder="Logo de la empresa">
           </div>
 
           <div class="mb-3">
             <label for="desde" class="form-label">Desde</label>
             <input type="text" class="form-control" formControlName="desde" [ngClass]="{'is-invalid': desdeInvalido, 'is-valid': desdeValido}">
+            <div *ngIf="desde?.errors && desde?.touched">
+              <p *ngIf="desde?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="desde?.errors?.['minlength']" class="text-danger">
+                Debe ser de 4 o más caracteres.
+              </p>
+           </div>
           </div>
 
           <div class="mb-3">
             <label for="hasta" class="form-label">Hasta</label>
             <input type="text" class="form-control"  formControlName="hasta" [ngClass]="{'is-invalid': hastaInvalido, 'is-valid': hastaValido}">
+            <div *ngIf="hasta?.errors && hasta?.touched">
+              <p *ngIf="hasta?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="hasta?.errors?.['minlength']" class="text-danger">
+                Debe ser de 4 o más caracteres.
+              </p>
+           </div>
           </div>
           
           <div class="modal-footer">

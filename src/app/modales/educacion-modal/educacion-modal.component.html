@@ -70,15 +70,31 @@
                         </div>
                         <div class="mb-3">
                             <label for="logo_educ" class="form-label">Logo</label>
-                            <input class="form-control" type="file"  formControlName="logo_educ" [ngClass]="{'is-invalid': logo_educInvalido, 'is-valid': logo_educValido}">
+                            <input class="form-control" type="text"  formControlName="logo_educ">
                         </div>
                         <div class="mb-3">
                             <label for="inicio" class="form-label">Fecha de inicio</label>
                             <input type="text" class="form-control" formControlName="inicio" [ngClass]="{'is-invalid': inicioInvalido, 'is-valid': inicioValido}"> 
+                            <div *ngIf="inicio?.errors && inicio?.touched">
+                                <p *ngIf="inicio?.hasError('required')" class="text-danger">
+                                  Campo requerido.
+                                </p>
+                                <p *ngIf="inicio?.errors?.['minlength']" class="text-danger">
+                                  Debe ser de 4 o más caracteres.
+                                </p>
+                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="fin" class="form-label">Fecha de finalización</label>
                             <input type="text" class="form-control"  formControlName="fin" [ngClass]="{'is-invalid': finInvalido, 'is-valid': finValido}">
+                            <div *ngIf="fin?.errors && fin?.touched">
+                                <p *ngIf="fin?.hasError('required')" class="text-danger">
+                                  Campo requerido.
+                                </p>
+                                <p *ngIf="fin?.errors?.['minlength']" class="text-danger">
+                                  Debe ser de 4 o más caracteres.
+                                </p>
+                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
@@ -90,3 +106,4 @@
         </div>
     </div>
 <!-- Fin Modal educación-->
+

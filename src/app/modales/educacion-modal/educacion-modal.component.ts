@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EducacionService } from 'src/app/servicios/educacion.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 
 @Component({
@@ -24,10 +24,10 @@ export class EducacionModalComponent implements OnInit {
       id:[''],
       curso:['',[Validators.required, Validators.minLength(3)]],
       institucion:['',[Validators.required, Validators.minLength(3)]],
-      titulo_curso:[''],
+      titulo_curso:['',[Validators.required, Validators.minLength(3)]],
       logo_educ:[''],
-      inicio:[''],
-      fin:[''],
+      inicio:['',[Validators.required, Validators.minLength(4)]],
+      fin:['',[Validators.required, Validators.minLength(4)]],
     })
   }
 

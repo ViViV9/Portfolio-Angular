@@ -1,0 +1,11 @@
+/*==SKILLS===*/
+.skill-info{
+	width: 100%;
+	list-style-type: none;
+	padding: 1%;
+}
+
+.progress-bar.progress-bar-striped.progress-bar-animated{
+    background-color:rgb(248, 35, 117);
+    border-radius: 2rem;
+}

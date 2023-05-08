@@ -10,26 +10,26 @@ export class ExperienciaService {
   //url= 'http://localhost:8080/experiencia/'
   url= 'https://portfoliobackendvd.onrender.com/experiencia/';
   
-  constructor(private httpClient:HttpClient) { }
+  constructor(private http:HttpClient) { }
   
   public verExperiencias(): Observable<Experiencia[]>{
-    return this.httpClient.get<Experiencia[]>(this.url + 'lista');
+    return this.http.get<Experiencia[]>(this.url + 'lista');
   }
 
   public buscarExperiencia(id: number): Observable<Experiencia> {
-    return this.httpClient.get<Experiencia>(this.url + `buscar/${id}`);
+    return this.http.get<Experiencia>(this.url + `buscar/${id}`);
   }
 
   public crearExperiencia(expe: Experiencia): Observable<any>{
-    return this.httpClient.post<any>(this.url + 'crear', expe);
+    return this.http.post<any>(this.url + 'crear', expe);
   }
 
   public editarExperiencia(expe: Experiencia): Observable<any>{
-    return this.httpClient.put<Experiencia>(this.url + 'editar', expe);
+    return this.http.put<Experiencia>(this.url + 'editar', expe);
   }
 
   public borrarExperiencia(id: number): Observable<Experiencia>{
-    return this.httpClient.delete<any>(this.url + `borrar/${id}`);
+    return this.http.delete<any>(this.url + `borrar/${id}`);
   }
 
 }

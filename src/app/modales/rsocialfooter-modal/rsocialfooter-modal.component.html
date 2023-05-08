@@ -35,8 +35,8 @@
 
             <input type="hidden" formControlName="id">
             <div class="mb-3">
-              <label for="icono_red" class="form-label">Icono</label>
-              <input class="form-control" type="text"  formControlName="icono_red" placeholder="Enlace del Icono de Fort Awesome" [ngClass]="{'is-invalid': iconoInvalido, 'is-valid': iconoValido}">
+              <label for="icono" class="form-label">Icono</label>
+              <input class="form-control" type="text" formControlName="icono" placeholder="Icono de Font Awesome ej: fab fa-github" [ngClass]="{'is-invalid': iconoInvalido, 'is-valid': iconoValido}">
               <div *ngIf="icono?.errors && icono?.touched">
                 <p *ngIf="icono?.hasError('required')" class="text-danger">
                   Campo requerido.
@@ -45,11 +45,11 @@
                   Debe ser de 3 o más caracteres.
                 </p>
               </div>
-              <p>Haga <a href="https://fontawesome.com/search">click aquí</a> para buscar el ícono</p>
+              <p>Haga <a href="https://fontawesome.com/search">click aquí</a> para buscar el ícono.</p>
             </div>
             <div class="mb-3">
               <label for="url" class="form-label">URL</label>
-              <input class="form-control" type="text"  formControlName="url" placeholder="URL" [ngClass]="{'is-invalid': urlInvalido, 'is-valid': urlValido}">
+              <input class="form-control" type="url"  formControlName="url" placeholder="URL" [ngClass]="{'is-invalid': urlInvalido, 'is-valid': urlValido}">
               <div *ngIf="url?.errors && url?.touched">
                   <p *ngIf="url?.hasError('required')" class="text-danger">
                       Campo requerido.

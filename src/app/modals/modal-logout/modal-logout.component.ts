@@ -15,9 +15,7 @@ export class ModalLogoutComponent implements OnInit {
 
   cerrarSesion() {
     if (confirm("Desea salir del Dashboard?")) {
-      this.router.navigate(['']);
-      console.log("Has cerrado la sesión");
+      this.router.navigate(['index']);
     }
   }
-
 }

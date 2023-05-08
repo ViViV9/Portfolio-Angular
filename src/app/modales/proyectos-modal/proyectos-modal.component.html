@@ -37,7 +37,7 @@
           <input type="hidden" formControlName="id">
           <div class="mb-3">
             <label for="titulo_proyecto" class="form-label">Título del proyecto</label>
-            <textarea type="text" class="form-control" formControlName="titulo_proyecto" [ngClass]="{'is-invalid': titulo_proyectoInvalido, 'is-valid': titulo_proyectoValido}"></textarea>
+            <input type="text" class="form-control" formControlName="titulo_proyecto" [ngClass]="{'is-invalid': titulo_proyectoInvalido, 'is-valid': titulo_proyectoValido}">
             <div *ngIf="titulo_proyecto?.errors && titulo_proyecto?.touched">
               <p *ngIf="titulo_proyecto?.hasError('required')" class="text-danger">
                 Campo requerido.
@@ -47,22 +47,33 @@
               </p>
            </div>
           </div>  
-          <div class="mb-3">
-            <label for="url_proyecto" class="form-label">URL</label>
-            <input type="text" class="form-control"  formControlName="url_proyecto" placeholder="URL" [ngClass]="{'is-invalid': url_proyectoInvalido, 'is-valid': url_proyectoValido}">
-          </div>
+
           <div class="mb-3">
             <label for="descripcion" class="form-label">Descripción</label>
             <textarea type="text" class="form-control" formControlName="descripcion" placeholder="Descripcion del proyecto" [ngClass]="{'is-invalid': descripcionInvalido, 'is-valid': descripcionValido}"></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="imagen_proyecto" class="form-label">Imagen</label>
-            <input type="text" class="form-control"  formControlName="imagen_proyecto" placeholder="Ej: https://ibb.co/WW374kr" [ngClass]="{'is-invalid': imagen_proyectoInvalido, 'is-valid': imagen_proyectoValido}">
-            <div *ngIf="imagen_proyecto?.errors && imagen_proyecto?.touched">
-              <p *ngIf="imagen_proyecto?.hasError('required')" class="text-danger">
+            <div *ngIf="descripcion?.errors && descripcion?.touched">
+              <p *ngIf="descripcion?.hasError('required')" class="text-danger">
                 Campo requerido.
               </p>
-              <p *ngIf="imagen_proyecto?.errors?.['minlength']" class="text-danger">
+              <p *ngIf="descripcion?.errors?.['minlength']" class="text-danger">
+                Debe ser de 8 o más caracteres.
+              </p>
+           </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="imagen_proyecto" class="form-label">Imagen</label>
+            <input type="text" class="form-control"  formControlName="imagen_proyecto" placeholder="Ej: https://ibb.co/WW374kr">
+          </div>
+
+          <div class="mb-3">
+            <label for="url_proyecto" class="form-label">URL</label>
+            <input type="url" class="form-control"  formControlName="url_proyecto" placeholder="URL" [ngClass]="{'is-invalid': url_proyectoInvalido, 'is-valid': url_proyectoValido}">
+            <div *ngIf="url_proyecto?.errors && url_proyecto?.touched">
+              <p *ngIf="url_proyecto?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="url_proyecto?.errors?.['minlength']" class="text-danger">
                 Debe ser de 3 o más caracteres.
               </p>
            </div>

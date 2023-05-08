@@ -1,5 +1,11 @@
+#login{
+    background-color: rgb(240, 248, 255);
+    background-size: cover;
+    min-height: 100vh;
+}
+
 .login{
-    background-color: #f0f8ff;
+    margin-top: 4rem;
 }
 
 .btn.btn{

@@ -20,10 +20,10 @@ export class ProyectosModalComponent implements OnInit {
       //Controles para el formulario 
     this.form= this.formBuilder.group({
       id:[''],
-      titulo_proyecto:[''],
-      url_proyecto:[''],
+      titulo_proyecto:['',[Validators.required, Validators.minLength(3)]],
+      descripcion:['',[Validators.required, Validators.minLength(8)]],
       imagen_proyecto:[''],
-      descripcion:[''],
+      url_proyecto:['',[Validators.required, Validators.minLength(3)]],
     })
   }
 
@@ -46,14 +46,14 @@ export class ProyectosModalComponent implements OnInit {
     return !this.titulo_proyecto?.errors && this.titulo_proyecto?.touched;
   }
 
-  get url_proyecto(){
-    return this.form.get("url_proyecto");
+  get descripcion(){
+    return this.form.get("descripcion");
   }
-  get url_proyectoInvalido(){
-    return this.url_proyecto?.errors && this.url_proyecto?.touched;
+  get descripcionInvalido(){
+    return this.descripcion?.errors && this.descripcion?.touched;
   }
-  get url_proyectoValido(){
-    return !this.url_proyecto?.errors && this.url_proyecto?.touched;
+  get descripcionValido(){
+    return !this.descripcion?.errors && this.descripcion?.touched;
   }
 
   get imagen_proyecto(){
@@ -66,15 +66,16 @@ export class ProyectosModalComponent implements OnInit {
     return !this.imagen_proyecto?.errors && this.imagen_proyecto?.touched;
   }
 
-  get descripcion(){
-    return this.form.get("descripcion");
+  get url_proyecto(){
+    return this.form.get("url_proyecto");
   }
-  get descripcionInvalido(){
-    return this.descripcion?.errors && this.descripcion?.touched;
+  get url_proyectoInvalido(){
+    return this.url_proyecto?.errors && this.url_proyecto?.touched;
   }
-  get descripcionValido(){
-    return !this.descripcion?.errors && this.descripcion?.touched;
+  get url_proyectoValido(){
+    return !this.url_proyecto?.errors && this.url_proyecto?.touched;
   }
+
 
   get Proyecto(){
     return this.form.get("proyecto");
