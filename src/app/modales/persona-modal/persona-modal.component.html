@@ -26,12 +26,13 @@
                   <img src="./../../../assets/IMG/banner.png" class="card-img" alt="...">
                   <div class="card-img-overlay text-center">
                     <h1 class="nombre-dashboard">{{persona.nombre}} {{persona.apellido}}</h1><br>
-                    <h6 class="titulo-dashboard">{{persona.titulo}}</h6> 
+                    <p class="titulo-dashboard mb-4"><strong>{{persona.titulo}}</strong></p> 
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body mt-4">
+                  <br>
                   <div class="container text-center mt-4">
-                    <div class="foto-dashboard" >
+                    <div class="foto-dashboard">
                       <img [src]="persona.foto_perfil" class="rounded-circle w-25"  alt="Viviana Verachtert" title="..."/>
                     </div>
                   </div>
