@@ -4,28 +4,72 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="staticBackdropLabel">Experiencia Laboral</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" (click)="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div  class="modal-body">
+        <div class=" container text-center">
+          <button type="button" class="btn btn-outline-secondary nuevo text-center" data-bs-toggle="modal" data-bs-target="#modalExpe"><i class="fa-solid fa-plus"> Crear</i></button>
+        </div>
         <!-- Formulario "Modal Experiencia" -->
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="experienciaForm" class="bg-white rounded seccion mt-4">
+          <div class="experiencia container container-fluid rounded shadow-sm">
+            <div class="container">
+              <ul class="p-0">
+                <li *ngFor="let experiencia of experiencias" class="d-flex justify-content-between align-items-center m-1">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="container">
+                        <div class="row mt-4">
+                          <div class="col-3">
+                            <img [src]="experiencia.logo_expe" class= "rounded w-80" alt="" width="100%">
+                          </div>
+                          <div class="col-9 descripcion descripcion">
+                            <p style="text-align: justify;">Empresa: <strong>{{experiencia.nombre_empresa}}</strong></p>
+                            <p style="text-align: justify;">Cargo: <strong>{{experiencia.puesto}}</strong></p>
+                            <p style="text-align: justify;">Desde: {{experiencia.desde}}</p>
+                            <p style="text-align: justify;">Hasta: {{experiencia.hasta}}</p>
+                          </div>
+                        </div>
+                        <br>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <span class="d-flex justify-content-between gap-2">
+                        <!--Lapiz para editar-->
+                        <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(experiencia.id)" data-bs-toggle="modal" data-bs-target="#modalExpe" title="Editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+        
+                        <!--Boton para borrar-->
+                        <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(experiencia.id)">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Inicio de Modal de Edición y creación de Educación-->
+<div class="modal fade" id="modalExpe" name="modalExpe" tabindex="-1" aria-labelledby="modalExpeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Experiencia Laboral</h1>
+        <button type="button" (click)="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div  class="modal-body">
         <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="experienciaForm" class="bg-white rounded seccion">
-          <ul class="p-0">
-            <li *ngFor="let experiencia of experiencias" class="d-flex justify-content-between align-items-center m-1 ">
-              <span>{{experiencia.id}} {{experiencia.nombre_empresa|uppercase}}</span>
-              <span class="d-flex justify-content-between gap-2">
-                <!--Lapiz para editar-->
-                <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(experiencia.id)">
-                  <i class="fa-solid fa-pencil"></i>
-                </button>
-
-                <!--Boton para borrar-->
-                <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(experiencia.id)">
-                  <i class="fa-solid fa-trash"></i>
-                </button>
-              </span>
-            </li>
-          </ul>
-
           <!--Validacion condicional-->
           <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
             <div class="input-group-prepend border-0">
@@ -94,11 +138,11 @@
           
           <div class="modal-footer">
             <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-            <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
+            <button type="submit" (click)="guardar()" [disabled]="form.invalid" class="btn btnLogin">Guardar</button>
           </div>
         </form>
-       </div>
+      </div>
     </div>
   </div>
 </div>
-
+<!-- Fin de Modal de Edición y creación de Educación-->

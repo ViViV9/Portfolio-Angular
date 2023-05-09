@@ -1,6 +1,5 @@
  /* ====== Acerca de mi (texto) =======*/
  .row.info-personal{
-    height: 53rem;
     font-size: larger;
     font-family: 'Georgia', sans-serif;
     text-align: justify;
@@ -28,3 +27,6 @@ main{
     background-color: #f6faf8;
 }
 
+#sobre-mi{
+    background-color:#fff7ff; 
+}

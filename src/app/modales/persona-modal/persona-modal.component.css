@@ -1,0 +1,30 @@
+/* Nombre y Apellido*/
+.nombre-dashboard {
+    font-family: Georgia,serif;
+    font-style:italic;
+    color: rgb(241, 48, 129);
+    text-shadow: 2px 2px 4px #8d8585;
+}
+
+/* Titulo "Desarroladora Web Full Stack" */
+.titulo-dashboard {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #0c0b0c;
+}
+
+.card-img{
+position: relative;
+}
+
+/* ===== Boton descarga CV =====*/
+.btn.btn-outline{
+    background-color:#f04d84;
+    border: 2px solid;
+    font-size: x-small;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+
+.p-0{
+    text-decoration: none;
+}

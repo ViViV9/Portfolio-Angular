@@ -3,12 +3,15 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Skill</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Habilidades</h1>
+        <button type="button" (click)="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div  class="modal-body">
+        <div class=" container text-center">
+          <button type="button" class="btn btn-outline-secondary nuevo text-center" data-bs-toggle="modal" data-bs-target="#modalSkill"><i class="fa-solid fa-plus"> Crear</i></button>
+        </div>
        <!-- Formulario "Modal Skills" -->
-        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="skillForm" class="bg-white rounded seccion">
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="skillForm" class="bg-white rounded seccion mt-4">
           <div class="habilidades container container-fluid rounded shadow-sm">
             <div class="container">
               <ul class="p-0">
@@ -21,7 +24,7 @@
                     </div>
                     <div class="col-3">
                       <div class="d-flex justify-content-end">
-                        <button class="btn btn-sm btn-outline-success me-md-2" type="button" (click)="cargarDetalle(habilidad.id)"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="btn btn-sm btn-outline-success me-md-2" type="button" (click)="cargarDetalle(habilidad.id)" data-bs-toggle="modal" data-bs-target="#modalSkill" title="Editar"><i class="fa-solid fa-pencil"></i></button>
                         <button class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" type="button" (click)="borrar(habilidad.id)"><i class="fa-solid fa-trash"></i></button>
                       </div>
                     </div>
@@ -31,7 +34,25 @@
               <br>
             </div>
           </div>
-          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Inicio de Modal de Edición y creación de Habilidades-->
+<div class="modal fade" id="modalSkill" name="modalSkill" tabindex="-1" aria-labelledby="modalSkillLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Habilidades</h1>
+        <button type="button" (click)="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div  class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="skillForm" class="bg-white rounded seccion">
             <!--Validacion condicional-->
           <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
             <div class="input-group-prepend border-0">
@@ -81,11 +102,11 @@
 
           <div class="modal-footer">
             <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-            <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
+            <button type="submit" (click)="guardar()" class="btn btnLogin" [disabled]="form.invalid">Guardar</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
-  
+<!-- Fin de Modal de Edición y creación de Habilidades-->

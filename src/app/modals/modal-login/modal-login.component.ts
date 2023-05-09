@@ -45,6 +45,12 @@ export class ModalLoginComponent implements OnInit {
     return this.Password?.touched && !this.Password?.valid;
   }
 
+  limpiar() {
+    console.log("Se limpió el formulario");
+    this.form.reset();
+    this.router.navigate(['/']);
+  }
+
   onEnviar(event: Event){
     event.preventDefault;
     if(this.form.valid){
@@ -67,9 +73,4 @@ export class ModalLoginComponent implements OnInit {
     }
   }
   
-  limpiar() {
-    console.log("Se limpió el formulario");
-    this.form.reset();
-    this.router.navigate(['/']);
-  }
 }

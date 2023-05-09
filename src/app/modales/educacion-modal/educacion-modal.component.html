@@ -1,109 +1,156 @@
 <!-- Modal -->
-    <div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="educacionModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Educación</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!--Formulario "Modal Educacion"--> 
-                <div  class="modal-body">
-                    <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm" class="bg-white rounded seccion">
-                        <ul class="p-0">
-                            <li *ngFor="let educacion of educaciones" class="d-flex justify-content-between align-items-center m-1 ">
-                                <span>{{educacion.id}} {{educacion.curso}}</span>
-                                <span class="d-flex justify-content-between gap-2">
-                                    <!--Lapiz para editar-->
-                                    <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(educacion.id)">
-                                      <i class="fa-solid fa-pencil"></i>
-                                    </button>
-                                    <!--Boton para borrar-->
-                                    <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(educacion.id)">
-                                      <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                </span>
-                            </li>
-                        </ul>
-                        <!--Validacion condicional-->
-                        <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
-                            <div class="input-group-prepend border-0">
-                                <span class="input-group-text border-0" id="basic-addon1">ID:</span>
-                            </div>
-                            <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
+<div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="educacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Educación</h1>
+                <button type="button" (click)="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--Formulario "Modal Educacion"--> 
+            <div  class="modal-body">
+                <div class=" container text-center">
+                    <button type="button" class="btn btn-outline-secondary nuevo text-center" data-bs-toggle="modal" data-bs-target="#modalEstudio"><i class="fa-solid fa-plus"> Crear</i></button>
+                  </div>
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm" class="bg-white rounded seccion mt-4">
+                    <div class="educacion container container-fluid rounded shadow-sm">
+                        <div class="container">
+                            <ul class="p-0">
+                                <li *ngFor="let educacion of educaciones" class="d-flex justify-content-between align-items-center m-1 ">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <div class="container text-center">
+                                                <div class="row mt-4"> 
+                                                  <h3 class="titulo-curso p-2"><strong>{{educacion.curso}}</strong></h3>
+                                                  <div class="col-3 p-2">
+                                                    <img [src]="educacion.logo_educ" class= "rounded-circle w-80" alt="Logo" width="100%">
+                                                  </div>
+                                                  <div class="col-9 descripcion">
+                                                    <p style="text-align: justify;">Institucion: <strong> {{educacion.institucion}}</strong></p>
+                                                    <p style="text-align: justify;">Titulo: <strong> {{educacion.titulo_curso}} </strong></p>
+                                                    <p style="text-align: justify;">Desde: {{educacion.inicio}}</p>
+                                                    <p style="text-align: justify;">Hasta: {{educacion.fin}}</p>
+                                                  </div>
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <span class="d-flex justify-content-between gap-2">
+                                               <!--Lapiz para editar-->
+                                                <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(educacion.id)" data-bs-toggle="modal" data-bs-target="#modalEstudio" title="Editar">
+                                                   <i class="fa-solid fa-pencil"></i>
+                                                </button>
+                                                <!--Boton para borrar-->
+                                                <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(educacion.id)">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <input type="hidden" formControlName="id">
-                        <div class="mb-3">
-                            <label for="curso" class="form-label">Curso</label>
-                            <input type="text" class="form-control" formControlName="curso" placeholder="Curso" [ngClass]="{'is-invalid': cursoInvalido, 'is-valid': cursoValido}">
-                            <div *ngIf="curso?.errors && curso?.touched">
-                                <p *ngIf="curso?.hasError('required')" class="text-danger">
-                                    Campo requerido.
-                                </p>
-                                <p *ngIf="curso?.errors?.['minlength']" class="text-danger">
-                                    Debe ser de 3 o más caracteres.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="institucion" class="form-label">Institución</label>
-                            <input type="text" class="form-control"  id="educacionEducacion" formControlName="institucion" placeholder="Nombre de la Institución" [ngClass]="{'is-invalid': institInvalido, 'is-valid': institValido}">
-                            <div *ngIf="institucion?.errors && institucion?.touched">
-                                <p *ngIf="institucion?.hasError('required')" class="text-danger">
-                                    Campo requerido.
-                                </p>
-                                <p *ngIf="institucion?.errors?.['minlength']" class="text-danger">
-                                    Debe ser de 3 o más caracteres.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="titulo_curso" class="form-label">Título del Curso</label>
-                            <input type="text" class="form-control" formControlName="titulo_curso" [ngClass]="{'is-invalid': titulo_cursoInvalido, 'is-valid': titulo_cursoValido}"> 
-                            <div *ngIf="titulo_curso?.errors && titulo_curso?.touched">
-                                <p *ngIf="titulo_curso?.hasError('required')" class="text-danger">
-                                    Campo requerido.
-                                </p>
-                                <p *ngIf="titulo_curso?.errors?.['minlength']" class="text-danger">
-                                    Debe ser de 3 o más caracteres.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="logo_educ" class="form-label">Logo</label>
-                            <input class="form-control" type="text"  formControlName="logo_educ">
-                        </div>
-                        <div class="mb-3">
-                            <label for="inicio" class="form-label">Fecha de inicio</label>
-                            <input type="text" class="form-control" formControlName="inicio" [ngClass]="{'is-invalid': inicioInvalido, 'is-valid': inicioValido}"> 
-                            <div *ngIf="inicio?.errors && inicio?.touched">
-                                <p *ngIf="inicio?.hasError('required')" class="text-danger">
-                                  Campo requerido.
-                                </p>
-                                <p *ngIf="inicio?.errors?.['minlength']" class="text-danger">
-                                  Debe ser de 4 o más caracteres.
-                                </p>
-                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="fin" class="form-label">Fecha de finalización</label>
-                            <input type="text" class="form-control"  formControlName="fin" [ngClass]="{'is-invalid': finInvalido, 'is-valid': finValido}">
-                            <div *ngIf="fin?.errors && fin?.touched">
-                                <p *ngIf="fin?.hasError('required')" class="text-danger">
-                                  Campo requerido.
-                                </p>
-                                <p *ngIf="fin?.errors?.['minlength']" class="text-danger">
-                                  Debe ser de 4 o más caracteres.
-                                </p>
-                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                            <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
             </div>
         </div>
     </div>
+</div>
 <!-- Fin Modal educación-->
 
+
+<!-- Inicio de Modal de Edición y creación de Educación -->
+<div class="modal fade" id="modalEstudio" name="modalEstudio" tabindex="-1" aria-labelledby="modalEstudio" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="ModalEstudioLabel">Educación</h4>
+                <button type="button" (click)="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm" class="bg-white rounded seccion">
+                    <!--Validacion condicional-->
+                    <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+                        <div class="input-group-prepend border-0">
+                            <span class="input-group-text border-0" id="basic-addon1">ID:</span>
+                        </div>
+                        <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
+                    </div>
+                    <input type="hidden" formControlName="id">
+                    <div class="mb-3">
+                        <label for="curso" class="form-label">Curso</label>
+                        <input type="text" class="form-control" formControlName="curso" placeholder="Curso" [ngClass]="{'is-invalid': cursoInvalido, 'is-valid': cursoValido}">
+                        <div *ngIf="curso?.errors && curso?.touched">
+                            <p *ngIf="curso?.hasError('required')" class="text-danger">
+                                Campo requerido.
+                            </p>
+                            <p *ngIf="curso?.errors?.['minlength']" class="text-danger">
+                                Debe ser de 3 o más caracteres.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="institucion" class="form-label">Institución</label>
+                        <input type="text" class="form-control"  id="educacionEducacion" formControlName="institucion" placeholder="Nombre de la Institución" [ngClass]="{'is-invalid': institInvalido, 'is-valid': institValido}">
+                        <div *ngIf="institucion?.errors && institucion?.touched">
+                            <p *ngIf="institucion?.hasError('required')" class="text-danger">
+                                Campo requerido.
+                            </p>
+                            <p *ngIf="institucion?.errors?.['minlength']" class="text-danger">
+                                Debe ser de 3 o más caracteres.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="titulo_curso" class="form-label">Título del Curso</label>
+                        <input type="text" class="form-control" formControlName="titulo_curso" [ngClass]="{'is-invalid': titulo_cursoInvalido, 'is-valid': titulo_cursoValido}"> 
+                        <div *ngIf="titulo_curso?.errors && titulo_curso?.touched">
+                            <p *ngIf="titulo_curso?.hasError('required')" class="text-danger">
+                                Campo requerido.
+                            </p>
+                            <p *ngIf="titulo_curso?.errors?.['minlength']" class="text-danger">
+                                Debe ser de 3 o más caracteres.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="logo_educ" class="form-label">Logo</label>
+                        <input class="form-control" type="text"  formControlName="logo_educ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inicio" class="form-label">Fecha de inicio</label>
+                        <input type="text" class="form-control" formControlName="inicio" [ngClass]="{'is-invalid': inicioInvalido, 'is-valid': inicioValido}"> 
+                        <div *ngIf="inicio?.errors && inicio?.touched">
+                            <p *ngIf="inicio?.hasError('required')" class="text-danger">
+                              Campo requerido.
+                            </p>
+                            <p *ngIf="inicio?.errors?.['minlength']" class="text-danger">
+                              Debe ser de 4 o más caracteres.
+                            </p>
+                         </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fin" class="form-label">Fecha de finalización</label>
+                        <input type="text" class="form-control"  formControlName="fin" [ngClass]="{'is-invalid': finInvalido, 'is-valid': finValido}">
+                        <div *ngIf="fin?.errors && fin?.touched">
+                            <p *ngIf="fin?.hasError('required')" class="text-danger">
+                              Campo requerido.
+                            </p>
+                            <p *ngIf="fin?.errors?.['minlength']" class="text-danger">
+                              Debe ser de 4 o más caracteres.
+                            </p>
+                         </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                <button type="submit" (click)="guardar()" [disabled]="form.invalid" class="btn btnLogin">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ...............Fin de Modal para Crear y Editar de Educación -->

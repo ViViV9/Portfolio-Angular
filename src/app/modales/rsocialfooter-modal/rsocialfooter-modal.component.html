@@ -4,68 +4,99 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Redes Sociales del Footer</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" (click)="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div  class="modal-body">
+          <div class=" container text-center">
+            <button type="button" class="btn btn-outline-secondary nuevo text-center" data-bs-toggle="modal" data-bs-target="#ModalRdFooter"><i class="fa-solid fa-plus"> Crear</i></button>
+          </div>
           <!-- Formulario "Modal Redes Sociales"-->
           <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="redSFooterForm" class="bg-white rounded seccion">
             <ul class="p-0">
               <li *ngFor="let redfooter of redesSFooter" class="d-flex justify-content-between align-items-center m-1 ">
-                <span>{{redfooter.id}} {{redfooter.icono|uppercase}}</span>
-                <span class="d-flex justify-content-between gap-2">
-                  <!--Lapiz para editar-->
-                  <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(redfooter.id)">
-                    <i class="fa-solid fa-pencil"></i>
-                  </button>
-  
-                  <!--Boton para borrar-->
-                  <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(redfooter.id)">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </span>
+                <div class="container">
+                  <div class="row justify-content-evenly text-center">
+                    <div class="col-4">
+                      <i [ngClass]=redfooter.icono class="fa-2xl"></i>
+                    </div>
+                    <div class="col-4">
+                      <span class="d-flex gap-2">
+                        <!--Lapiz para editar-->
+                        <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(redfooter.id)" data-bs-toggle="modal" data-bs-target="#ModalRdFooter" title="Editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+        
+                        <!--Boton para borrar-->
+                        <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(redfooter.id)">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
-            <!--Validacion condicional-->
-            <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
-              <div class="input-group-prepend border-0">
-                <span class="input-group-text border-0" id="basic-addon1">ID:</span>
-              </div>
-              <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
-            </div>
-
-            <input type="hidden" formControlName="id">
-            <div class="mb-3">
-              <label for="icono" class="form-label">Icono</label>
-              <input class="form-control" type="text" formControlName="icono" placeholder="Icono de Font Awesome ej: fab fa-github" [ngClass]="{'is-invalid': iconoInvalido, 'is-valid': iconoValido}">
-              <div *ngIf="icono?.errors && icono?.touched">
-                <p *ngIf="icono?.hasError('required')" class="text-danger">
-                  Campo requerido.
-                </p>
-                <p *ngIf="icono?.errors?.['minlength']" class="text-danger">
-                  Debe ser de 3 o más caracteres.
-                </p>
-              </div>
-              <p>Haga <a href="https://fontawesome.com/search">click aquí</a> para buscar el ícono.</p>
-            </div>
-            <div class="mb-3">
-              <label for="url" class="form-label">URL</label>
-              <input class="form-control" type="url"  formControlName="url" placeholder="URL" [ngClass]="{'is-invalid': urlInvalido, 'is-valid': urlValido}">
-              <div *ngIf="url?.errors && url?.touched">
-                  <p *ngIf="url?.hasError('required')" class="text-danger">
-                      Campo requerido.
-                  </p>
-                  <p *ngIf="url?.errors?.['minlength']" class="text-danger">
-                      Debe ser de 3 o más caracteres.
-                  </p>
-              </div>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-              <button type="submit" (click)="guardar()" class="btn btnLogin">Guardar</button>
-            </div>
           </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
         </div>
       </div>
     </div>
   </div>
+
+
+  <!-- Inicio de Modal de Edición y creación de Redes para Footer -->
+<div class="modal fade" id="ModalRdFooter" name="ModalRdFooter" tabindex="-1" aria-labelledby="ModalRdFooter" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Redes Sociales del Footer</h1>
+        <button type="button" (click)="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div  class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="redSFooterForm" class="bg-white rounded seccion">
+          <!--Validacion condicional-->
+          <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+            <div class="input-group-prepend border-0">
+              <span class="input-group-text border-0" id="basic-addon1">ID:</span>
+            </div>
+            <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
+          </div>
+
+          <input type="hidden" formControlName="id">
+          <div class="mb-3">
+            <label for="icono" class="form-label">Icono</label>
+            <input class="form-control" type="text" formControlName="icono" placeholder="Icono de Font Awesome ej: fab fa-github" [ngClass]="{'is-invalid': iconoInvalido, 'is-valid': iconoValido}">
+            <div *ngIf="icono?.errors && icono?.touched">
+              <p *ngIf="icono?.hasError('required')" class="text-danger">
+                Campo requerido.
+              </p>
+              <p *ngIf="icono?.errors?.['minlength']" class="text-danger">
+                Debe ser de 3 o más caracteres.
+              </p>
+            </div>
+            <p>Haga <a href="https://fontawesome.com/search">click aquí</a> para buscar el ícono.</p>
+          </div>
+          <div class="mb-3">
+            <label for="url" class="form-label">URL</label>
+            <input class="form-control" type="url"  formControlName="url" placeholder="URL" [ngClass]="{'is-invalid': urlInvalido, 'is-valid': urlValido}">
+            <div *ngIf="url?.errors && url?.touched">
+                <p *ngIf="url?.hasError('required')" class="text-danger">
+                    Campo requerido.
+                </p>
+                <p *ngIf="url?.errors?.['minlength']" class="text-danger">
+                    Debe ser de 3 o más caracteres.
+                </p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+            <button type="button" (click)="limpiar()" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+            <button type="submit" (click)="guardar()" class="btn btnLogin" [disabled]="form.invalid">Guardar</button>
+          </div>
+    </div>
+  </div>
+</div>
+<!-- fin de Modal de Edición y creación de Redes para Footer -->
