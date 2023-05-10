@@ -15,7 +15,7 @@ export class PersonaModalComponent implements OnInit {
   personas: Persona []= [];
   
   constructor(private formBuilder: FormBuilder, private personaServ: PersonaService, private router:Router) {
-      //Controles para el formulario 
+    //Controles para el formulario 
     this.form= this.formBuilder.group({
       id:[''],
       nombre:['',[Validators.required, Validators.minLength(3)]],
@@ -27,18 +27,8 @@ export class PersonaModalComponent implements OnInit {
       textsobre_mi3:['',[Validators.required, Validators.minLength(3)]],
       cv:[''],
     })
-     }
+  }
 
-  ngOnInit(): void {
-   this.cargarPersona();
-  }
-  
-  onUpdate():void{
-   this.personaServ.editarPersona(this.form.value).subscribe(data => {
-    alert("La persona ha sido modificada.");
-    this.router.navigate(['']);
-   })
-  }
 
   get nombre() {
     return this.form.get("nombre");
@@ -124,16 +114,6 @@ export class PersonaModalComponent implements OnInit {
     return this.form.get("persona");
   }
 
-  onEnviar(event:Event){
-    event.preventDefault;
-    if (this.form.valid){
-      this.onUpdate();
-    }else{
-      alert("falló en la carga, intente nuevamente");
-      this.form.markAllAsTouched();
-    }
-  }
-
   cargarPersona(): void{
     this.personaServ.verPersonas().subscribe({
       next: (data) => {
@@ -143,6 +123,10 @@ export class PersonaModalComponent implements OnInit {
       error: (e) => console.error(e),
       complete: () => console.info('complete')
     })
+  }
+
+  ngOnInit(): void {
+    this.cargarPersona();
   }
 
   cargarDetalle(id: number){
@@ -188,10 +172,10 @@ export class PersonaModalComponent implements OnInit {
     //}
   //}
 
- limpiar() {
-  console.log("Se limpió el formulario");
-  this.form.reset();
- }
+  limpiar() {
+    console.log("Se limpió el formulario");
+    this.form.reset();
+  }
 
   volver(){
     this.router.navigate(['/dashboard']);

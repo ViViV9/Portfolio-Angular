@@ -21,15 +21,10 @@ export class RsocialfooterModalComponent implements OnInit {
       icono:['',[Validators.required, Validators.minLength(3)]],
       url:['',[Validators.required, Validators.minLength(3)]],
     })
-     }
-
-  ngOnInit(): void {
-    this.cargarRedSFooter();
   }
 
-  onUpdate():void{
-    this.redSFooterServ.editarRedSFooter(this.form.value), {
-    }
+  get RedSFooter(){
+    return this.form.get("redSFooter");
   }
 
   get icono() {
@@ -56,20 +51,6 @@ export class RsocialfooterModalComponent implements OnInit {
     return !this.url?.errors && this.url?.touched;
   }
 
-  get RedSFooter(){
-    return this.form.get("redSFooter");
-  }
-
-  onEnviar(event:Event){
-    event.preventDefault;
-    if (this.form.valid){
-      this.onUpdate();
-    }else{
-      alert("Falló en la carga, intente nuevamente");
-      this.form.markAllAsTouched();
-    }
-  }
-
   cargarRedSFooter(): void{
     this.redSFooterServ.verRedSFooter().subscribe({
       next: (data) => {
@@ -78,18 +59,22 @@ export class RsocialfooterModalComponent implements OnInit {
       },
       error: (e) => console.error(e),
       complete: () => console.info('complete')
-  })
-}
+    })
+  }
+
+  ngOnInit(): void {
+    this.cargarRedSFooter();
+  }
 
   cargarDetalle(id: number){
     this.redSFooterServ.buscarRedSFooter(id).subscribe({
-        next: (data) => {
-          this.form.setValue(data);
-        },
-        error: (e) => console.error(e),
-        complete: () => console.info('complete')
-      });
-    }
+      next: (data) => {
+        this.form.setValue(data);
+      },
+       error: (e) => console.error(e),
+      complete: () => console.info('complete')
+    });
+  }
 
   guardar() {
     let redfooter = this.form.value;

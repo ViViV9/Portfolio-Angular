@@ -27,13 +27,8 @@ export class ExperienciaModalComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-    this.cargarExperiencia();
-  }
-
-   onUpdate():void{
-    this.expeService.editarExperiencia(this.form.value), {
-   }
+  get Experiencia(){
+    return this.form.get("experiencia");
   }
 
   get nombre_empresa() {
@@ -86,20 +81,6 @@ export class ExperienciaModalComponent implements OnInit {
     return !this.hasta?.errors && this.hasta?.touched;
   }
 
-  get Experiencia(){
-    return this.form.get("experiencia");
-  }
-
-  onEnviar(event:Event){
-    event.preventDefault;
-    if (this.form.valid){
-      this.onUpdate();
-    }else{
-      alert("falló en la carga, intente nuevamente");
-      this.form.markAllAsTouched();
-    }
-  }
-
   cargarExperiencia(): void{
     this.expeService.verExperiencias().subscribe({
       next: (data) => {
@@ -110,6 +91,11 @@ export class ExperienciaModalComponent implements OnInit {
       complete: () => console.info('complete')
     });
   }
+  
+  ngOnInit(): void {
+    this.cargarExperiencia();
+  }
+
 
   cargarDetalle(id: number){
     this.expeService.buscarExperiencia(id).subscribe({

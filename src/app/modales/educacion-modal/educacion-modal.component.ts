@@ -30,14 +30,9 @@ export class EducacionModalComponent implements OnInit {
       fin:['',[Validators.required, Validators.minLength(4)]],
     })
   }
-
-  ngOnInit(): void {
-    this.cargarEducacion();
-  }
   
-  onUpdate():void{
-    this.educService.editarEducacion(this.form.value), {
-    }
+  get Educacion(){
+    return this.form.get("educacion");
   }
 
   get institucion() {
@@ -58,10 +53,6 @@ export class EducacionModalComponent implements OnInit {
   }
   get cursoValido(){
     return !this.curso?.errors && this.curso?.touched;
-  }
-
-  get Educacion(){
-    return this.form.get("educacion");
   }
 
   get titulo_curso(){
@@ -104,16 +95,6 @@ export class EducacionModalComponent implements OnInit {
     return !this.fin?.errors && this.fin?.touched;
   }
 
-  onEnviar(event:Event){
-    event.preventDefault;
-    if (this.form.valid){
-      this.onUpdate();
-    }else{
-      alert("falló en la carga, intente nuevamente");
-      this.form.markAllAsTouched();
-    }
-  }
-
   cargarEducacion(): void{
     this.educService.verEducaciones().subscribe({
       next: (data) => {
@@ -122,8 +103,12 @@ export class EducacionModalComponent implements OnInit {
       },
       error: (e) => console.error(e),
       complete: () => console.info('complete')
-  })
-}
+    })
+  }
+
+  ngOnInit(): void {
+    this.cargarEducacion();
+  }
 
   cargarDetalle(id: number){
     this.educService.buscarEducacion(id).subscribe({

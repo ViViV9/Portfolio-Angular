@@ -25,15 +25,10 @@ export class SkillModalComponent implements OnInit {
       porcentaje:['',[Validators.required]],
 
     })
-   }
-
-  ngOnInit(): void {
-    this.cargarHabilidad();
   }
-
-  onUpdate():void{
-    this.skillServ.editarHabilidad(this.form.value), {
-    }
+ 
+  get Habilidad(){
+    return this.form.get("habilidad");
   }
 
   get nombre_skill() {
@@ -66,20 +61,6 @@ export class SkillModalComponent implements OnInit {
     return !this.porcentaje?.errors && this.porcentaje?.touched;
   }
 
-  get Habilidad(){
-    return this.form.get("habilidad");
-  }
-
-  onEnviar(event:Event){
-    event.preventDefault;
-    if (this.form.valid){
-      this.onUpdate();
-    }else{
-      alert("falló en la carga, intente nuevamente");
-      this.form.markAllAsTouched();
-    }
-  }
-
   cargarHabilidad(): void{
     this.skillServ.verHabilidades().subscribe({
       next: (data) => {
@@ -88,18 +69,22 @@ export class SkillModalComponent implements OnInit {
       },
       error: (e) => console.error(e),
       complete: () => console.info('complete')
-  })
-}
+    })
+  }
+
+  ngOnInit(): void {
+    this.cargarHabilidad();
+  }
 
   cargarDetalle(id: number){
     this.skillServ.buscarHabilidad(id).subscribe({
-        next: (data) => {
-          this.form.setValue(data);
-        },
-        error: (e) => console.error(e),
-        complete: () => console.info('complete')
-      });
-    }
+      next: (data) => {
+        this.form.setValue(data);
+      },
+      error: (e) => console.error(e),
+      complete: () => console.info('complete')
+    });
+  }
 
   guardar() {
     let skill = this.form.value;
@@ -125,7 +110,7 @@ export class SkillModalComponent implements OnInit {
       console.log("Se modificó correctamente");
     }
   }
-
+ 
   borrar(id: number) {
     if (confirm("Confirme si desea eliminar")) {
       this.skillServ.borrarHabilidad(id).subscribe(data => {});
@@ -133,7 +118,7 @@ export class SkillModalComponent implements OnInit {
       console.log("Se eliminó correctamente");
     }
   }
-
+ 
   limpiar() {
     console.log("Se limpió el formulario");
     this.form.reset();

@@ -27,15 +27,10 @@ export class ProyectosModalComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-    this.cargarProyecto();
+  get Proyecto(){
+    return this.form.get("proyecto");
   }
-
-  onUpdate():void{
-    this.proyectoServ.editarProyecto(this.form.value), {
-    }
-  }
-
+ 
   get titulo_proyecto(){
     return this.form.get("titulo_proyecto");
   }
@@ -76,21 +71,6 @@ export class ProyectosModalComponent implements OnInit {
     return !this.url_proyecto?.errors && this.url_proyecto?.touched;
   }
 
-
-  get Proyecto(){
-    return this.form.get("proyecto");
-  }
-
-  onEnviar(event:Event){
-    event.preventDefault;
-    if (this.form.valid){
-      this.onUpdate();
-    }else{
-      alert("falló en la carga, intente nuevamente");
-      this.form.markAllAsTouched();
-    }
-  }
-
   cargarProyecto(): void{
     this.proyectoServ.verProyectos().subscribe({
       next: (data) => {
@@ -99,8 +79,12 @@ export class ProyectosModalComponent implements OnInit {
       },
       error: (e) => console.error(e),
       complete: () => console.info('complete')
-  })
-}
+    })
+  }
+  
+  ngOnInit(): void {
+    this.cargarProyecto();
+  }
 
   cargarDetalle(id: number){
     this.proyectoServ.buscarProyecto(id).subscribe({

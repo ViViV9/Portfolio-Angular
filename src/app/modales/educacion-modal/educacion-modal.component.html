@@ -11,7 +11,7 @@
                 <div class=" container text-center">
                     <button type="button" class="btn btn-outline-secondary nuevo text-center" data-bs-toggle="modal" data-bs-target="#modalEstudio"><i class="fa-solid fa-plus"> Crear</i></button>
                   </div>
-                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm" class="bg-white rounded seccion mt-4">
+                <form [formGroup]="form" name="educacionForm" class="bg-white rounded seccion mt-4">
                     <div class="educacion container container-fluid rounded shadow-sm">
                         <div class="container">
                             <ul class="p-0">
@@ -71,7 +71,7 @@
                 <button type="button" (click)="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm" class="bg-white rounded seccion">
+                <form [formGroup]="form" name="educacionForm" class="bg-white rounded seccion">
                     <!--Validacion condicional-->
                     <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
                         <div class="input-group-prepend border-0">
@@ -106,7 +106,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="titulo_curso" class="form-label">Título del Curso</label>
-                        <input type="text" class="form-control" formControlName="titulo_curso" [ngClass]="{'is-invalid': titulo_cursoInvalido, 'is-valid': titulo_cursoValido}"> 
+                        <input type="text" class="form-control" formControlName="titulo_curso" placeholder="Ej: Desarrollador" [ngClass]="{'is-invalid': titulo_cursoInvalido, 'is-valid': titulo_cursoValido}"> 
                         <div *ngIf="titulo_curso?.errors && titulo_curso?.touched">
                             <p *ngIf="titulo_curso?.hasError('required')" class="text-danger">
                                 Campo requerido.
@@ -118,11 +118,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="logo_educ" class="form-label">Logo</label>
-                        <input class="form-control" type="text"  formControlName="logo_educ">
+                        <input class="form-control" type="text"  formControlName="logo_educ" placeholder="Ej: https://i.ibb.co/tZC019s/Logo-CUI.png">
                     </div>
                     <div class="mb-3">
                         <label for="inicio" class="form-label">Fecha de inicio</label>
-                        <input type="text" class="form-control" formControlName="inicio" [ngClass]="{'is-invalid': inicioInvalido, 'is-valid': inicioValido}"> 
+                        <input type="text" class="form-control" formControlName="inicio" placeholder="Ej: 2022; Actual" [ngClass]="{'is-invalid': inicioInvalido, 'is-valid': inicioValido}"> 
                         <div *ngIf="inicio?.errors && inicio?.touched">
                             <p *ngIf="inicio?.hasError('required')" class="text-danger">
                               Campo requerido.
@@ -134,7 +134,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="fin" class="form-label">Fecha de finalización</label>
-                        <input type="text" class="form-control"  formControlName="fin" [ngClass]="{'is-invalid': finInvalido, 'is-valid': finValido}">
+                        <input type="text" class="form-control"  formControlName="fin" placeholder="Ej: 2022" [ngClass]="{'is-invalid': finInvalido, 'is-valid': finValido}">
                         <div *ngIf="fin?.errors && fin?.touched">
                             <p *ngIf="fin?.hasError('required')" class="text-danger">
                               Campo requerido.

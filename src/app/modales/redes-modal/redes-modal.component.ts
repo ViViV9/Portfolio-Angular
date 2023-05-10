@@ -22,17 +22,12 @@ export class RedesModalComponent implements OnInit {
       url:['',[Validators.required, Validators.minLength(3)]],
       icono_red:['',[Validators.required, Validators.minLength(3)]],
     })
-     }
-
-  ngOnInit(): void {
-    this.cargarRedSocial();
   }
 
-  onUpdate():void{
-    this.redsService.editarRedSocial(this.form.value), {
-    }
+  get RedSocial(){
+    return this.form.get("redSocial");
   }
-
+  
   get url() {
     return this.form.get("url");
   }
@@ -57,20 +52,6 @@ export class RedesModalComponent implements OnInit {
     return !this.icono_red?.errors && this.icono_red?.touched;
   }
 
-  get RedSocial(){
-    return this.form.get("redSocial");
-  }
-
-  onEnviar(event:Event){
-    event.preventDefault;
-    if (this.form.valid){
-      this.onUpdate();
-    }else{
-      alert("Falló en la carga, intente nuevamente");
-      this.form.markAllAsTouched();
-    }
-  }
-
   cargarRedSocial(): void{
     this.redsService.verRedesSociales().subscribe({
       next: (data) => {
@@ -79,8 +60,12 @@ export class RedesModalComponent implements OnInit {
       },
       error: (e) => console.error(e),
       complete: () => console.info('complete')
-  })
-}
+    })
+  }
+  
+  ngOnInit(): void {
+    this.cargarRedSocial();
+  }
 
   cargarDetalle(id: number){
     this.redsService.buscarRedSocial(id).subscribe({
