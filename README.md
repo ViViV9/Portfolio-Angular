@@ -53,7 +53,7 @@ Para visualizar la página web, haga click :point_right: [aquí](https://portfol
 ## **Agradecimientos** 
 #### :raised_hands: ####
 
-Primero quiero agradecer a mi familia, mi esposo e hijos, que siempre me apoyaron en todo.
+Primero quiero agradecer a mi esposo e hijos, por siempre apoyarme incondicionalmente.
 
 Y al programa **"Argentina Programa"** por darme la oportunidad de realizar esta capacitación.
 
