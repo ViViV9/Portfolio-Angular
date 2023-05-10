@@ -14,7 +14,7 @@
 Este proyecto fue creado como trabajo final del curso Argentina Programa "Yo Programo"; y es mi primer proyecto como Desarrolladora Web Full Stack Jr.
 
 ### **De que se trata?**  
-Dicho proyecto es un Portfolio Web, que cuenta con una web principal y a su vez se puede acceder a un panel de control; que mediante una direccion de correo electrónico y contraseñas definidas, permite al usuario: ver, crear, editar o eliminar los datos en los formularios creados. 
+Dicho proyecto es un Portfolio Web, que cuenta con una web principal y a su vez se puede acceder a un panel de control; que mediante una dirección de correo electrónico y contraseñas definidas, permite al usuario: ver, crear, editar o eliminar los datos en los formularios creados. 
 
 ----
 ## **Desarrollo**
@@ -53,7 +53,7 @@ Para visualizar la página web, haga click :point_right: [aquí](https://portfol
 ## **Agradecimientos** 
 #### :raised_hands: ####
 
-Primero quiero agradecer a mi familia, mi esposo e hijos, que siempre se apoyaron en todo.
+Primero quiero agradecer a mi familia, mi esposo e hijos, que siempre me apoyaron en todo.
 
 Y al programa **"Argentina Programa"** por darme la oportunidad de realizar esta capacitación.
 
